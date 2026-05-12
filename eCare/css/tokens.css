@@ -1,0 +1,229 @@
+/* ============================================================
+   eCare Design System — Typography Tokens
+   Source: Figma · App, Mobile Web, Desktop modes
+   ============================================================
+   Architecture:
+     1. Font face declarations
+     2. Mobile-first primitives (App / Mobile Web values)
+     3. Desktop overrides at min-width: 1024px
+     4. Line-heights and tracking, per-breakpoint
+     5. Semantic role tokens — bundles per role (display, h1…h7, body, label…)
+     6. Component-level tokens — buttons, labels, avatars
+
+   Breakpoint behaviour:
+     · viewport <  1024px  →  App / Mobile Web values
+     · viewport >= 1024px  →  Desktop values
+     The change is a snap, not a fluid interpolation.
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1 · Font faces
+   ---------------------------------------------------------- */
+@font-face {
+  font-family: "YouNik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/YouNik-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "YouNik";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/YouNik-Medium.otf") format("opentype");
+}
+
+:root {
+  /* ----------------------------------------------------------
+     2 · Primitives — families & weights (constant)
+     ---------------------------------------------------------- */
+  --font-family-sans:
+    "YouNik", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-family-mono:
+    ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+
+  /* Breakpoint constant (informational — used in media queries below) */
+  --breakpoint-desktop: 1024px;
+
+  /* ----------------------------------------------------------
+     3 · MOBILE / APP — default values (viewport < 1024px)
+     ---------------------------------------------------------- */
+  --font-size-block: 3rem;        /* 48 */
+  --font-size-h1:    2rem;        /* 32 */
+  --font-size-h2:    1.625rem;    /* 26 */
+  --font-size-h3:    1.25rem;     /* 20 */
+  --font-size-h4:    1rem;        /* 16 */
+  --font-size-h5:    1rem;        /* 16 */
+  --font-size-h6:    0.875rem;    /* 14 */
+  --font-size-h7:    0.75rem;     /* 12 */
+  --font-size-body-large: 1rem;     /* 16 */
+  --font-size-body-small: 0.875rem; /* 14 */
+
+  --line-height-block:      calc(50 / 48);   /* 1.042 */
+  --line-height-h1:         calc(33 / 32);   /* 1.031 */
+  --line-height-h2:         calc(27 / 26);   /* 1.038 */
+  --line-height-h3:         calc(22 / 20);   /* 1.100 */
+  --line-height-h4:         calc(18 / 16);   /* 1.125 */
+  --line-height-h5:         calc(18 / 16);   /* 1.125 */
+  --line-height-h6:         calc(15 / 14);   /* 1.071 */
+  --line-height-h7:         calc(14 / 12);   /* 1.167 */
+  --line-height-body-large: calc(18 / 16);   /* 1.125 */
+  --line-height-body-small: calc(16 / 14);   /* 1.143 */
+
+  --letter-spacing-block: -0.005em;  /* -0.5% */
+  --letter-spacing-h1:    -0.005em;  /* -0.5% */
+  --letter-spacing-h2:    -0.005em;  /* -0.5% */
+  --letter-spacing-h3:     0em;
+  --letter-spacing-h4:     0em;
+  --letter-spacing-h5:     0em;
+  --letter-spacing-h6:     0em;
+  --letter-spacing-h7:     0em;
+  --letter-spacing-body:   0em;
+
+  /* ----------------------------------------------------------
+     4 · Component-level — constant across breakpoints
+     ---------------------------------------------------------- */
+  --font-size-label:         0.75rem;   /* 12 */
+  --font-size-button-large:  1rem;      /* 16 */
+  --font-size-button-medium: 0.875rem;  /* 14 */
+  --font-size-button-small:  0.75rem;   /* 12 */
+  --font-size-avatar-large:  1.25rem;   /* 20 */
+  --font-size-avatar-medium: 1rem;      /* 16 */
+  --font-size-avatar-small:  0.75rem;   /* 12 */
+
+  --line-height-label:      1;             /* 12 / 12 */
+  --line-height-button-l:   calc(18 / 16); /* 1.125 */
+  --line-height-button-m:   calc(15 / 14); /* 1.071 */
+  --line-height-button-s:   1;             /* 12 / 12 */
+  --line-height-avatar-l:   calc(22 / 20); /* 1.10 */
+  --line-height-avatar-m:   1;             /* 16 / 16 */
+  --line-height-avatar-s:   1;             /* 12 / 12 */
+
+  --letter-spacing-label:   0.003em;  /*  0.3% */
+  --letter-spacing-button:  0.002em;  /*  0.2% */
+  --letter-spacing-avatar:  0.002em;  /*  0.2% */
+
+  /* ----------------------------------------------------------
+     5 · Semantic role tokens — what components reference
+     (These reference the size/leading/tracking primitives above,
+      so they automatically pick up the desktop overrides.)
+     ---------------------------------------------------------- */
+
+  /* Display */
+  --type-block-family:  var(--font-family-sans);
+  --type-block-size:    var(--font-size-block);
+  --type-block-weight:  var(--font-weight-medium);
+  --type-block-leading: var(--line-height-block);
+  --type-block-tracking:var(--letter-spacing-block);
+
+  /* Headings */
+  --type-h1-family:  var(--font-family-sans);
+  --type-h1-size:    var(--font-size-h1);
+  --type-h1-weight:  var(--font-weight-medium);
+  --type-h1-leading: var(--line-height-h1);
+  --type-h1-tracking:var(--letter-spacing-h1);
+
+  --type-h2-family:  var(--font-family-sans);
+  --type-h2-size:    var(--font-size-h2);
+  --type-h2-weight:  var(--font-weight-medium);
+  --type-h2-leading: var(--line-height-h2);
+  --type-h2-tracking:var(--letter-spacing-h2);
+
+  --type-h3-family:  var(--font-family-sans);
+  --type-h3-size:    var(--font-size-h3);
+  --type-h3-weight:  var(--font-weight-medium);
+  --type-h3-leading: var(--line-height-h3);
+  --type-h3-tracking:var(--letter-spacing-h3);
+
+  --type-h4-family:  var(--font-family-sans);
+  --type-h4-size:    var(--font-size-h4);
+  --type-h4-weight:  var(--font-weight-medium);
+  --type-h4-leading: var(--line-height-h4);
+  --type-h4-tracking:var(--letter-spacing-h4);
+
+  --type-h5-family:  var(--font-family-sans);
+  --type-h5-size:    var(--font-size-h5);
+  --type-h5-weight:  var(--font-weight-medium);
+  --type-h5-leading: var(--line-height-h5);
+  --type-h5-tracking:var(--letter-spacing-h5);
+
+  --type-h6-family:  var(--font-family-sans);
+  --type-h6-size:    var(--font-size-h6);
+  --type-h6-weight:  var(--font-weight-medium);
+  --type-h6-leading: var(--line-height-h6);
+  --type-h6-tracking:var(--letter-spacing-h6);
+
+  --type-h7-family:  var(--font-family-sans);
+  --type-h7-size:    var(--font-size-h7);
+  --type-h7-weight:  var(--font-weight-medium);
+  --type-h7-leading: var(--line-height-h7);
+  --type-h7-tracking:var(--letter-spacing-h7);
+
+  /* Body */
+  --type-body-large-family:  var(--font-family-sans);
+  --type-body-large-size:    var(--font-size-body-large);
+  --type-body-large-weight:  var(--font-weight-regular);
+  --type-body-large-leading: var(--line-height-body-large);
+  --type-body-large-tracking:var(--letter-spacing-body);
+
+  --type-body-small-family:  var(--font-family-sans);
+  --type-body-small-size:    var(--font-size-body-small);
+  --type-body-small-weight:  var(--font-weight-regular);
+  --type-body-small-leading: var(--line-height-body-small);
+  --type-body-small-tracking:var(--letter-spacing-body);
+
+  /* Component-level */
+  --type-label-size:    var(--font-size-label);
+  --type-label-weight:  var(--font-weight-medium);
+  --type-label-leading: var(--line-height-label);
+  --type-label-tracking:var(--letter-spacing-label);
+
+  --type-button-large-size:    var(--font-size-button-large);
+  --type-button-large-weight:  var(--font-weight-medium);
+  --type-button-large-leading: var(--line-height-button-l);
+  --type-button-large-tracking:var(--letter-spacing-button);
+
+  --type-button-medium-size:    var(--font-size-button-medium);
+  --type-button-medium-weight:  var(--font-weight-medium);
+  --type-button-medium-leading: var(--line-height-button-m);
+  --type-button-medium-tracking:var(--letter-spacing-button);
+
+  --type-button-small-size:    var(--font-size-button-small);
+  --type-button-small-weight:  var(--font-weight-medium);
+  --type-button-small-leading: var(--line-height-button-s);
+  --type-button-small-tracking:var(--letter-spacing-button);
+}
+
+/* ============================================================
+   6 · DESKTOP OVERRIDES — viewport >= 1024px
+   Single hard breakpoint. No fluid interpolation.
+   ============================================================ */
+@media (min-width: 1024px) {
+  :root {
+    --font-size-block: 3.5rem;     /* 56 */
+    --font-size-h1:    3rem;       /* 48 */
+    --font-size-h2:    1.875rem;   /* 30 */
+    --font-size-h3:    1.4375rem;  /* 23 */
+    --font-size-h4:    1.125rem;   /* 18 */
+    /* H5 / H6 / H7 unchanged (constant) */
+    --font-size-body-large: 1.125rem;  /* 18 */
+    --font-size-body-small: 1rem;      /* 16 */
+
+    --line-height-block:      calc(60 / 56);   /* 1.071 */
+    --line-height-h1:         calc(50 / 48);   /* 1.042 */
+    --line-height-h2:         calc(31 / 30);   /* 1.033 */
+    --line-height-h3:         calc(24 / 23);   /* 1.043 */
+    --line-height-h4:         calc(20 / 18);   /* 1.111 */
+    --line-height-h6:         calc(16 / 14);   /* 1.143 */
+    --line-height-body-large: calc(20 / 18);   /* 1.111 */
+    --line-height-body-small: calc(18 / 16);   /* 1.125 */
+
+    --letter-spacing-block: -0.01em;   /* -1% */
+    --letter-spacing-h1:    -0.01em;   /* -1% */
+    /* H2 tracking stays at -0.005em (same on both) */
+  }
+}
