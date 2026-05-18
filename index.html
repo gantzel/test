@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Typography</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="#overview" class="is-active">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Foundation</strong> &nbsp;·&nbsp; Typography</span>
+        <span>v 0.1 — Draft</span>
+        <span>Tokens · App · Mobile Web · Desktop</span>
+      </div>
+
+      <h1 class="hero__title">Typography<br /><em>foundation.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The eCare typography system is built on a single typeface — YouNik —
+            and a tight set of role-based tokens that snap between an
+            App / Mobile and a Desktop scale at 1024 px. Every component reads from
+            this surface, so the type stays consistent from a 12-pixel label
+            on a card to a 56-pixel block on a marketing page.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            This page is the canonical reference. Each token is shown in
+            isolation with its size, weight, leading and tracking. Values are
+            generated from the Figma variable export — when the Figma file
+            changes, regenerate the tokens here.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">1</div>
+          <div class="stat__lab">Typeface · YouNik</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">2</div>
+          <div class="stat__lab">Weights · 400 / 500</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">10</div>
+          <div class="stat__lab">Text roles</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">7</div>
+          <div class="stat__lab">Component roles</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TYPEFACE ===== -->
+    <section id="typeface" class="section" data-screen-label="02 Typeface">
+      <div class="eyebrow">02 · Typeface</div>
+      <h2 class="section__title type-h1">YouNik.</h2>
+      <p class="section__lead type-body-large">
+        YouNik is the brand voice of eCare. Drawn with a soft humanist
+        rhythm and a near-monolinear stroke, it carries equally well at
+        display and at UI scale. We ship two weights — Regular for reading
+        and Medium for emphasis and headings.
+      </p>
+
+      <div class="specimen">
+        <p class="specimen__big">Aa<span class="alt">Aa</span></p>
+      </div>
+
+      <!-- glyph grid -->
+      <div class="glyph-grid" aria-label="Character set preview">
+        <div class="glyph">A</div><div class="glyph">B</div><div class="glyph">C</div><div class="glyph">D</div>
+        <div class="glyph">E</div><div class="glyph">F</div><div class="glyph">G</div><div class="glyph">H</div>
+        <div class="glyph">I</div><div class="glyph">J</div><div class="glyph">K</div><div class="glyph">L</div>
+        <div class="glyph">M</div><div class="glyph">N</div><div class="glyph">O</div><div class="glyph">P</div>
+        <div class="glyph">Q</div><div class="glyph">R</div><div class="glyph">S</div><div class="glyph">T</div>
+        <div class="glyph">U</div><div class="glyph">V</div><div class="glyph">W</div><div class="glyph">X</div>
+        <div class="glyph">Y</div><div class="glyph">Z</div>
+        <div class="glyph">a</div><div class="glyph">b</div><div class="glyph">c</div><div class="glyph">d</div>
+        <div class="glyph">e</div><div class="glyph">f</div><div class="glyph">g</div><div class="glyph">h</div>
+        <div class="glyph">i</div><div class="glyph">j</div><div class="glyph">k</div><div class="glyph">l</div>
+        <div class="glyph">m</div><div class="glyph">n</div><div class="glyph">o</div><div class="glyph">p</div>
+        <div class="glyph">q</div><div class="glyph">r</div><div class="glyph">s</div><div class="glyph">t</div>
+        <div class="glyph">u</div><div class="glyph">v</div><div class="glyph">w</div><div class="glyph">x</div>
+        <div class="glyph">y</div><div class="glyph">z</div>
+        <div class="glyph">0</div><div class="glyph">1</div><div class="glyph">2</div><div class="glyph">3</div>
+        <div class="glyph">4</div><div class="glyph">5</div><div class="glyph">6</div><div class="glyph">7</div>
+        <div class="glyph">8</div><div class="glyph">9</div>
+        <div class="glyph">.</div><div class="glyph">,</div><div class="glyph">;</div><div class="glyph">:</div>
+        <div class="glyph">!</div><div class="glyph">?</div><div class="glyph">&amp;</div><div class="glyph">@</div>
+        <div class="glyph">#</div><div class="glyph">%</div><div class="glyph">+</div><div class="glyph">−</div>
+        <div class="glyph">/</div><div class="glyph">(</div><div class="glyph">)</div><div class="glyph">€</div>
+      </div>
+
+      <!-- weights -->
+      <div class="weights">
+        <div class="weight">
+          <p class="weight__sample" style="font-weight:400">Care, clearly.</p>
+          <div class="weight__meta"><span><strong>YouNik Regular</strong></span><span>400</span></div>
+        </div>
+        <div class="weight">
+          <p class="weight__sample" style="font-weight:500">Care, clearly.</p>
+          <div class="weight__meta"><span><strong>YouNik Medium</strong></span><span>500</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TYPE SCALE — SIDE-BY-SIDE COMPARISON ===== -->
+    <section id="scale" class="section" data-screen-label="03 Type scale">
+      <div class="eyebrow">03 · Type scale · Side-by-side</div>
+      <h2 class="section__title type-h1">Mobile next to Desktop.</h2>
+      <p class="section__lead type-body-large">
+        Every text role rendered at its actual pixel size for both breakpoints,
+        so the difference between app/mobile and desktop is readable at a glance.
+        Type doesn't interpolate — it snaps at <span class="mono">1024&nbsp;px</span>.
+        Δ is the size jump in pixels between the two modes.
+      </p>
+
+      <div class="compare__wrap">
+        <div class="compare__bar">
+          <div></div>
+          <div><span class="compare__pill">App · Mobile</span><span>375 px viewport</span></div>
+          <div><span class="compare__pill compare__pill--alt">Desktop</span><span>1440 px viewport</span></div>
+          <div></div>
+        </div>
+
+        <table class="compare">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th class="compare__col">App / Mobile</th>
+              <th class="compare__col">Desktop</th>
+              <th>Δ size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Block</td>
+              <td><span class="compare__sample" style="font-size:48px;line-height:50px;letter-spacing:-0.005em;">eCare</span><div class="compare__rule">48 / 50 / −0.5%</div></td>
+              <td><span class="compare__sample" style="font-size:56px;line-height:60px;letter-spacing:-0.01em;">eCare</span><div class="compare__rule">56 / 60 / −1%</div></td>
+              <td><span class="compare__delta--pos">+8 px</span></td>
+            </tr>
+            <tr>
+              <td>H1</td>
+              <td><span class="compare__sample" style="font-size:32px;line-height:33px;letter-spacing:-0.005em;">eCare</span><div class="compare__rule">32 / 33 / −0.5%</div></td>
+              <td><span class="compare__sample" style="font-size:48px;line-height:50px;letter-spacing:-0.01em;">eCare</span><div class="compare__rule">48 / 50 / −1%</div></td>
+              <td><span class="compare__delta--pos">+16 px</span></td>
+            </tr>
+            <tr>
+              <td>H2</td>
+              <td><span class="compare__sample" style="font-size:26px;line-height:27px;letter-spacing:-0.005em;">eCare</span><div class="compare__rule">26 / 27 / −0.5%</div></td>
+              <td><span class="compare__sample" style="font-size:30px;line-height:31px;letter-spacing:-0.005em;">eCare</span><div class="compare__rule">30 / 31 / −0.5%</div></td>
+              <td><span class="compare__delta--pos">+4 px</span></td>
+            </tr>
+            <tr>
+              <td>H3</td>
+              <td><span class="compare__sample" style="font-size:20px;line-height:22px;">eCare</span><div class="compare__rule">20 / 22 / 0</div></td>
+              <td><span class="compare__sample" style="font-size:23px;line-height:24px;">eCare</span><div class="compare__rule">23 / 24 / 0</div></td>
+              <td><span class="compare__delta--pos">+3 px</span></td>
+            </tr>
+            <tr>
+              <td>H4</td>
+              <td><span class="compare__sample" style="font-size:16px;line-height:18px;">eCare</span><div class="compare__rule">16 / 18 / 0</div></td>
+              <td><span class="compare__sample" style="font-size:18px;line-height:20px;">eCare</span><div class="compare__rule">18 / 20 / 0</div></td>
+              <td><span class="compare__delta--pos">+2 px</span></td>
+            </tr>
+            <tr>
+              <td>Body L</td>
+              <td><span class="compare__sample compare__sample--reg" style="font-size:16px;line-height:18px;">eCare</span><div class="compare__rule">16 / 18 · 400</div></td>
+              <td><span class="compare__sample compare__sample--reg" style="font-size:18px;line-height:20px;">eCare</span><div class="compare__rule">18 / 20 · 400</div></td>
+              <td><span class="compare__delta--pos">+2 px</span></td>
+            </tr>
+            <tr>
+              <td>H5</td>
+              <td><span class="compare__sample" style="font-size:16px;line-height:18px;">eCare</span><div class="compare__rule">16 / 18 / 0</div></td>
+              <td><span class="compare__sample" style="font-size:16px;line-height:18px;">eCare</span><div class="compare__rule">16 / 18 / 0</div></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Body S</td>
+              <td><span class="compare__sample compare__sample--reg" style="font-size:14px;line-height:16px;">eCare</span><div class="compare__rule">14 / 16 · 400</div></td>
+              <td><span class="compare__sample compare__sample--reg" style="font-size:16px;line-height:18px;">eCare</span><div class="compare__rule">16 / 18 · 400</div></td>
+              <td><span class="compare__delta--pos">+2 px</span></td>
+            </tr>
+            <tr>
+              <td>H6</td>
+              <td><span class="compare__sample" style="font-size:14px;line-height:15px;">eCare</span><div class="compare__rule">14 / 15 / 0</div></td>
+              <td><span class="compare__sample" style="font-size:14px;line-height:16px;">eCare</span><div class="compare__rule">14 / 16 / 0</div></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>H7</td>
+              <td><span class="compare__sample" style="font-size:12px;line-height:14px;">eCare</span><div class="compare__rule">12 / 14 / 0</div></td>
+              <td><span class="compare__sample" style="font-size:12px;line-height:14px;">eCare</span><div class="compare__rule">12 / 14 / 0</div></td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="muted" style="margin-top: 28px; font-size: 13px; font-family: var(--font-family-mono); line-height: 1.7;">
+        Breakpoint · viewport &lt; 1024px uses App / Mobile values,<br />
+        viewport ≥ 1024px uses Desktop values. Roles without Δ are constant across breakpoints.
+      </p>
+    </section>
+
+    <!-- ===== TOKENS IN ISOLATION ===== -->
+    <section id="tokens" class="section" data-screen-label="04 Tokens">
+      <div class="eyebrow">04 · Tokens in isolation</div>
+      <h2 class="section__title type-h1">Each role, in detail.</h2>
+      <p class="section__lead type-body-large">
+        A specification card per role. The left side renders the role in its
+        actual style; the right side lists the four properties any consumer
+        needs — size, weight, leading and tracking — plus the CSS variable and
+        utility class.
+      </p>
+
+      <!-- Block -->
+      <article class="token" data-screen-label="04.01 Block">
+        <div class="token__preview">
+          <div class="token__name"><strong>Block</strong><span>Display / Marketing</span></div>
+          <p class="token__sample type-block">Care that meets you where you are.</p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-block-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-block</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">48 → 56 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">500 Medium</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.07 (60/56)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">−0.01 em</div></div>
+        </div>
+      </article>
+
+      <!-- H1 -->
+      <article class="token" data-screen-label="04.02 H1">
+        <div class="token__preview">
+          <div class="token__name"><strong>H1</strong><span>Page title</span></div>
+          <p class="token__sample type-h1">Manage your care plan.</p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-h1-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-h1 · &lt;h1&gt;</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">32 → 48 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">500 Medium</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.04 (50/48)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">−0.01 em</div></div>
+        </div>
+      </article>
+
+      <!-- H2 -->
+      <article class="token" data-screen-label="04.03 H2">
+        <div class="token__preview">
+          <div class="token__name"><strong>H2</strong><span>Section heading</span></div>
+          <p class="token__sample type-h2">Upcoming appointments this week</p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-h2-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-h2 · &lt;h2&gt;</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">26 → 30 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">500 Medium</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.03 (31/30)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">−0.005 em</div></div>
+        </div>
+      </article>
+
+      <!-- H3 -->
+      <article class="token" data-screen-label="04.04 H3">
+        <div class="token__preview">
+          <div class="token__name"><strong>H3</strong><span>Sub-section heading</span></div>
+          <p class="token__sample type-h3">Recent prescriptions and refills</p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-h3-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-h3 · &lt;h3&gt;</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">20 → 23 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">500 Medium</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.04 (24/23)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">0</div></div>
+        </div>
+      </article>
+
+      <!-- H4 -->
+      <article class="token" data-screen-label="04.05 H4">
+        <div class="token__preview">
+          <div class="token__name"><strong>H4</strong><span>Card title</span></div>
+          <p class="token__sample type-h4">Annual physical exam</p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-h4-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-h4 · &lt;h4&gt;</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">16 → 18 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">500 Medium</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.11 (20/18)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">0</div></div>
+        </div>
+      </article>
+
+      <!-- H5 -->
+      <article class="token" data-screen-label="04.06 H5">
+        <div class="token__preview">
+          <div class="token__name"><strong>H5</strong><span>List header</span></div>
+          <p class="token__sample type-h5">Provider details</p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-h5-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-h5 · &lt;h5&gt;</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">16 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">500 Medium</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.13 (18/16)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">0</div></div>
+        </div>
+      </article>
+
+      <!-- H6 -->
+      <article class="token" data-screen-label="04.07 H6">
+        <div class="token__preview">
+          <div class="token__name"><strong>H6</strong><span>Inline label · meta heading</span></div>
+          <p class="token__sample type-h6">Lab results</p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-h6-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-h6 · &lt;h6&gt;</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">14 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">500 Medium</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.14 (16/14)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">0</div></div>
+        </div>
+      </article>
+
+      <!-- H7 -->
+      <article class="token" data-screen-label="04.08 H7">
+        <div class="token__preview">
+          <div class="token__name"><strong>H7</strong><span>Smallest heading · fine print title</span></div>
+          <p class="token__sample type-h7">Insurance &amp; billing</p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-h7-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-h7</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">12 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">500 Medium</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.17 (14/12)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">0</div></div>
+        </div>
+      </article>
+
+      <!-- Body Large -->
+      <article class="token" data-screen-label="04.09 Body Large">
+        <div class="token__preview">
+          <div class="token__name"><strong>Body&nbsp;Large</strong><span>Default reading text</span></div>
+          <p class="token__sample type-body-large token__sample--multi">
+            Your doctor reviewed your latest results and noted that everything
+            looks within healthy range. We've scheduled a follow-up call for
+            next Tuesday to walk through the report together.
+          </p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-body-large-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-body-large · &lt;p&gt;</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">16 → 18 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">400 Regular</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.11 (20/18)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">0</div></div>
+        </div>
+      </article>
+
+      <!-- Body Small -->
+      <article class="token" data-screen-label="04.10 Body Small">
+        <div class="token__preview">
+          <div class="token__name"><strong>Body&nbsp;Small</strong><span>Secondary &amp; supportive text</span></div>
+          <p class="token__sample type-body-small token__sample--multi">
+            Refills typically take 24–48 hours to process. You'll receive a
+            notification when your prescription is ready for pickup or
+            scheduled for delivery.
+          </p>
+        </div>
+        <div class="token__spec">
+          <div class="spec spec--wide"><div class="spec__label">Token</div><div class="spec__value">--type-body-small-*</div></div>
+          <div class="spec spec--wide"><div class="spec__label">Class</div><div class="spec__value">.type-body-small</div></div>
+          <div class="spec"><div class="spec__label">Size</div><div class="spec__value">14 → 16 px</div></div>
+          <div class="spec"><div class="spec__label">Weight</div><div class="spec__value">400 Regular</div></div>
+          <div class="spec"><div class="spec__label">Leading</div><div class="spec__value">1.13 (18/16)</div></div>
+          <div class="spec"><div class="spec__label">Tracking</div><div class="spec__value">0</div></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== COMPONENT TYPE ===== -->
+    <section id="components" class="section" data-screen-label="05 Component type">
+      <div class="eyebrow">05 · Component type</div>
+      <h2 class="section__title type-h1">Type that lives inside components.</h2>
+      <p class="section__lead type-body-large">
+        Labels, buttons and avatars use dedicated tokens so their rhythm
+        stays predictable inside dense UI. These do not scale fluidly —
+        their sizes are constant across breakpoints by design.
+      </p>
+
+      <div class="compgrid">
+        <div class="compcell">
+          <div class="compcell__sample">
+            <span class="lbl-pill">Active</span>
+          </div>
+          <div class="compcell__name"><strong>Label</strong><span>12 / 12 · +0.3%</span></div>
+        </div>
+
+        <div class="compcell">
+          <div class="compcell__sample"><button class="btn-large" type="button">Schedule visit</button></div>
+          <div class="compcell__name"><strong>Button · Large</strong><span>16 / 18 · +0.2%</span></div>
+        </div>
+        <div class="compcell">
+          <div class="compcell__sample"><button class="btn-medium" type="button">Continue</button></div>
+          <div class="compcell__name"><strong>Button · Medium</strong><span>14 / 15 · +0.2%</span></div>
+        </div>
+        <div class="compcell">
+          <div class="compcell__sample"><button class="btn-small" type="button">Dismiss</button></div>
+          <div class="compcell__name"><strong>Button · Small</strong><span>12 / 12 · 0</span></div>
+        </div>
+
+        <div class="compcell">
+          <div class="compcell__sample"><span class="avatar avatar-large">JD</span></div>
+          <div class="compcell__name"><strong>Avatar · Large</strong><span>20 / 22 · +2%</span></div>
+        </div>
+        <div class="compcell">
+          <div class="compcell__sample"><span class="avatar avatar-medium">JD</span></div>
+          <div class="compcell__name"><strong>Avatar · Medium</strong><span>16 / 16 · +0.2%</span></div>
+        </div>
+        <div class="compcell">
+          <div class="compcell__sample"><span class="avatar avatar-small">JD</span></div>
+          <div class="compcell__name"><strong>Avatar · Small</strong><span>12 / 12 · +0.2%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESPONSIVE ===== -->
+    <section id="responsive" class="section" data-screen-label="06 Responsive">
+      <div class="eyebrow">06 · Responsive behaviour</div>
+      <h2 class="section__title type-h1">Snap at 1024 px.</h2>
+      <p class="section__lead type-body-large">
+        Type doesn't interpolate — it switches modes at a single
+        breakpoint. Below <span class="mono">1024&nbsp;px</span> every
+        scaling role uses its App / Mobile value; at or above
+        <span class="mono">1024&nbsp;px</span> it snaps to its Desktop
+        value. Drag the viewport below to see the change.
+      </p>
+
+      <div class="respdemo">
+        <div class="respdemo__bar">
+          <label>Mode</label>
+          <div class="respdemo__toggle" role="tablist" aria-label="Breakpoint mode">
+            <button id="modeMobile"  type="button" role="tab" data-mode="mobile"  aria-selected="false">App / Mobile <span class="mono muted">&lt; 1024</span></button>
+            <button id="modeDesktop" type="button" role="tab" data-mode="desktop" aria-selected="true">Desktop <span class="mono muted">≥ 1024</span></button>
+          </div>
+          <div class="respdemo__readout"><span id="vwOut">1280</span> px</div>
+        </div>
+        <div class="respdemo__frame" id="frame" style="width: 1280px; max-width: 100%;">
+          <div class="respdemo__inner">
+            <p class="type-h7 muted" style="margin:0">YOUR CARE TEAM</p>
+            <h1 id="respH1" style="margin:0;font-weight:500;">Care that meets you where you are.</h1>
+            <p id="respBody" style="margin:8px 0 0; max-width: 60ch; color: var(--doc-ink-soft);">
+              Schedule visits, refill prescriptions, message your providers
+              and review your records — all in one place.
+            </p>
+          </div>
+        </div>
+        <div style="padding: 0 20px 20px; display:flex; gap:32px; justify-content:center; flex-wrap:wrap; font-family: var(--font-family-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color: var(--doc-muted);">
+          <span>H1: <span id="h1px" style="color:var(--doc-ink)">—</span></span>
+          <span>Body L: <span id="bodypx" style="color:var(--doc-ink)">—</span></span>
+        </div>
+      </div>
+
+      <div style="margin-top: 28px; font-size: 13px; color: var(--doc-muted); font-family: var(--font-family-mono); line-height: 1.7;">
+        Implementation · <span style="color:var(--doc-ink)">@media (min-width: 1024px) { --font-size-h1: 3rem; … }</span>
+      </div>
+    </section>
+
+    <!-- ===== REFERENCE TABLE ===== -->
+    <section id="reference" class="section" data-screen-label="07 Reference">
+      <div class="eyebrow">07 · Reference</div>
+      <h2 class="section__title type-h1">All tokens, at a glance.</h2>
+      <p class="section__lead type-body-large">
+        The full enumeration for engineering — what to import, what each role
+        compiles to, and where it diverges between mobile and desktop.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>CSS class</th>
+              <th>Token prefix</th>
+              <th>Mobile</th>
+              <th>Desktop</th>
+              <th>Weight</th>
+              <th>Tracking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Block</td>     <td class="mono">.type-block</td>       <td class="mono">--type-block-*</td>      <td class="mono">48 / 50</td><td class="mono">56 / 60</td><td>500</td><td class="mono">−1%</td></tr>
+            <tr><td>H1</td>        <td class="mono">.type-h1</td>          <td class="mono">--type-h1-*</td>         <td class="mono">32 / 33</td><td class="mono">48 / 50</td><td>500</td><td class="mono">−1%</td></tr>
+            <tr><td>H2</td>        <td class="mono">.type-h2</td>          <td class="mono">--type-h2-*</td>         <td class="mono">26 / 27</td><td class="mono">30 / 31</td><td>500</td><td class="mono">−0.5%</td></tr>
+            <tr><td>H3</td>        <td class="mono">.type-h3</td>          <td class="mono">--type-h3-*</td>         <td class="mono">20 / 22</td><td class="mono">23 / 24</td><td>500</td><td class="mono">0</td></tr>
+            <tr><td>H4</td>        <td class="mono">.type-h4</td>          <td class="mono">--type-h4-*</td>         <td class="mono">16 / 18</td><td class="mono">18 / 20</td><td>500</td><td class="mono">0</td></tr>
+            <tr><td>H5</td>        <td class="mono">.type-h5</td>          <td class="mono">--type-h5-*</td>         <td class="mono">16 / 18</td><td class="mono">16 / 18</td><td>500</td><td class="mono">0</td></tr>
+            <tr><td>H6</td>        <td class="mono">.type-h6</td>          <td class="mono">--type-h6-*</td>         <td class="mono">14 / 15</td><td class="mono">14 / 16</td><td>500</td><td class="mono">0</td></tr>
+            <tr><td>H7</td>        <td class="mono">.type-h7</td>          <td class="mono">--type-h7-*</td>         <td class="mono">12 / 14</td><td class="mono">12 / 14</td><td>500</td><td class="mono">0</td></tr>
+            <tr><td>Body Large</td><td class="mono">.type-body-large</td>  <td class="mono">--type-body-large-*</td> <td class="mono">16 / 18</td><td class="mono">18 / 20</td><td>400</td><td class="mono">0</td></tr>
+            <tr><td>Body Small</td><td class="mono">.type-body-small</td>  <td class="mono">--type-body-small-*</td> <td class="mono">14 / 16</td><td class="mono">16 / 18</td><td>400</td><td class="mono">0</td></tr>
+            <tr><td>Label</td>          <td class="mono">.type-label</td>          <td class="mono">--type-label-*</td>          <td class="mono">12 / 12</td><td class="mono">12 / 12</td><td>500</td><td class="mono">+0.3%</td></tr>
+            <tr><td>Button · Large</td> <td class="mono">.type-button-large</td>   <td class="mono">--type-button-large-*</td>   <td class="mono">16 / 18</td><td class="mono">16 / 18</td><td>500</td><td class="mono">+0.2%</td></tr>
+            <tr><td>Button · Medium</td><td class="mono">.type-button-medium</td>  <td class="mono">--type-button-medium-*</td>  <td class="mono">14 / 15</td><td class="mono">14 / 15</td><td>500</td><td class="mono">+0.2%</td></tr>
+            <tr><td>Button · Small</td> <td class="mono">.type-button-small</td>   <td class="mono">--type-button-small-*</td>   <td class="mono">12 / 12</td><td class="mono">12 / 12</td><td>500</td><td class="mono">0</td></tr>
+            <tr><td>Avatar · Large</td> <td class="mono">.type-avatar-large</td>   <td class="mono">--type-avatar-large-*</td>   <td class="mono">20 / 22</td><td class="mono">20 / 22</td><td>500</td><td class="mono">+2%</td></tr>
+            <tr><td>Avatar · Medium</td><td class="mono">.type-avatar-medium</td>  <td class="mono">--type-avatar-medium-*</td>  <td class="mono">16 / 16</td><td class="mono">16 / 16</td><td>500</td><td class="mono">+0.2%</td></tr>
+            <tr><td>Avatar · Small</td> <td class="mono">.type-avatar-small</td>   <td class="mono">--type-avatar-small-*</td>   <td class="mono">12 / 12</td><td class="mono">12 / 12</td><td>500</td><td class="mono">+0.2%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== USAGE ===== -->
+    <section id="usage" class="section" data-screen-label="08 Usage">
+      <div class="eyebrow">08 · Usage</div>
+      <h2 class="section__title type-h1">How to use it.</h2>
+      <p class="section__lead type-body-large">
+        Two ways to reach the type system from product code — either pull the
+        utility class onto a semantic element, or reference the underlying CSS
+        variables directly when you need something custom.
+      </p>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">Utility class</h3>
+          <pre class="code"><span class="c">&lt;!-- Drop the class on a semantic tag --&gt;</span>
+<span class="k">&lt;h1</span> <span class="k">class=</span><span class="s">"type-h1"</span><span class="k">&gt;</span>
+  Manage your care plan.
+<span class="k">&lt;/h1&gt;</span>
+
+<span class="k">&lt;p</span> <span class="k">class=</span><span class="s">"type-body-large"</span><span class="k">&gt;</span>
+  Default reading text.
+<span class="k">&lt;/p&gt;</span></pre>
+        </div>
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">CSS variables</h3>
+          <pre class="code"><span class="c">/* Compose a custom block */</span>
+<span class="k">.callout</span> {
+  font-family: <span class="s">var(--type-h2-family)</span>;
+  font-size:   <span class="s">var(--type-h2-size)</span>;
+  font-weight: <span class="s">var(--type-h2-weight)</span>;
+  line-height: <span class="s">var(--type-h2-leading)</span>;
+  letter-spacing: <span class="s">var(--type-h2-tracking)</span>;
+}</pre>
+        </div>
+      </div>
+
+      <div style="margin-top: 48px;">
+        <h3 class="type-h3" style="margin: 0 0 12px">File layout</h3>
+        <pre class="code"><span class="c">/* Load order matters — tokens first, then utility classes */</span>
+<span class="k">&lt;link</span> <span class="k">rel=</span><span class="s">"stylesheet"</span> <span class="k">href=</span><span class="s">"css/tokens.css"</span><span class="k">&gt;</span>     <span class="c">// font-faces + CSS variables</span>
+<span class="k">&lt;link</span> <span class="k">rel=</span><span class="s">"stylesheet"</span> <span class="k">href=</span><span class="s">"css/typography.css"</span><span class="k">&gt;</span> <span class="c">// .type-* utility classes</span></pre>
+      </div>
+    </section>
+
+    <section class="section section--tight" style="text-align:center;" data-screen-label="09 Footer">
+      <div class="eyebrow" style="margin-bottom: 12px;">eCare Design System · Foundation 01</div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       Scripts — sidebar active + responsive demo
+       ============================================================ -->
+  <script>
+
+    // Responsive demo — binary toggle: App/Mobile vs Desktop
+    (function () {
+      const MOBILE = {
+        vw:    375,
+        h1:    { size: 32, line: 33, track: '-0.005em' },
+        body:  { size: 16, line: 18, track: '0' }
+      };
+      const DESKTOP = {
+        vw:    1280,
+        h1:    { size: 48, line: 50, track: '-0.01em' },
+        body:  { size: 18, line: 20, track: '0' }
+      };
+
+      const tabs    = document.querySelectorAll('.respdemo__toggle [data-mode]');
+      const out     = document.getElementById('vwOut');
+      const frame   = document.getElementById('frame');
+      const h1      = document.getElementById('respH1');
+      const body    = document.getElementById('respBody');
+      const h1px    = document.getElementById('h1px');
+      const bodypx  = document.getElementById('bodypx');
+
+      function apply(el, spec) {
+        el.style.fontSize      = spec.size + 'px';
+        el.style.lineHeight    = (spec.line / spec.size).toFixed(3);
+        el.style.letterSpacing = spec.track;
+      }
+
+      function set(mode) {
+        const cfg = mode === 'desktop' ? DESKTOP : MOBILE;
+        tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.mode === mode ? 'true' : 'false'));
+        out.textContent = cfg.vw;
+        const maxAvail = window.innerWidth - 80;
+        frame.style.width = Math.min(cfg.vw, maxAvail) + 'px';
+        apply(h1,   cfg.h1);
+        apply(body, cfg.body);
+        h1px.textContent   = cfg.h1.size + ' / ' + cfg.h1.line + ' px';
+        bodypx.textContent = cfg.body.size + ' / ' + cfg.body.line + ' px';
+      }
+      tabs.forEach(t => t.addEventListener('click', () => set(t.dataset.mode)));
+      window.addEventListener('resize', () => {
+        const active = document.querySelector('.respdemo__toggle [aria-selected="true"]');
+        set(active ? active.dataset.mode : 'desktop');
+      });
+      set('desktop');
+    })();
+  </script>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Spinner</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html" class="is-active">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== 01 OVERVIEW ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Component</strong> &nbsp;·&nbsp; Spinner</span>
+        <span>v 0.1 — Draft</span>
+        <span>2 variants · 40 px · CSS animation</span>
+      </div>
+
+      <h1 class="hero__title">Spinner<br /><em>component.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The Spinner is an animated loading indicator that communicates
+            that an operation is in progress. It is a rotating arc rendered
+            entirely in CSS — no image assets required.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            Two colour variants cover all contexts: Primary (brand green)
+            for use on light surfaces and Secondary (adaptive dark/light)
+            for use on any surface where the green would be inappropriate.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">2</div>
+          <div class="stat__lab">Variants</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">40 px</div>
+          <div class="stat__lab">Default size</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">4 px</div>
+          <div class="stat__lab">Stroke width</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">0.75 s</div>
+          <div class="stat__lab">Rotation speed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 VARIANTS ===== -->
+    <section id="variants" class="section" data-screen-label="02 Variants">
+      <div class="eyebrow">02 · Variants</div>
+      <h2 class="section__title type-h1">Two variants.</h2>
+      <p class="section__lead type-body-large">
+        Primary uses the brand green and is the default choice on white and
+        light grey surfaces. Secondary adapts to the current theme — dark on
+        light, light on dark.
+      </p>
+
+      <div class="sp-variants">
+
+        <div class="sp-variants__row">
+          <div class="sp-variants__label">
+            <strong>Primary</strong>
+            <span>spinner</span>
+          </div>
+          <div class="sp-variants__demo">
+            <div class="spinner" role="status" aria-label="Loading"></div>
+          </div>
+          <div class="sp-variants__note">Default — brand green on light surfaces</div>
+        </div>
+
+        <div class="sp-variants__row sp-variants__row--last">
+          <div class="sp-variants__label">
+            <strong>Secondary</strong>
+            <span>spinner--secondary</span>
+          </div>
+          <div class="sp-variants__demo">
+            <div class="spinner spinner--secondary" role="status" aria-label="Loading"></div>
+          </div>
+          <div class="sp-variants__note">Adaptive — dark in light mode, light in dark mode</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 03 ANATOMY ===== -->
+    <section id="anatomy" class="section" data-screen-label="03 Anatomy">
+      <div class="eyebrow">03 · Anatomy</div>
+      <h2 class="section__title type-h1">One part.</h2>
+
+      <div class="anatomy">
+        <div class="anatomy__preview">
+          <div class="sp-anat" aria-hidden="true">
+            <div class="sp-anat__wrap" data-part-a>
+              <div class="spinner sp-anat__spinner"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="anatomy__parts">
+          <div class="part">
+            <div class="part__badge">A</div>
+            <div class="part__info">
+              <strong class="part__name">Arc</strong>
+              <p class="part__desc">
+                A single <span class="mono">40 × 40 px</span> element with
+                <span class="mono">border-radius: 50%</span> and a
+                <span class="mono">4 px</span> border. Three sides are
+                coloured; one side is <span class="mono">transparent</span>
+                to form the open arc. A CSS
+                <span class="mono">@keyframes</span> animation rotates it
+                continuously at <span class="mono">0.75 s</span> per revolution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 TOKENS ===== -->
+    <section id="tokens" class="section" data-screen-label="04 Tokens">
+      <div class="eyebrow">04 · Tokens</div>
+      <h2 class="section__title type-h1">Figma variables.</h2>
+      <p class="section__lead type-body-large">
+        The Primary variant is always brand green. The Secondary variant
+        follows the text colour of the current theme so it always contrasts
+        with the surface it sits on.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Figma variable</th>
+              <th>Light</th>
+              <th>Dark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">--color-brand-primary</td>
+              <td class="mono">Brand / Primary</td>
+              <td><span class="token-swatch" style="background:var(--color-brand-primary);"></span><span class="mono">Primary arc</span></td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--color-text-dark-primary</td>
+              <td class="mono">Text / Dark Colors / Text Primary</td>
+              <td><span class="token-swatch" style="background:var(--color-text-dark-primary);border:1px solid var(--doc-hairline);"></span><span class="mono">Secondary arc</span></td>
+              <td class="mono" style="color:var(--doc-muted);">— not used</td>
+            </tr>
+            <tr>
+              <td class="mono">--color-text-light-primary</td>
+              <td class="mono">Text / Light Colors / Text Primary</td>
+              <td class="mono" style="color:var(--doc-muted);">— not used</td>
+              <td><span class="token-swatch" style="background:var(--color-text-light-primary);border:1px solid var(--doc-hairline);"></span><span class="mono">Secondary arc</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 05 CODE ===== -->
+    <section id="code" class="section" data-screen-label="05 Code">
+      <div class="eyebrow">05 · Code</div>
+      <h2 class="section__title type-h1">How to build it.</h2>
+      <p class="section__lead type-body-large">
+        A single <span class="mono">div</span> with
+        <span class="mono">role="status"</span> and an
+        <span class="mono">aria-label</span> for screen readers.
+        The modifier class switches the colour variant.
+      </p>
+
+      <div style="display:grid; gap: 24px;">
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">HTML structure</h3>
+          <pre class="code"><span class="c">&lt;!-- Primary (brand green) --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"spinner"</span>
+     <span class="k">role=</span><span class="s">"status"</span>
+     <span class="k">aria-label=</span><span class="s">"Loading"</span><span class="k">&gt;&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Secondary (adaptive) --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"spinner spinner--secondary"</span>
+     <span class="k">role=</span><span class="s">"status"</span>
+     <span class="k">aria-label=</span><span class="s">"Loading"</span><span class="k">&gt;&lt;/div&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">Modifier</h3>
+          <pre class="code"><span class="c">/* Applied to .spinner */</span>
+<span class="k">.spinner--secondary</span>  <span class="c">/* Dark in light mode, light in dark mode */</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">CSS</h3>
+          <pre class="code"><span class="k">.spinner</span> {
+  display:       inline-block;
+  width:         40px;
+  height:        40px;
+  border-radius: 50%;
+  border:        4px solid transparent;
+  border-top-color:    <span class="s">var(--color-brand-primary)</span>;
+  border-right-color:  <span class="s">var(--color-brand-primary)</span>;
+  border-bottom-color: <span class="s">var(--color-brand-primary)</span>;
+  animation:     spinner-rotate 0.75s linear infinite;
+}
+
+<span class="k">.spinner--secondary</span> {
+  border-top-color:    <span class="s">var(--color-text-dark-primary)</span>;
+  border-right-color:  <span class="s">var(--color-text-dark-primary)</span>;
+  border-bottom-color: <span class="s">var(--color-text-dark-primary)</span>;
+}
+
+<span class="k">[data-color-theme="dark"] .spinner--secondary</span> {
+  border-top-color:    <span class="s">var(--color-text-light-primary)</span>;
+  border-right-color:  <span class="s">var(--color-text-light-primary)</span>;
+  border-bottom-color: <span class="s">var(--color-text-light-primary)</span>;
+}
+
+<span class="k">@keyframes spinner-rotate</span> {
+  to { transform: rotate(360deg); }
+}</pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <section class="section section--tight" style="text-align:center;" data-screen-label="06 Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Components</div>
+    </section>
+
+  </main>
+
+  <style>
+    /* ---- Variants table ---- */
+    .sp-variants {
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius-lg);
+      overflow: hidden;
+    }
+    .sp-variants__row {
+      display: grid;
+      grid-template-columns: 180px 1fr 1fr;
+      align-items: center;
+      border-bottom: 1px solid var(--doc-hairline);
+      min-height: 100px;
+    }
+    .sp-variants__row--last { border-bottom: none; }
+    .sp-variants__label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 20px 24px;
+      background: var(--doc-surface);
+      border-right: 1px solid var(--doc-hairline);
+      font-family: var(--font-family-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+    .sp-variants__label strong { color: var(--doc-ink); font-weight: 500; }
+    .sp-variants__label span  { color: var(--doc-muted); }
+    .sp-variants__demo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 32px;
+    }
+    .sp-variants__note {
+      padding: 20px 24px;
+      border-left: 1px solid var(--doc-hairline);
+      font-size: 12px;
+      color: var(--doc-muted);
+      line-height: 1.5;
+    }
+
+    /* ---- Anatomy ---- */
+    .sp-anat {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 32px;
+    }
+    .sp-anat__wrap {
+      position: relative;
+      display: inline-flex;
+    }
+    .sp-anat__spinner {
+      width: 64px;
+      height: 64px;
+      border-width: 6px;
+      animation-duration: 1.5s;
+    }
+    .sp-anat__wrap[data-part-a]::before {
+      content: 'A';
+      position: absolute;
+      top: -14px; left: -14px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    /* ---- Token swatch ---- */
+    .token-swatch {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border-radius: var(--border-radius-4);
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  </style>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Divider</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html" class="is-active">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== 01 OVERVIEW ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Component</strong> &nbsp;·&nbsp; Divider</span>
+        <span>v 0.1 — Draft</span>
+        <span>1 variant · horizontal · 1 px stroke</span>
+      </div>
+
+      <h1 class="hero__title">Divider<br /><em>component.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The Divider is a single 1 px horizontal line that creates a
+            visual separation between adjacent content blocks — list rows,
+            sections, or groups of related elements. It carries no semantic
+            meaning beyond structure, so it is marked as presentational.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            A single token, <span class="mono">--color-divider</span>, drives
+            the colour in both light and dark mode. The line is always 1 px tall
+            and stretches to fill its container. No variants, no modifiers.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">1</div>
+          <div class="stat__lab">Variant</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">1 px</div>
+          <div class="stat__lab">Height</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">1</div>
+          <div class="stat__lab">Token</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">23%</div>
+          <div class="stat__lab">Opacity</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 USAGE ===== -->
+    <section id="usage" class="section" data-screen-label="02 Usage">
+      <div class="eyebrow">02 · Usage</div>
+      <h2 class="section__title type-h1">In context.</h2>
+      <p class="section__lead type-body-large">
+        Place a Divider between list rows, between a header and its content,
+        or to mark a transition between two content groups. Avoid stacking
+        dividers or using them as decorative elements.
+      </p>
+
+      <div class="div-examples">
+
+        <!-- Example 1: list rows -->
+        <div class="div-example-card">
+          <div class="div-example-card__label">Between list rows</div>
+          <div class="div-example-card__preview">
+            <div class="div-mock-list">
+              <div class="div-mock-row">
+                <div class="div-mock-row__title">Metformin 500 mg</div>
+                <div class="div-mock-row__sub">2 × daily · Morning &amp; Evening</div>
+              </div>
+              <hr class="divider" aria-hidden="true" />
+              <div class="div-mock-row">
+                <div class="div-mock-row__title">Lisinopril 10 mg</div>
+                <div class="div-mock-row__sub">1 × daily · Morning</div>
+              </div>
+              <hr class="divider" aria-hidden="true" />
+              <div class="div-mock-row">
+                <div class="div-mock-row__title">Atorvastatin 20 mg</div>
+                <div class="div-mock-row__sub">1 × daily · Evening</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example 2: section separation -->
+        <div class="div-example-card">
+          <div class="div-example-card__label">Between sections</div>
+          <div class="div-example-card__preview">
+            <div class="div-mock-section">
+              <div class="div-mock-section__heading">Personal information</div>
+              <div class="div-mock-section__body">
+                <div class="div-mock-field">
+                  <span class="div-mock-field__label">Full name</span>
+                  <span class="div-mock-field__value">Anders Nielsen</span>
+                </div>
+                <div class="div-mock-field">
+                  <span class="div-mock-field__label">CPR</span>
+                  <span class="div-mock-field__value">010174-xxxx</span>
+                </div>
+              </div>
+              <hr class="divider" aria-hidden="true" style="margin: 16px 0;" />
+              <div class="div-mock-section__heading">Contact</div>
+              <div class="div-mock-section__body">
+                <div class="div-mock-field">
+                  <span class="div-mock-field__label">Phone</span>
+                  <span class="div-mock-field__value">+45 20 00 00 00</span>
+                </div>
+                <div class="div-mock-field">
+                  <span class="div-mock-field__label">Email</span>
+                  <span class="div-mock-field__value">anders@example.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 03 ANATOMY ===== -->
+    <section id="anatomy" class="section" data-screen-label="03 Anatomy">
+      <div class="eyebrow">03 · Anatomy</div>
+      <h2 class="section__title type-h1">One part.</h2>
+
+      <div class="anatomy">
+        <div class="anatomy__preview">
+          <div class="div-anat" aria-hidden="true">
+            <div class="div-anat__wrap">
+              <div class="div-anat__badge">A</div>
+              <hr class="divider div-anat__line" />
+            </div>
+          </div>
+        </div>
+
+        <div class="anatomy__parts">
+          <div class="part">
+            <div class="part__badge">A</div>
+            <div class="part__info">
+              <strong class="part__name">Line</strong>
+              <p class="part__desc">
+                A block-level element, <span class="mono">1 px</span> tall, stretching to
+                the full width of its container. Background colour is
+                <span class="mono">--color-divider</span> — an
+                <span class="mono">rgba</span> value at 23% opacity that adapts
+                automatically to light and dark mode. No border, no padding,
+                no margin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 TOKENS ===== -->
+    <section id="tokens" class="section" data-screen-label="04 Tokens">
+      <div class="eyebrow">04 · Tokens</div>
+      <h2 class="section__title type-h1">Figma variables.</h2>
+      <p class="section__lead type-body-large">
+        A single adaptive token controls the line colour. It resolves to a
+        different <span class="mono">rgba</span> value in light and dark mode,
+        so the visual weight stays consistent across themes.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Figma variable</th>
+              <th>Light</th>
+              <th>Dark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">--color-divider</td>
+              <td class="mono">System / System Colors / Divider</td>
+              <td><span class="token-swatch" style="background:var(--color-divider);border:1px solid var(--doc-hairline);"></span><span class="mono">--color-divider</span></td>
+              <td><span class="token-swatch" style="background:var(--color-divider);border:1px solid var(--doc-hairline);"></span><span class="mono">--color-divider</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 05 CODE ===== -->
+    <section id="code" class="section" data-screen-label="05 Code">
+      <div class="eyebrow">05 · Code</div>
+      <h2 class="section__title type-h1">How to build it.</h2>
+      <p class="section__lead type-body-large">
+        A single <span class="mono">&lt;hr&gt;</span> element with the
+        <span class="mono">.divider</span> class. Mark it
+        <span class="mono">aria-hidden="true"</span> when it is purely decorative —
+        which is almost always the case.
+      </p>
+
+      <div style="display:grid; gap: 24px;">
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">HTML</h3>
+          <pre class="code"><span class="c">&lt;!-- Standard usage — decorative, hidden from screen readers --&gt;</span>
+<span class="k">&lt;hr</span> <span class="k">class=</span><span class="s">"divider"</span> <span class="k">aria-hidden=</span><span class="s">"true"</span> <span class="k">/&gt;</span>
+
+<span class="c">&lt;!-- Semantic separator — omit aria-hidden if the separation is meaningful --&gt;</span>
+<span class="k">&lt;hr</span> <span class="k">class=</span><span class="s">"divider"</span> <span class="k">role=</span><span class="s">"separator"</span> <span class="k">/&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">CSS</h3>
+          <pre class="code"><span class="k">.divider</span> {
+  display: block;
+  height: 1px;
+  background: <span class="s">var(--color-divider)</span>;
+  border: none;
+  width: 100%;
+  margin: 0;
+}</pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <section class="section section--tight" style="text-align:center;" data-screen-label="06 Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Components</div>
+    </section>
+
+  </main>
+
+  <style>
+    /* ---- Usage examples ---- */
+    .div-examples {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-medium);
+    }
+    @media (max-width: 800px) {
+      .div-examples { grid-template-columns: 1fr; }
+    }
+
+    .div-example-card {
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius);
+      overflow: hidden;
+    }
+    .div-example-card__label {
+      padding: 10px var(--spacing-medium);
+      font-size: 12px;
+      font-weight: var(--font-weight-medium);
+      color: var(--doc-muted);
+      border-bottom: 1px solid var(--doc-hairline);
+    }
+    .div-example-card__preview {
+      padding: var(--spacing-large);
+      background: var(--doc-surface);
+    }
+
+    /* Mock list */
+    .div-mock-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .div-mock-row {
+      padding: 12px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .div-mock-row__title {
+      font-size: 14px;
+      font-weight: var(--font-weight-medium);
+      color: var(--doc-ink);
+    }
+    .div-mock-row__sub {
+      font-size: 12px;
+      color: var(--doc-ink-soft);
+    }
+
+    /* Mock section */
+    .div-mock-section {
+      display: flex;
+      flex-direction: column;
+    }
+    .div-mock-section__heading {
+      font-size: 12px;
+      font-weight: var(--font-weight-medium);
+      color: var(--doc-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+    .div-mock-section__body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .div-mock-field {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .div-mock-field__label {
+      font-size: 13px;
+      color: var(--doc-ink-soft);
+    }
+    .div-mock-field__value {
+      font-size: 13px;
+      font-weight: var(--font-weight-medium);
+      color: var(--doc-ink);
+    }
+
+    /* ---- Anatomy ---- */
+    .div-anat {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 0;
+      width: 100%;
+    }
+    .div-anat__wrap {
+      position: relative;
+      width: 280px;
+    }
+    .div-anat__badge {
+      position: absolute;
+      top: -14px;
+      left: -14px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .div-anat__line {
+      width: 100%;
+    }
+
+    /* ---- Token swatch ---- */
+    .token-swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: var(--border-radius-4);
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  </style>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Colors</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="#overview" class="is-active">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- 01 OVERVIEW -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Foundation</strong> &nbsp;·&nbsp; Colors</span>
+        <span>v 0.1 — Draft</span>
+        <span>Variables · Figma · CSS tokens</span>
+      </div>
+      <h1 class="hero__title">Colors<br /><em>foundation.</em></h1>
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>The eCare color system is built directly from Figma variables and exported as CSS custom properties. Every token has a semantic name that describes its purpose, so the system stays meaningful as the palette evolves.</p>
+        </div>
+        <div class="hero__col">
+          <p>The system covers two themes — Light and Dark — with 68 tokens per theme. Use the toggle at the top of each section to preview how colors shift between modes.</p>
+        </div>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><div class="stat__num">68</div><div class="stat__lab">Tokens per theme</div></div>
+        <div class="stat"><div class="stat__num">2</div><div class="stat__lab">Themes</div></div>
+        <div class="stat"><div class="stat__num">9</div><div class="stat__lab">Color groups</div></div>
+        <div class="stat"><div class="stat__num">12</div><div class="stat__lab">Background colors</div></div>
+      </div>
+    </section>
+
+    <!-- 02 BRAND -->
+    <section id="brand" class="section" data-screen-label="02 Brand palette">
+      <div class="eyebrow">02 · Brand palette</div>
+      <h2 class="section__title type-h1">Two brand colors.</h2>
+      <p class="section__lead type-body-large">Primary is the signature YouSee green — vivid and action-forward. Secondary is the near-black surface color used for UI frames, dark-mode backgrounds and interactive controls.</p>
+      <div class="swatch-grid swatch-grid--2">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#00DC00;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Primary</div>
+            <div class="swatch-card__path">Color Palette / Primary Color</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#00DC00</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">RGB</span><span class="swatch-card__value mono">0, 220, 0</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-brand-primary</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Same in</span><span class="swatch-card__value">Both themes</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-brand-secondary);">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Secondary</div>
+            <div class="swatch-card__path">Color Palette / Secondary Color</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#323232</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#FFFFFF</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-brand-secondary</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 BACKGROUNDS -->
+    <section id="backgrounds" class="section" data-screen-label="03 Backgrounds">
+      <div class="eyebrow">03 · Background colors</div>
+      <h2 class="section__title type-h1">Surface palette.</h2>
+      <p class="section__lead type-body-large">Twelve background tokens cover the full range from near-black to white. Most are static across themes — Frame Background, Neutral Card, Product Cards and Navigation Top Bar adapt to the active mode.</p>
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-bg-frame);border:1px solid var(--doc-hairline);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.5)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Frame Background</div>
+            <div class="swatch-card__path">Background Colors / Frame Background</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#FFFFFF</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#323232</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-frame</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#0F140A;">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Dark Green</div>
+            <div class="swatch-card__path">Background Colors / Dark Green</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#0F140A</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-dark-green</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#3C3F34;">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">GreenGrey</div>
+            <div class="swatch-card__path">Background Colors / GreenGrey</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#3C3F34</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-green-grey</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#696A5E;">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Grey</div>
+            <div class="swatch-card__path">Background Colors / Grey</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#696A5E</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-grey</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#8B8A7D;">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">MidGrey</div>
+            <div class="swatch-card__path">Background Colors / MidGrey</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#8B8A7D</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-mid-grey</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#CECBBD;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">LightGrey</div>
+            <div class="swatch-card__path">Background Colors / LightGrey</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#CECBBD</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-light-grey</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#F0EBDC;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Light</div>
+            <div class="swatch-card__path">Background Colors / Light</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#F0EBDC</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-light</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#FFD200;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Yellow</div>
+            <div class="swatch-card__path">Background Colors / Yellow</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#FFD200</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-yellow</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#FF786E;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Red</div>
+            <div class="swatch-card__path">Background Colors / Red</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#FF786E</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-red</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-bg-neutral-card);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Neutral Card Grey</div>
+            <div class="swatch-card__path">Background Colors / Neutral Card Grey</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#D9D5C7</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#8B8A7D</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-neutral-card</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-bg-product-cards);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Product Cards</div>
+            <div class="swatch-card__path">Background Colors / Background Product Cards</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(240,235,220,.6)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#696A5E</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-product-cards</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-bg-nav);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Navigation Top Bar</div>
+            <div class="swatch-card__path">Background Colors / Navigation Top Bar</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#F0F0F0</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#191919</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-bg-nav-top</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 TEXT -->
+    <section id="text" class="section" data-screen-label="04 Text colors">
+      <div class="eyebrow">04 · Text colors</div>
+      <h2 class="section__title type-h1">Readable on any surface.</h2>
+      <p class="section__lead type-body-large">Text tokens use semi-transparent black or white so they naturally adapt to any colored surface. "Light Colors" are for text on dark surfaces; "Dark Colors" are for text on light surfaces. The values swap between themes.</p>
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:rgba(255,255,255,0.87);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Text Light Primary</div>
+            <div class="swatch-card__path">Text / Light Colors / Text Primary</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(255,255,255,.87)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(0,0,0,.8)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-text-light-primary</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:rgba(255,255,255,0.6);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Text Light Secondary</div>
+            <div class="swatch-card__path">Text / Light Colors / Text Secondary</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(255,255,255,.6)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(0,0,0,.56)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-text-light-secondary</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:rgba(0,0,0,0.8);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Text Dark Primary</div>
+            <div class="swatch-card__path">Text / Dark Colors / Text Primary</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(0,0,0,.8)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.87)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-text-dark-primary</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:rgba(0,0,0,0.56);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Text Dark Secondary</div>
+            <div class="swatch-card__path">Text / Dark Colors / Text Secondary</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(0,0,0,.56)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.6)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-text-dark-secondary</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 ALERTS -->
+    <section id="alerts" class="section" data-screen-label="05 Alert colors">
+      <div class="eyebrow">05 · Alert colors</div>
+      <h2 class="section__title type-h1">Situational feedback.</h2>
+      <p class="section__lead type-body-large">Four colors map directly to the Alert component's four variants. Alert colors are notably different between light and dark themes — toggle above to compare.</p>
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-alert-success);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Success</div>
+            <div class="swatch-card__path">Alerts / Success</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#63E65F</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#02C801</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-alert-success</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-alert-info);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Information</div>
+            <div class="swatch-card__path">Alerts / Information</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#CFD4E2</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#4B5B7E</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-alert-info</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-alert-warning);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Warning</div>
+            <div class="swatch-card__path">Alerts / Warning</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#F8DFB2</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#E6B967</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-alert-warning</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-alert-error);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Error</div>
+            <div class="swatch-card__path">Alerts / Error</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#FB8F82</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#E86A5A</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-alert-error</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="alert-strip">
+        <div class="alert-strip__label">Live preview</div>
+        <div class="alert-strip__items">
+          <div class="alert-strip__item" style="background:var(--c-alert-success);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="rgba(0,0,0,0.8)" stroke-width="1.5"/><path d="M8 12.5l2.8 2.8 5.2-5.6" stroke="rgba(0,0,0,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Success</span>
+          </div>
+          <div class="alert-strip__item" style="background:var(--c-alert-info);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="rgba(0,0,0,0.8)" stroke-width="1.5"/><path d="M12 11v5" stroke="rgba(0,0,0,0.8)" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="0.9" fill="rgba(0,0,0,0.8)"/></svg>
+            <span>Information</span>
+          </div>
+          <div class="alert-strip__item" style="background:var(--c-alert-warning);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="rgba(0,0,0,0.8)" stroke-width="1.5"/><path d="M12 8v5" stroke="rgba(0,0,0,0.8)" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="rgba(0,0,0,0.8)"/></svg>
+            <span>Warning</span>
+          </div>
+          <div class="alert-strip__item" style="background:var(--c-alert-error);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="rgba(0,0,0,0.8)" stroke-width="1.5"/><path d="M12 8v5" stroke="rgba(0,0,0,0.8)" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="rgba(0,0,0,0.8)"/></svg>
+            <span>Error</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 FEEDBACK & LABELS -->
+    <section id="feedback" class="section" data-screen-label="06 Feedback &amp; Labels">
+      <div class="eyebrow">06 · Feedback &amp; Labels</div>
+      <h2 class="section__title type-h1">Labels &amp; status chips.</h2>
+      <p class="section__lead type-body-large">Six label tokens for price badges, status chips and contextual labels. Warning, Error and Success labels use semi-transparent values in dark mode for a softer contrast.</p>
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-label-extra);">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Extra Label</div>
+            <div class="swatch-card__path">Feedback &amp; Label / Extra Label</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#3C3F34</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.8)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-label-extra</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-label-warning);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Warning Label</div>
+            <div class="swatch-card__path">Feedback &amp; Label / Warning Label</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#FAD48E</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,153,0,.4)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-label-warning</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-label-error);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Error Label</div>
+            <div class="swatch-card__path">Feedback &amp; Label / Error Label</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#FB8F82</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(225,46,26,.5)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-label-error</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-label-success);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Success Label</div>
+            <div class="swatch-card__path">Feedback &amp; Label / Success Label</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#63E65F</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(0,225,0,.3)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-label-success</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-label-general);border:1px solid var(--doc-hairline);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">General Label</div>
+            <div class="swatch-card__path">Feedback &amp; Label / General Label</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(135,105,8,.12)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(60,63,52,.8)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-label-general</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 SYSTEM -->
+    <section id="system" class="section" data-screen-label="07 System colors">
+      <div class="eyebrow">07 · System colors</div>
+      <h2 class="section__title type-h1">UI structure &amp; status.</h2>
+      <p class="section__lead type-body-large">System tokens cover status indicators, borders, overlays, modals and fixed text. Most adapt to the active theme.</p>
+
+      <h3 class="type-h3" style="margin:0 0 20px">Status</h3>
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#5773C0;">
+            <span class="swatch-card__on-color" style="color:#fff">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">100% Info</div>
+            <div class="swatch-card__path">System / System Colors / 100% Info</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#5773C0</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-sys-info</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#FEA200;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">100% Warning</div>
+            <div class="swatch-card__path">System / System Colors / 100% Warning</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#FEA200</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-sys-warning</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#00DC00;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">100% Success</div>
+            <div class="swatch-card__path">System / System Colors / 100% Success</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#00DC00</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-sys-success</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#E12E1A;">
+            <span class="swatch-card__on-color" style="color:#fff">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">100% Error</div>
+            <div class="swatch-card__path">System / System Colors / 100% Error</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#E12E1A</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-sys-error</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="type-h3" style="margin:32px 0 20px">Borders, overlays &amp; UI</h3>
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-border-active);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Border Active</div>
+            <div class="swatch-card__path">System / System Colors / Border Active</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(0,0,0,.8)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#00DC00</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-border-active</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-border-default);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Border Default</div>
+            <div class="swatch-card__path">System / System Colors / Border Default</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(0,0,0,.32)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.8)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-border-default</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-divider);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Divider</div>
+            <div class="swatch-card__path">System / System Colors / Divider</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(34,31,14,.23)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.23)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-divider</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-modal-backdrop);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Modal Backdrop</div>
+            <div class="swatch-card__path">System / System Colors / Modal Backdrop Overlay</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(15,20,10,.4)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(0,0,0,.8)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-modal-backdrop</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-modal-card);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Modal Card</div>
+            <div class="swatch-card__path">System / System Colors / Modal Card</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#FFFFFF</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#353535</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-modal-card</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#3C3F34;">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Highlight Card</div>
+            <div class="swatch-card__path">System / System Colors / Highlight Card</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#3C3F34</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-highlight-card</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Same in</span><span class="swatch-card__value">Both themes</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-error-text);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Error Text</div>
+            <div class="swatch-card__path">System / System Colors / Error Text</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#E12E1A</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#FF786E</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-error-text</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-price-text);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Price Text Green</div>
+            <div class="swatch-card__path">System / System Colors / Price Text Green</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#0C9D0C</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#00DC00</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-price-text</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#FB8F82;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Snackbar Error</div>
+            <div class="swatch-card__path">System / Snackbar / Snackbar Error</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#FB8F82</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#E86A5A</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-snackbar-error</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#63E65F;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Snackbar Success</div>
+            <div class="swatch-card__path">System / Snackbar / Snackbar Success</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#63E65F</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-snackbar-success</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Same in</span><span class="swatch-card__value">Both themes</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="type-h3" style="margin:32px 0 20px">Fixed text colors</h3>
+      <p style="font-size:14px;color:var(--doc-muted);margin:0 0 24px">These tokens are intentionally fixed — they do not change with the active theme.</p>
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#FFFFFF;border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">100% White</div>
+            <div class="swatch-card__path">Fixed Text Color / 100% White</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#FFFFFF</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-fixed-white</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#000000;">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">100% Black</div>
+            <div class="swatch-card__path">Fixed Text Color / 100% Black</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#000000</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-fixed-black</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#333333;">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">100% Text Primary</div>
+            <div class="swatch-card__path">Fixed Text Color / 100% Text Primary</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#333333</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#EAEBE7</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-text-100-primary</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#959492;border:1px solid var(--doc-hairline);">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">100% Disable</div>
+            <div class="swatch-card__path">Fixed Text Color / 100% Disable</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#959492</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#6A6D67</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-text-100-disable</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 STATES & DISABLED -->
+    <section id="states" class="section" data-screen-label="08 States &amp; Disabled">
+      <div class="eyebrow">08 · States &amp; Disabled</div>
+      <h2 class="section__title type-h1">Interactive &amp; inactive.</h2>
+      <p class="section__lead type-body-large">State overlay tokens define how interactive elements respond to hover and press. Disabled tokens communicate non-interactive state. Most use semi-transparent values that overlay cleanly on any surface.</p>
+
+      <h3 class="type-h3" style="margin:0 0 20px">State overlays</h3>
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-state-button);">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Button Color</div>
+            <div class="swatch-card__path">State overlays / Button Color</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">#323232</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">#FFFFFF</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-state-button</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#00FF00;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Primary Hover</div>
+            <div class="swatch-card__path">State overlays / Primary Hover</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#00FF00</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-state-primary-hover</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Same in</span><span class="swatch-card__value">Both themes</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#00C200;">
+            <span class="swatch-card__on-color" style="color:rgba(0,0,0,0.8)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Primary Pressed</div>
+            <div class="swatch-card__path">State overlays / Primary Pressed</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#00C200</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-state-primary-pressed</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Same in</span><span class="swatch-card__value">Both themes</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:#4B4B4B;">
+            <span class="swatch-card__on-color" style="color:rgba(255,255,255,0.87)">Aa</span>
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Secondary Hover</div>
+            <div class="swatch-card__path">State overlays / Secondary Hover</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Hex</span><span class="swatch-card__value mono">#4B4B4B</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-state-secondary-hover</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-state-tertiary-hover);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Tertiary Hover</div>
+            <div class="swatch-card__path">State overlays / Tertiary Hover</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(70,55,0,.06)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.08)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-state-tertiary-hover</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-state-tertiary-pressed);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Tertiary Pressed</div>
+            <div class="swatch-card__path">State overlays / Tertiary Pressed</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(70,55,0,.12)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.16)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-state-tertiary-pressed</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-state-pre-selected);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Pre Selected</div>
+            <div class="swatch-card__path">State overlays / Pre Selected</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(70,55,0,.06)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.08)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-state-pre-selected</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-state-filled-warm);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Filled Warm Grey</div>
+            <div class="swatch-card__path">State overlays / Filled Warm Grey</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(70,55,0,.1)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.09)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-state-filled-warm</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="type-h3" style="margin:32px 0 20px">Disabled</h3>
+      <div class="swatch-grid swatch-grid--3">
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-disabled);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Disabled</div>
+            <div class="swatch-card__path">System / Disabled / Disabled</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(0,0,0,.38)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.38)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-disabled</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-disabled-bg);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Disabled Background</div>
+            <div class="swatch-card__path">System / Disabled / Disabled Background</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(0,0,0,.12)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.12)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-disabled-bg</span></div>
+          </div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-card__color" style="background:var(--c-disabled-switch);border:1px solid var(--doc-hairline);">
+          </div>
+          <div class="swatch-card__info">
+            <div class="swatch-card__name">Switch Disabled</div>
+            <div class="swatch-card__path">System / Disabled / Switch Disabled</div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Light</span><span class="swatch-card__value mono">rgba(0,0,0,.18)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Dark</span><span class="swatch-card__value mono">rgba(255,255,255,.18)</span></div>
+            <div class="swatch-card__row"><span class="swatch-card__label">Token</span><span class="swatch-card__value mono">--color-disabled-switch</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 TOKENS TABLE -->
+    <section id="tokens" class="section" data-screen-label="09 Tokens">
+      <div class="eyebrow">09 · All tokens</div>
+      <h2 class="section__title type-h1">Reference.</h2>
+      <p class="section__lead type-body-large">All 68 color tokens — Figma variable path, CSS custom property, and resolved values for both themes.</p>
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Figma variable</th>
+              <th>CSS token</th>
+              <th>Light</th>
+              <th>Dark</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="6" class="reftable__group">Brand</td></tr>
+            <tr><td>Primary</td><td class="mono">Color Palette/Primary Color</td><td class="mono">--color-brand-primary</td><td class="mono">#00DC00</td><td class="mono">#00DC00</td><td><span class="inline-swatch" style="background:#00DC00"></span></td></tr>
+            <tr><td>Secondary</td><td class="mono">Color Palette/Secondary Color</td><td class="mono">--color-brand-secondary</td><td class="mono">#323232</td><td class="mono">#FFFFFF</td><td><span class="inline-swatch" style="background:var(--c-brand-secondary)"></span></td></tr>
+
+            <tr><td colspan="6" class="reftable__group">Background</td></tr>
+            <tr><td>Frame Background</td><td class="mono">Background Colors/Frame Background</td><td class="mono">--color-bg-frame</td><td class="mono">#FFFFFF</td><td class="mono">#323232</td><td><span class="inline-swatch" style="background:var(--c-bg-frame);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Dark Green</td><td class="mono">Background Colors/Dark Green</td><td class="mono">--color-bg-dark-green</td><td class="mono">#0F140A</td><td class="mono">#0F140A</td><td><span class="inline-swatch" style="background:#0F140A"></span></td></tr>
+            <tr><td>GreenGrey</td><td class="mono">Background Colors/GreenGrey</td><td class="mono">--color-bg-green-grey</td><td class="mono">#3C3F34</td><td class="mono">#3C3F34</td><td><span class="inline-swatch" style="background:#3C3F34"></span></td></tr>
+            <tr><td>Grey</td><td class="mono">Background Colors/Grey</td><td class="mono">--color-bg-grey</td><td class="mono">#696A5E</td><td class="mono">#696A5E</td><td><span class="inline-swatch" style="background:#696A5E"></span></td></tr>
+            <tr><td>MidGrey</td><td class="mono">Background Colors/MidGrey</td><td class="mono">--color-bg-mid-grey</td><td class="mono">#8B8A7D</td><td class="mono">#8B8A7D</td><td><span class="inline-swatch" style="background:#8B8A7D"></span></td></tr>
+            <tr><td>LightGrey</td><td class="mono">Background Colors/LightGrey</td><td class="mono">--color-bg-light-grey</td><td class="mono">#CECBBD</td><td class="mono">#CECBBD</td><td><span class="inline-swatch" style="background:#CECBBD"></span></td></tr>
+            <tr><td>Light</td><td class="mono">Background Colors/Light</td><td class="mono">--color-bg-light</td><td class="mono">#F0EBDC</td><td class="mono">#F0EBDC</td><td><span class="inline-swatch" style="background:#F0EBDC"></span></td></tr>
+            <tr><td>Yellow</td><td class="mono">Background Colors/Yellow</td><td class="mono">--color-bg-yellow</td><td class="mono">#FFD200</td><td class="mono">#FFD200</td><td><span class="inline-swatch" style="background:#FFD200"></span></td></tr>
+            <tr><td>Red</td><td class="mono">Background Colors/Red</td><td class="mono">--color-bg-red</td><td class="mono">#FF786E</td><td class="mono">#FF786E</td><td><span class="inline-swatch" style="background:#FF786E"></span></td></tr>
+            <tr><td>Neutral Card Grey</td><td class="mono">Background Colors/Neutral Card Grey</td><td class="mono">--color-bg-neutral-card</td><td class="mono">#D9D5C7</td><td class="mono">#8B8A7D</td><td><span class="inline-swatch" style="background:var(--c-bg-neutral-card)"></span></td></tr>
+            <tr><td>Product Cards</td><td class="mono">Background Colors/Background Product Cards</td><td class="mono">--color-bg-product-cards</td><td class="mono">rgba(240,235,220,.6)</td><td class="mono">#696A5E</td><td><span class="inline-swatch" style="background:var(--c-bg-product-cards)"></span></td></tr>
+            <tr><td>Navigation Top Bar</td><td class="mono">Background Colors/Navigation Top Bar</td><td class="mono">--color-bg-nav-top</td><td class="mono">#F0F0F0</td><td class="mono">#191919</td><td><span class="inline-swatch" style="background:var(--c-bg-nav)"></span></td></tr>
+
+            <tr><td colspan="6" class="reftable__group">Text</td></tr>
+            <tr><td>Text Light Primary</td><td class="mono">Text/Light Colors/Text Primary</td><td class="mono">--color-text-light-primary</td><td class="mono">rgba(255,255,255,.87)</td><td class="mono">rgba(0,0,0,.8)</td><td><span class="inline-swatch" style="background:rgba(255,255,255,.87);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Text Light Secondary</td><td class="mono">Text/Light Colors/Text Secondary</td><td class="mono">--color-text-light-secondary</td><td class="mono">rgba(255,255,255,.6)</td><td class="mono">rgba(0,0,0,.56)</td><td><span class="inline-swatch" style="background:rgba(255,255,255,.6);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Text Dark Primary</td><td class="mono">Text/Dark Colors/Text Primary</td><td class="mono">--color-text-dark-primary</td><td class="mono">rgba(0,0,0,.8)</td><td class="mono">rgba(255,255,255,.87)</td><td><span class="inline-swatch" style="background:rgba(0,0,0,.8)"></span></td></tr>
+            <tr><td>Text Dark Secondary</td><td class="mono">Text/Dark Colors/Text Secondary</td><td class="mono">--color-text-dark-secondary</td><td class="mono">rgba(0,0,0,.56)</td><td class="mono">rgba(255,255,255,.6)</td><td><span class="inline-swatch" style="background:rgba(0,0,0,.56)"></span></td></tr>
+
+            <tr><td colspan="6" class="reftable__group">Alerts</td></tr>
+            <tr><td>Alert Success</td><td class="mono">Alerts/Success</td><td class="mono">--color-alert-success</td><td class="mono">#63E65F</td><td class="mono">#02C801</td><td><span class="inline-swatch" style="background:var(--c-alert-success)"></span></td></tr>
+            <tr><td>Alert Info</td><td class="mono">Alerts/Information</td><td class="mono">--color-alert-info</td><td class="mono">#CFD4E2</td><td class="mono">#4B5B7E</td><td><span class="inline-swatch" style="background:var(--c-alert-info)"></span></td></tr>
+            <tr><td>Alert Warning</td><td class="mono">Alerts/Warning</td><td class="mono">--color-alert-warning</td><td class="mono">#F8DFB2</td><td class="mono">#E6B967</td><td><span class="inline-swatch" style="background:var(--c-alert-warning)"></span></td></tr>
+            <tr><td>Alert Error</td><td class="mono">Alerts/Error</td><td class="mono">--color-alert-error</td><td class="mono">#FB8F82</td><td class="mono">#E86A5A</td><td><span class="inline-swatch" style="background:var(--c-alert-error)"></span></td></tr>
+
+            <tr><td colspan="6" class="reftable__group">Feedback &amp; Labels</td></tr>
+            <tr><td>Extra Label</td><td class="mono">Feedback &amp; Label/Extra Label</td><td class="mono">--color-label-extra</td><td class="mono">#3C3F34</td><td class="mono">rgba(255,255,255,.8)</td><td><span class="inline-swatch" style="background:var(--c-label-extra)"></span></td></tr>
+            <tr><td>Warning Label</td><td class="mono">Feedback &amp; Label/Warning Label</td><td class="mono">--color-label-warning</td><td class="mono">#FAD48E</td><td class="mono">rgba(255,153,0,.4)</td><td><span class="inline-swatch" style="background:var(--c-label-warning)"></span></td></tr>
+            <tr><td>Error Label</td><td class="mono">Feedback &amp; Label/Error Label</td><td class="mono">--color-label-error</td><td class="mono">#FB8F82</td><td class="mono">rgba(225,46,26,.5)</td><td><span class="inline-swatch" style="background:var(--c-label-error)"></span></td></tr>
+            <tr><td>Success Label</td><td class="mono">Feedback &amp; Label/Success Label</td><td class="mono">--color-label-success</td><td class="mono">#63E65F</td><td class="mono">rgba(0,225,0,.3)</td><td><span class="inline-swatch" style="background:var(--c-label-success)"></span></td></tr>
+            <tr><td>General Label</td><td class="mono">Feedback &amp; Label/General Label</td><td class="mono">--color-label-general</td><td class="mono">rgba(135,105,8,.12)</td><td class="mono">rgba(60,63,52,.8)</td><td><span class="inline-swatch" style="background:var(--c-label-general);border:1px solid var(--doc-hairline)"></span></td></tr>
+
+            <tr><td colspan="6" class="reftable__group">System · Status</td></tr>
+            <tr><td>100% Info</td><td class="mono">System/System Colors/100% Info</td><td class="mono">--color-sys-info</td><td class="mono">#5773C0</td><td class="mono">#5773C0</td><td><span class="inline-swatch" style="background:#5773C0"></span></td></tr>
+            <tr><td>100% Warning</td><td class="mono">System/System Colors/100% Warning</td><td class="mono">--color-sys-warning</td><td class="mono">#FEA200</td><td class="mono">#FEA200</td><td><span class="inline-swatch" style="background:#FEA200"></span></td></tr>
+            <tr><td>100% Success</td><td class="mono">System/System Colors/100% Success</td><td class="mono">--color-sys-success</td><td class="mono">#00DC00</td><td class="mono">#00DC00</td><td><span class="inline-swatch" style="background:#00DC00"></span></td></tr>
+            <tr><td>100% Error</td><td class="mono">System/System Colors/100% Error</td><td class="mono">--color-sys-error</td><td class="mono">#E12E1A</td><td class="mono">#E12E1A</td><td><span class="inline-swatch" style="background:#E12E1A"></span></td></tr>
+
+            <tr><td colspan="6" class="reftable__group">System · UI</td></tr>
+            <tr><td>Border Active</td><td class="mono">System/System Colors/Border Active</td><td class="mono">--color-border-active</td><td class="mono">rgba(0,0,0,.8)</td><td class="mono">#00DC00</td><td><span class="inline-swatch" style="background:var(--c-border-active)"></span></td></tr>
+            <tr><td>Border Default</td><td class="mono">System/System Colors/Border Default</td><td class="mono">--color-border-default</td><td class="mono">rgba(0,0,0,.32)</td><td class="mono">rgba(255,255,255,.8)</td><td><span class="inline-swatch" style="background:var(--c-border-default);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Divider</td><td class="mono">System/System Colors/Divider</td><td class="mono">--color-divider</td><td class="mono">rgba(34,31,14,.23)</td><td class="mono">rgba(255,255,255,.23)</td><td><span class="inline-swatch" style="background:var(--c-divider);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Modal Backdrop</td><td class="mono">System/System Colors/Modal Backdrop Overlay</td><td class="mono">--color-modal-backdrop</td><td class="mono">rgba(15,20,10,.4)</td><td class="mono">rgba(0,0,0,.8)</td><td><span class="inline-swatch" style="background:var(--c-modal-backdrop)"></span></td></tr>
+            <tr><td>Modal Card</td><td class="mono">System/System Colors/Modal Card</td><td class="mono">--color-modal-card</td><td class="mono">#FFFFFF</td><td class="mono">#353535</td><td><span class="inline-swatch" style="background:var(--c-modal-card);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Highlight Card</td><td class="mono">System/System Colors/Highlight Card</td><td class="mono">--color-highlight-card</td><td class="mono">#3C3F34</td><td class="mono">#3C3F34</td><td><span class="inline-swatch" style="background:#3C3F34"></span></td></tr>
+            <tr><td>Error Text</td><td class="mono">System/System Colors/Error Text</td><td class="mono">--color-error-text</td><td class="mono">#E12E1A</td><td class="mono">#FF786E</td><td><span class="inline-swatch" style="background:var(--c-error-text)"></span></td></tr>
+            <tr><td>Price Text Green</td><td class="mono">System/System Colors/Price Text Green</td><td class="mono">--color-price-text</td><td class="mono">#0C9D0C</td><td class="mono">#00DC00</td><td><span class="inline-swatch" style="background:var(--c-price-text)"></span></td></tr>
+            <tr><td>Snackbar Error</td><td class="mono">System/Snackbar/Snackbar Error</td><td class="mono">--color-snackbar-error</td><td class="mono">#FB8F82</td><td class="mono">#E86A5A</td><td><span class="inline-swatch" style="background:var(--c-snackbar-error)"></span></td></tr>
+            <tr><td>Snackbar Success</td><td class="mono">System/Snackbar/Snackbar Success</td><td class="mono">--color-snackbar-success</td><td class="mono">#63E65F</td><td class="mono">#63E65F</td><td><span class="inline-swatch" style="background:#63E65F"></span></td></tr>
+
+            <tr><td colspan="6" class="reftable__group">Fixed Text</td></tr>
+            <tr><td>100% White</td><td class="mono">Fixed Text Color/100% White</td><td class="mono">--color-fixed-white</td><td class="mono">#FFFFFF</td><td class="mono">#FFFFFF</td><td><span class="inline-swatch" style="background:#FFFFFF;border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>100% Black</td><td class="mono">Fixed Text Color/100% Black</td><td class="mono">--color-fixed-black</td><td class="mono">#000000</td><td class="mono">#000000</td><td><span class="inline-swatch" style="background:#000000"></span></td></tr>
+            <tr><td>Text Always White Primary</td><td class="mono">Fixed Text Color/Text Always White Primary</td><td class="mono">--color-text-always-white-p</td><td class="mono">rgba(255,255,255,.87)</td><td class="mono">rgba(255,255,255,.87)</td><td><span class="inline-swatch" style="background:rgba(255,255,255,.87);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Text Always White Secondary</td><td class="mono">Fixed Text Color/Text Always White Secondary</td><td class="mono">--color-text-always-white-s</td><td class="mono">rgba(255,255,255,.6)</td><td class="mono">rgba(255,255,255,.6)</td><td><span class="inline-swatch" style="background:rgba(255,255,255,.6);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Text Always Black Primary</td><td class="mono">Fixed Text Color/Text Always Black Primary</td><td class="mono">--color-text-always-black-p</td><td class="mono">rgba(0,0,0,.8)</td><td class="mono">rgba(0,0,0,.8)</td><td><span class="inline-swatch" style="background:rgba(0,0,0,.8)"></span></td></tr>
+            <tr><td>Text Always Black Secondary</td><td class="mono">Fixed Text Color/Text Always Black Secondary</td><td class="mono">--color-text-always-black-s</td><td class="mono">rgba(0,0,0,.56)</td><td class="mono">rgba(0,0,0,.56)</td><td><span class="inline-swatch" style="background:rgba(0,0,0,.56)"></span></td></tr>
+            <tr><td>100% Text Primary</td><td class="mono">Fixed Text Color/100% Text Primary</td><td class="mono">--color-text-100-primary</td><td class="mono">#333333</td><td class="mono">#EAEBE7</td><td><span class="inline-swatch" style="background:var(--c-text-100-primary)"></span></td></tr>
+            <tr><td>100% Disable</td><td class="mono">Fixed Text Color/100% Disable</td><td class="mono">--color-text-100-disable</td><td class="mono">#959492</td><td class="mono">#6A6D67</td><td><span class="inline-swatch" style="background:var(--c-text-100-disable)"></span></td></tr>
+
+            <tr><td colspan="6" class="reftable__group">State Overlays</td></tr>
+            <tr><td>Button Color</td><td class="mono">State overlays/Button Color</td><td class="mono">--color-state-button</td><td class="mono">#323232</td><td class="mono">#FFFFFF</td><td><span class="inline-swatch" style="background:var(--c-state-button)"></span></td></tr>
+            <tr><td>Primary Hover</td><td class="mono">State overlays/Primary Hover</td><td class="mono">--color-state-primary-hover</td><td class="mono">#00FF00</td><td class="mono">#00FF00</td><td><span class="inline-swatch" style="background:#00FF00"></span></td></tr>
+            <tr><td>Primary Pressed</td><td class="mono">State overlays/Primary Pressed</td><td class="mono">--color-state-primary-pressed</td><td class="mono">#00C200</td><td class="mono">#00C200</td><td><span class="inline-swatch" style="background:#00C200"></span></td></tr>
+            <tr><td>Secondary Hover</td><td class="mono">State overlays/Secondary Hover</td><td class="mono">--color-state-secondary-hover</td><td class="mono">#4B4B4B</td><td class="mono">#4B4B4B</td><td><span class="inline-swatch" style="background:#4B4B4B"></span></td></tr>
+            <tr><td>Secondary Pressed</td><td class="mono">State overlays/Secondary Pressed</td><td class="mono">--color-state-secondary-pressed</td><td class="mono">#4B4B4B</td><td class="mono">#4B4B4B</td><td><span class="inline-swatch" style="background:#4B4B4B"></span></td></tr>
+            <tr><td>Tertiary Hover</td><td class="mono">State overlays/Tertiary Hover</td><td class="mono">--color-state-tertiary-hover</td><td class="mono">rgba(70,55,0,.06)</td><td class="mono">rgba(255,255,255,.08)</td><td><span class="inline-swatch" style="background:var(--c-state-tertiary-hover);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Tertiary Pressed</td><td class="mono">State overlays/Tertiary Pressed</td><td class="mono">--color-state-tertiary-pressed</td><td class="mono">rgba(70,55,0,.12)</td><td class="mono">rgba(255,255,255,.16)</td><td><span class="inline-swatch" style="background:var(--c-state-tertiary-pressed);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Pre Selected</td><td class="mono">State overlays/Pre Selected</td><td class="mono">--color-state-pre-selected</td><td class="mono">rgba(70,55,0,.06)</td><td class="mono">rgba(255,255,255,.08)</td><td><span class="inline-swatch" style="background:var(--c-state-pre-selected);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Filled Warm Grey</td><td class="mono">State overlays/Filled Warm Grey</td><td class="mono">--color-state-filled-warm</td><td class="mono">rgba(70,55,0,.1)</td><td class="mono">rgba(255,255,255,.09)</td><td><span class="inline-swatch" style="background:var(--c-state-filled-warm);border:1px solid var(--doc-hairline)"></span></td></tr>
+
+            <tr><td colspan="6" class="reftable__group">Disabled</td></tr>
+            <tr><td>Disabled</td><td class="mono">System/Disabled/Disabled</td><td class="mono">--color-disabled</td><td class="mono">rgba(0,0,0,.38)</td><td class="mono">rgba(255,255,255,.38)</td><td><span class="inline-swatch" style="background:var(--c-disabled);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Disabled Background</td><td class="mono">System/Disabled/Disabled Background</td><td class="mono">--color-disabled-bg</td><td class="mono">rgba(0,0,0,.12)</td><td class="mono">rgba(255,255,255,.12)</td><td><span class="inline-swatch" style="background:var(--c-disabled-bg);border:1px solid var(--doc-hairline)"></span></td></tr>
+            <tr><td>Switch Disabled</td><td class="mono">System/Disabled/Switch Disabled</td><td class="mono">--color-disabled-switch</td><td class="mono">rgba(0,0,0,.18)</td><td class="mono">rgba(255,255,255,.18)</td><td><span class="inline-swatch" style="background:var(--c-disabled-switch);border:1px solid var(--doc-hairline)"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 10 CODE -->
+    <section id="code" class="section" data-screen-label="10 Code">
+      <div class="eyebrow">10 · Code</div>
+      <h2 class="section__title type-h1">How to use it.</h2>
+      <p class="section__lead type-body-large">Import <span class="mono">tokens.css</span> and reference the CSS custom properties. The file defines <span class="mono">:root</span> for Light theme and <span class="mono">[data-theme="dark"]</span> overrides for Dark theme.</p>
+      <div style="display:grid;gap:24px;">
+        <div>
+          <h3 class="type-h3" style="margin:0 0 12px">CSS tokens (excerpt)</h3>
+          <pre class="code"><span class="c">/* eCare Design System — Color tokens
+   Source: Figma variables · Light &amp; Dark Theme
+   Exported: May 2026 */</span>
+
+<span class="k">:root</span> {
+  <span class="c">/* Brand */</span>
+  --color-brand-primary:   <span class="s">#00DC00</span>;
+  --color-brand-secondary: <span class="s">#323232</span>;
+
+  <span class="c">/* Alerts */</span>
+  --color-alert-success:   <span class="s">#63E65F</span>;
+  --color-alert-info:      <span class="s">#CFD4E2</span>;
+  --color-alert-warning:   <span class="s">#F8DFB2</span>;
+  --color-alert-error:     <span class="s">#FB8F82</span>;
+
+  <span class="c">/* Text */</span>
+  --color-text-dark-primary:   <span class="s">rgba(0, 0, 0, 0.8)</span>;
+  --color-text-dark-secondary: <span class="s">rgba(0, 0, 0, 0.56)</span>;
+
+  <span class="c">/* … 62 more tokens */</span>
+}
+
+<span class="k">[data-theme="dark"]</span> {
+  --color-brand-secondary: <span class="s">#FFFFFF</span>;
+  --color-alert-success:   <span class="s">#02C801</span>;
+  --color-alert-info:      <span class="s">#4B5B7E</span>;
+  --color-alert-warning:   <span class="s">#E6B967</span>;
+  --color-alert-error:     <span class="s">#E86A5A</span>;
+  <span class="c">/* … dark overrides */</span>
+}</pre>
+        </div>
+        <div>
+          <h3 class="type-h3" style="margin:0 0 12px">Usage examples</h3>
+          <pre class="code"><span class="c">/* Alert component */</span>
+<span class="k">.alert--success</span> {
+  background: <span class="s">var(--color-alert-success)</span>;
+  color:      <span class="s">var(--color-text-dark-primary)</span>;
+}
+
+<span class="c">/* Dark-mode button */</span>
+<span class="k">.btn-primary</span> {
+  background: <span class="s">var(--color-brand-primary)</span>;
+  color:      <span class="s">var(--color-text-dark-primary)</span>;
+}
+<span class="k">.btn-primary:hover</span> {
+  background: <span class="s">var(--color-state-primary-hover)</span>;
+}
+
+<span class="c">/* Disabled state */</span>
+<span class="k">.btn:disabled</span> {
+  background: <span class="s">var(--color-disabled-bg)</span>;
+  color:      <span class="s">var(--color-disabled)</span>;
+}</pre>
+        </div>
+        <div>
+          <h3 class="type-h3" style="margin:0 0 12px">Load order</h3>
+          <pre class="code"><span class="c">&lt;!-- Load tokens first --&gt;</span>
+<span class="k">&lt;link</span> <span class="k">rel=</span><span class="s">"stylesheet"</span> <span class="k">href=</span><span class="s">"css/tokens.css"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="k">rel=</span><span class="s">"stylesheet"</span> <span class="k">href=</span><span class="s">"css/typography.css"</span><span class="k">&gt;</span>
+
+<span class="c">&lt;!-- Set theme on root element --&gt;</span>
+<span class="k">&lt;body</span> <span class="k">data-theme=</span><span class="s">"dark"</span><span class="k">&gt;</span> <span class="c">// dark mode</span>
+<span class="k">&lt;body&gt;</span>                  <span class="c">// light mode (default)</span></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" style="text-align:center;" data-screen-label="Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Foundation 02</div>
+    </section>
+
+  </main>
+
+  <script src="js/theme.js"></script>
+
+  <style>
+    /* ============================================================
+       Color tokens — Light theme (default)
+       ============================================================ */
+    :root {
+      --c-brand-primary:          #00DC00;
+      --c-brand-secondary:        #323232;
+      --c-bg-frame:               #FFFFFF;
+      --c-bg-neutral-card:        #D9D5C7;
+      --c-bg-product-cards:       var(--color-bg-product-cards);
+      --c-bg-nav:                 #F0F0F0;
+      /* Alert & feedback — alias to tokens.css */
+      --c-alert-success:          var(--color-alert-success);
+      --c-alert-info:             var(--color-alert-info);
+      --c-alert-warning:          var(--color-alert-warning);
+      --c-alert-error:            var(--color-alert-error);
+      --c-label-extra:            var(--color-label-extra);
+      --c-label-warning:          var(--color-label-warning);
+      --c-label-error:            var(--color-label-error);
+      --c-label-success:          var(--color-label-success);
+      --c-label-general:          var(--color-label-general);
+      --c-snackbar-error:         var(--color-snackbar-error);
+      --c-border-active:          var(--color-border-active);
+      --c-border-default:         var(--color-border-default);
+      --c-divider:                var(--color-divider);
+      --c-modal-backdrop:         var(--color-modal-backdrop);
+      --c-modal-card:             var(--color-modal-card);
+      --c-error-text:             var(--color-error-text);
+      --c-price-text:             var(--color-price-text);
+      --c-text-100-primary:       var(--color-text-100-primary);
+      --c-text-100-disable:       var(--color-text-100-disable);
+      --c-state-button:           var(--color-state-button);
+      --c-state-tertiary-hover:   var(--color-state-tertiary-hover);
+      --c-state-tertiary-pressed: var(--color-state-tertiary-pressed);
+      --c-state-pre-selected:     var(--color-state-pre-selected);
+      --c-state-filled-warm:      var(--color-state-filled-warm);
+      --c-disabled:               var(--color-disabled);
+      --c-disabled-bg:            var(--color-disabled-bg);
+      --c-disabled-switch:        var(--color-disabled-switch);
+    }
+
+    /* Dark theme — bg/brand overrides only (alert/system/state handled by tokens.css) */
+    [data-color-theme="dark"] {
+      --c-brand-secondary:  var(--color-brand-secondary);
+      --c-bg-frame:         var(--color-bg-frame);
+      --c-bg-neutral-card:  var(--color-bg-neutral-card);
+      --c-bg-nav:           var(--color-bg-nav-top);
+    }
+
+    /* ---- Swatch grid ---- */
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .swatch-grid--2 { grid-template-columns: repeat(2, 1fr); }
+    .swatch-grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+    .swatch-card {
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius);
+      overflow: hidden;
+    }
+    .swatch-card__color {
+      height: 120px;
+      display: flex;
+      align-items: flex-end;
+      padding: 12px 16px;
+    }
+    .swatch-card__on-color {
+      font-family: var(--font-family-sans);
+      font-size: 24px;
+      font-weight: 500;
+      opacity: 0.6;
+    }
+    .swatch-card__info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: var(--doc-bg);
+    }
+    .swatch-card__name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--doc-ink);
+    }
+    .swatch-card__path {
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--doc-muted);
+      margin-bottom: 4px;
+    }
+    .swatch-card__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .swatch-card__label {
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--doc-muted);
+      flex-shrink: 0;
+    }
+    .swatch-card__value {
+      font-size: 12px;
+      color: var(--doc-ink);
+      text-align: right;
+    }
+    .swatch-card__value.mono {
+      font-family: var(--font-family-mono);
+      font-size: 11px;
+    }
+
+    /* ---- Alert strip ---- */
+    .alert-strip {
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius);
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+    .alert-strip__label {
+      padding: 12px 20px;
+      background: var(--doc-surface);
+      border-bottom: 1px solid var(--doc-hairline);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--doc-muted);
+    }
+    .alert-strip__items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--doc-hairline);
+    }
+    .alert-strip__item {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(0,0,0,0.8);
+    }
+
+    /* ---- Reference table group row ---- */
+    .reftable__group {
+      background: var(--doc-surface-2);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--doc-muted);
+      padding: 8px 16px;
+    }
+
+    /* ---- Inline swatch ---- */
+    .inline-swatch {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      vertical-align: middle;
+    }
+
+    /* ---- Sub-nav ---- */
+    .sidebar__nav a.is-sub {
+      padding-left: 22px;
+      font-size: 13px;
+      color: var(--doc-muted);
+    }
+    .sidebar__nav a.is-sub:hover { color: var(--doc-ink-soft); background: var(--doc-surface-2); }
+    .sidebar__nav a.is-sub.is-active { background: var(--doc-ink); color: var(--doc-bg); }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 1300px) {
+      .swatch-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 1100px) {
+      .swatch-grid { grid-template-columns: repeat(2, 1fr); }
+      .swatch-grid--2 { grid-template-columns: repeat(2, 1fr); }
+      .alert-strip__items { grid-template-columns: repeat(2, 1fr); }
+      .theme-bar { padding: 14px 32px; }
+    }
+    @media (max-width: 640px) {
+      .swatch-grid,
+      .swatch-grid--2,
+      .swatch-grid--3 { grid-template-columns: 1fr; }
+      .alert-strip__items { grid-template-columns: 1fr; }
+      .theme-bar { padding: 14px 20px; }
+    }
+  </style>
+
+</body>
+</html>

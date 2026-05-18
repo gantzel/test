@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Label</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html" class="is-active">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Component</strong> &nbsp;·&nbsp; Label</span>
+        <span>v 0.1 — Draft</span>
+        <span>6 variants · pill shape · H7 typography</span>
+      </div>
+
+      <h1 class="hero__title">Label<br /><em>component.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The eCare label is a compact status badge used to communicate
+            category, state or priority at a glance. It appears on product
+            cards, list items and inline with content to signal meaning without
+            taking up space.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            Six semantic variants cover the full feedback range — from product
+            promotion to error and disabled states. The pill shape, fixed H7
+            typography and tight padding are all defined by Figma tokens and
+            do not change across breakpoints.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">6</div>
+          <div class="stat__lab">Variants</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">12 px</div>
+          <div class="stat__lab">Font size · H7</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">4 × 8 px</div>
+          <div class="stat__lab">Padding · constant</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">512 px</div>
+          <div class="stat__lab">Border radius · pill</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXAMPLES ===== -->
+    <section id="examples" class="section" data-screen-label="02 Examples">
+      <div class="eyebrow">02 · Examples</div>
+      <h2 class="section__title type-h1">Six variants.</h2>
+      <p class="section__lead type-body-large">
+        Each variant maps to a semantic use case. Use <em>Extra</em> for product
+        highlights, the three feedback variants for status, <em>Neutral</em> for
+        general information, and <em>Disabled</em> when interaction is unavailable.
+      </p>
+
+      <div class="label-examples">
+
+        <div class="label-example">
+          <div class="label-example__preview">
+            <span class="label label--extra">Populær</span>
+          </div>
+          <div class="label-example__info">
+            <strong class="label-example__name">Extra</strong>
+            <span class="label-example__desc">Product promotion, highlights</span>
+            <code class="label-example__class mono">label--extra</code>
+          </div>
+        </div>
+
+        <div class="label-example">
+          <div class="label-example__preview">
+            <span class="label label--neutral">Information</span>
+          </div>
+          <div class="label-example__info">
+            <strong class="label-example__name">Neutral</strong>
+            <span class="label-example__desc">General information, context</span>
+            <code class="label-example__class mono">label--neutral</code>
+          </div>
+        </div>
+
+        <div class="label-example">
+          <div class="label-example__preview">
+            <span class="label label--warning">Warning</span>
+          </div>
+          <div class="label-example__info">
+            <strong class="label-example__name">Warning</strong>
+            <span class="label-example__desc">Caution, needs attention</span>
+            <code class="label-example__class mono">label--warning</code>
+          </div>
+        </div>
+
+        <div class="label-example">
+          <div class="label-example__preview">
+            <span class="label label--error">Error</span>
+          </div>
+          <div class="label-example__info">
+            <strong class="label-example__name">Error</strong>
+            <span class="label-example__desc">Failed state, blocking issue</span>
+            <code class="label-example__class mono">label--error</code>
+          </div>
+        </div>
+
+        <div class="label-example">
+          <div class="label-example__preview">
+            <span class="label label--success">Success</span>
+          </div>
+          <div class="label-example__info">
+            <strong class="label-example__name">Success</strong>
+            <span class="label-example__desc">Completed, confirmed state</span>
+            <code class="label-example__class mono">label--success</code>
+          </div>
+        </div>
+
+        <div class="label-example">
+          <div class="label-example__preview">
+            <span class="label label--disabled">Disabled</span>
+          </div>
+          <div class="label-example__info">
+            <strong class="label-example__name">Disabled</strong>
+            <span class="label-example__desc">Unavailable, not applicable</span>
+            <code class="label-example__class mono">label--disabled</code>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== ANATOMY ===== -->
+    <section id="anatomy" class="section" data-screen-label="03 Anatomy">
+      <div class="eyebrow">03 · Anatomy</div>
+      <h2 class="section__title type-h1">Two parts.</h2>
+      <p class="section__lead type-body-large">
+        The label is a single-level component. The container defines all visual
+        properties — the text slot receives whatever string is passed in.
+      </p>
+
+      <div class="anatomy">
+        <div class="anatomy__preview">
+          <div class="label-anat" aria-hidden="true">
+            <span class="label label--extra label-anat__label" data-part="A">
+              <span class="label-anat__text" data-part="B">Populær</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="anatomy__parts">
+          <div class="part">
+            <div class="part__badge">A</div>
+            <div class="part__info">
+              <strong class="part__name">Container</strong>
+              <p class="part__desc">
+                Sets <span class="mono">background</span> to the variant color token,
+                <span class="mono">border-radius</span> to <span class="mono">--border-radius-round</span> (512 px pill)
+                and <span class="mono">padding</span> to <span class="mono">--spacing-x-small</span> ×
+                <span class="mono">--spacing-small</span> (4 × 8 px). Uses
+                <span class="mono">inline-flex</span> so width is always content-driven.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">B</div>
+            <div class="part__info">
+              <strong class="part__name">Text</strong>
+              <p class="part__desc">
+                H7 typography — 12 px / 14 px line-height / weight 500.
+                Text color is fixed per variant and does not inherit from context.
+                Keep labels short: one to two words maximum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TOKENS ===== -->
+    <section id="tokens" class="section" data-screen-label="04 Tokens">
+      <div class="eyebrow">04 · Tokens</div>
+      <h2 class="section__title type-h1">Figma variables.</h2>
+      <p class="section__lead type-body-large">
+        Each variant has its own background token from the Feedback &amp; Label group.
+        Shape, padding and typography are shared tokens constant across all variants
+        and breakpoints.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Figma variable</th>
+              <th>Light</th>
+              <th>Dark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">--color-label-extra</td>
+              <td class="mono">Feedback &amp; Label/<wbr>Extra Label</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-label-extra);"></span>
+                <span class="mono">--color-label-extra</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:rgba(255,255,255,0.8);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-label-extra</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--color-label-general</td>
+              <td class="mono">Feedback &amp; Label/<wbr>Generel Label</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-label-general);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-label-general</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:rgba(60,63,52,0.8);"></span>
+                <span class="mono">--color-label-general</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--color-label-warning</td>
+              <td class="mono">Feedback &amp; Label/<wbr>Warning Label</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-label-warning);"></span>
+                <span class="mono">--color-label-warning</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:rgba(255,153,0,0.4);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-label-warning</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--color-label-error</td>
+              <td class="mono">Feedback &amp; Label/<wbr>Error Label</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-label-error);"></span>
+                <span class="mono">--color-label-error</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:rgba(225,46,26,0.5);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-label-error</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--color-label-success</td>
+              <td class="mono">Feedback &amp; Label/<wbr>Success Label</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-label-success);"></span>
+                <span class="mono">--color-label-success</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:rgba(0,225,0,0.3);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-label-success</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--color-disabled-bg</td>
+              <td class="mono">System/Disabled/<wbr>Disabled Background</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-disabled-bg);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-disabled-bg</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:rgba(255,255,255,0.12);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-disabled-bg</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--border-radius-round</td>
+              <td class="mono">Border/<wbr>Border Radius/Round</td>
+              <td class="mono" colspan="2" style="color:var(--doc-muted);">512 px — constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--spacing-x-small</td>
+              <td class="mono">Spacing/X-Small</td>
+              <td class="mono" colspan="2" style="color:var(--doc-muted);">4 px top &amp; bottom — constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--spacing-small</td>
+              <td class="mono">Spacing/Small</td>
+              <td class="mono" colspan="2" style="color:var(--doc-muted);">8 px left &amp; right — constant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== CODE ===== -->
+    <section id="code" class="section" data-screen-label="05 Code">
+      <div class="eyebrow">05 · Code</div>
+      <h2 class="section__title type-h1">How to build it.</h2>
+      <p class="section__lead type-body-large">
+        An inline <span class="mono">&lt;span class="label label--[variant]"&gt;</span>.
+        The variant modifier sets the background — all other properties come from the base class.
+      </p>
+
+      <div style="display:grid; gap:24px;">
+
+        <div>
+          <h3 class="type-h3" style="margin:0 0 12px;">HTML</h3>
+          <pre class="code"><span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"label label--extra"</span><span class="k">&gt;</span>Populær<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"label label--neutral"</span><span class="k">&gt;</span>Information<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"label label--warning"</span><span class="k">&gt;</span>Warning<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"label label--error"</span><span class="k">&gt;</span>Error<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"label label--success"</span><span class="k">&gt;</span>Success<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"label label--disabled"</span><span class="k">&gt;</span>Disabled<span class="k">&lt;/span&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin:0 0 12px;">CSS</h3>
+          <pre class="code"><span class="k">.label</span> {
+  display: inline-flex;
+  align-items: center;
+  padding:        <span class="s">var(--spacing-x-small)</span> <span class="s">var(--spacing-small)</span>;  <span class="c">/* 4px 8px */</span>
+  border-radius:  <span class="s">var(--border-radius-round)</span>;                    <span class="c">/* 512px — pill */</span>
+  font-family:    <span class="s">var(--type-h7-family)</span>;
+  font-size:      <span class="s">var(--type-h7-size)</span>;                           <span class="c">/* 12px */</span>
+  font-weight:    <span class="s">var(--type-h7-weight)</span>;                         <span class="c">/* 500 */</span>
+  line-height:    <span class="s">var(--type-h7-leading)</span>;                        <span class="c">/* 14px */</span>
+  letter-spacing: <span class="s">var(--type-h7-tracking)</span>;
+  white-space: nowrap;
+}
+
+<span class="k">.label--extra</span>    { background: <span class="s">var(--color-label-extra)</span>;   color: <span class="s">var(--color-text-light-primary)</span>; }
+<span class="k">.label--neutral</span>  { background: <span class="s">var(--color-label-general)</span>; color: <span class="s">var(--color-text-dark-primary)</span>; }
+<span class="k">.label--warning</span>  { background: <span class="s">var(--color-label-warning)</span>; color: <span class="s">var(--color-text-always-black-p)</span>; }
+<span class="k">.label--error</span>    { background: <span class="s">var(--color-label-error)</span>;   color: <span class="s">var(--color-text-always-black-p)</span>; }
+<span class="k">.label--success</span>  { background: <span class="s">var(--color-label-success)</span>; color: <span class="s">var(--color-text-always-black-p)</span>; }
+<span class="k">.label--disabled</span> { background: <span class="s">var(--color-disabled-bg)</span>;   color: <span class="s">var(--color-disabled)</span>; }
+
+<span class="c">/* Dark mode: bg flips on extra and neutral — swap text to stay readable */</span>
+<span class="k">[data-color-theme="dark"] .label--extra</span>   { color: <span class="s">var(--color-text-always-black-p)</span>; }
+<span class="k">[data-color-theme="dark"] .label--neutral</span> { color: <span class="s">var(--color-text-light-primary)</span>; }</pre>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section--tight" style="text-align:center;" data-screen-label="06 Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Components</div>
+    </section>
+
+  </main>
+
+  <style>
+    /* ---- Label examples grid ---- */
+    .label-examples {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-medium);
+    }
+    @media (max-width: 900px) {
+      .label-examples { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .label-examples { grid-template-columns: 1fr; }
+    }
+
+    .label-example {
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius);
+      overflow: hidden;
+    }
+    .label-example__preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-xx-large) var(--spacing-medium);
+      background: var(--doc-surface);
+      border-bottom: 1px solid var(--doc-hairline);
+    }
+    .label-example__info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-x-small);
+      padding: var(--spacing-medium);
+    }
+    .label-example__name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--doc-ink);
+    }
+    .label-example__desc {
+      font-size: 12px;
+      color: var(--doc-ink-soft);
+    }
+    .label-example__class {
+      font-size: 11px;
+      color: var(--doc-muted);
+      margin-top: var(--spacing-x-small);
+    }
+
+    /* ---- Anatomy ---- */
+    .label-anat {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .label-anat__label {
+      position: relative;
+      font-size: 28px !important;
+      padding: 10px 22px !important;
+    }
+    .label-anat__label[data-part]::after {
+      content: attr(data-part);
+      position: absolute;
+      top: -10px; right: -10px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px; font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .label-anat__text {
+      position: relative;
+    }
+    .label-anat__text[data-part]::after {
+      content: attr(data-part);
+      position: absolute;
+      top: -14px; right: -14px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px; font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    /* ---- Token swatch ---- */
+    .token-swatch {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  </style>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
