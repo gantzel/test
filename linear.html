@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Linear</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html" class="is-active">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Component</strong> &nbsp;·&nbsp; Linear</span>
+        <span>v 0.1 — Draft</span>
+        <span>3 variants · 8px bar · H6 typography</span>
+      </div>
+
+      <h1 class="hero__title">Linear<br /><em>component.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The Linear component represents progress or consumption along a
+            straight line. It is used to indicate how much of a resource has
+            been used — such as mobile data, storage or time — and how much
+            remains.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            Three variants signal meaning at a glance: green for normal use,
+            red for near-limit or over-threshold, and empty for a full track
+            with no data. Optional header and footer rows add context without
+            changing the bar itself.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">3</div>
+          <div class="stat__lab">Variants</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">8 px</div>
+          <div class="stat__lab">Bar height</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">4 px</div>
+          <div class="stat__lab">Border radius</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">14 px</div>
+          <div class="stat__lab">Font size · H6</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXAMPLES ===== -->
+    <section id="examples" class="section" data-screen-label="02 Examples">
+      <div class="eyebrow">02 · Examples</div>
+      <h2 class="section__title type-h1">Three variants.</h2>
+      <p class="section__lead type-body-large">
+        <em>Positive</em> for normal progress, <em>Alert</em> when a threshold
+        is exceeded or approaching, and <em>Empty</em> when no progress data
+        is available.
+      </p>
+
+      <div class="linear-examples">
+
+        <!-- Positive -->
+        <div class="linear-example">
+          <div class="linear-example__preview">
+            <div class="linear linear--positive" style="--linear-progress: 12.5%">
+              <div class="linear__header">
+                <span class="linear__title">Data brugt i udlandet</span>
+              </div>
+              <div class="linear__track">
+                <div class="linear__fill"></div>
+              </div>
+              <div class="linear__footer">5 GB brugt af 40 GB</div>
+            </div>
+          </div>
+          <div class="linear-example__info">
+            <strong class="linear-example__name">Positive</strong>
+            <span class="linear-example__desc">Normal usage — progress within limit</span>
+            <code class="linear-example__class mono">linear--positive</code>
+          </div>
+        </div>
+
+        <!-- Alert -->
+        <div class="linear-example">
+          <div class="linear-example__preview">
+            <div class="linear linear--alert" style="--linear-progress: 87.5%">
+              <div class="linear__header">
+                <span class="linear__title">Data brugt i udlandet</span>
+              </div>
+              <div class="linear__track">
+                <div class="linear__fill"></div>
+              </div>
+              <div class="linear__footer">35 GB brugt af 40 GB</div>
+            </div>
+          </div>
+          <div class="linear-example__info">
+            <strong class="linear-example__name">Alert</strong>
+            <span class="linear-example__desc">Usage near or over threshold</span>
+            <code class="linear-example__class mono">linear--alert</code>
+          </div>
+        </div>
+
+        <!-- Empty -->
+        <div class="linear-example">
+          <div class="linear-example__preview">
+            <div class="linear linear--empty">
+              <div class="linear__header">
+                <span class="linear__title">Data brugt i udlandet</span>
+              </div>
+              <div class="linear__track">
+                <div class="linear__fill"></div>
+              </div>
+              <div class="linear__footer">35 GB brugt af 40 GB</div>
+            </div>
+          </div>
+          <div class="linear-example__info">
+            <strong class="linear-example__name">Empty</strong>
+            <span class="linear-example__desc">No progress data available</span>
+            <code class="linear-example__class mono">linear--empty</code>
+          </div>
+        </div>
+
+        <!-- With label chip -->
+        <div class="linear-example">
+          <div class="linear-example__preview">
+            <div class="linear linear--positive" style="--linear-progress: 30%">
+              <div class="linear__header">
+                <span class="linear__title">Data brugt i udlandet</span>
+                <span class="label label--neutral">Tilkøb</span>
+              </div>
+              <div class="linear__track">
+                <div class="linear__fill"></div>
+              </div>
+              <div class="linear__footer">12 GB brugt af 40 GB</div>
+            </div>
+          </div>
+          <div class="linear-example__info">
+            <strong class="linear-example__name">With label</strong>
+            <span class="linear-example__desc">Optional Label chip in the header</span>
+            <code class="linear-example__class mono">label label--neutral</code>
+          </div>
+        </div>
+
+        <!-- Header only -->
+        <div class="linear-example">
+          <div class="linear-example__preview">
+            <div class="linear linear--positive" style="--linear-progress: 60%">
+              <div class="linear__header">
+                <span class="linear__title">Taletid</span>
+              </div>
+              <div class="linear__track">
+                <div class="linear__fill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="linear-example__info">
+            <strong class="linear-example__name">Header only</strong>
+            <span class="linear-example__desc">Footer row omitted</span>
+            <code class="linear-example__class mono">no .linear__footer</code>
+          </div>
+        </div>
+
+        <!-- Bar only -->
+        <div class="linear-example">
+          <div class="linear-example__preview">
+            <div class="linear linear--alert" style="--linear-progress: 95%">
+              <div class="linear__track">
+                <div class="linear__fill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="linear-example__info">
+            <strong class="linear-example__name">Bar only</strong>
+            <span class="linear-example__desc">Both header and footer omitted</span>
+            <code class="linear-example__class mono">no header / footer</code>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== ANATOMY ===== -->
+    <section id="anatomy" class="section" data-screen-label="03 Anatomy">
+      <div class="eyebrow">03 · Anatomy</div>
+      <h2 class="section__title type-h1">Four parts.</h2>
+      <p class="section__lead type-body-large">
+        Header and footer are optional and independent — any combination is
+        valid. The track and fill are always present; the fill is hidden in
+        the Empty variant.
+      </p>
+
+      <div class="anatomy">
+        <div class="anatomy__preview">
+          <div class="linear-anat" aria-hidden="true">
+            <div class="linear-anat__header" data-part="A">
+              <span class="linear-anat__title">Data brugt i udlandet</span>
+              <span class="label label--neutral">Tilkøb</span>
+            </div>
+            <div class="linear-anat__track" data-part="B">
+              <div class="linear-anat__fill" data-part="C"></div>
+            </div>
+            <div class="linear-anat__footer" data-part="D">5 GB brugt af 40 GB</div>
+          </div>
+        </div>
+
+        <div class="anatomy__parts">
+          <div class="part">
+            <div class="part__badge">A</div>
+            <div class="part__info">
+              <strong class="part__name">Header <em>(optional)</em></strong>
+              <p class="part__desc">
+                Flex row with <span class="mono">justify-content: space-between</span>.
+                Left slot: <span class="mono">.linear__title</span> — H6 typography,
+                <span class="mono">--color-text-dark-secondary</span>.
+                Right slot: optional <span class="mono">.label</span> chip.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">B</div>
+            <div class="part__info">
+              <strong class="part__name">Track</strong>
+              <p class="part__desc">
+                Full-width bar, 8 px high. Background
+                <span class="mono">--color-state-tertiary-pressed</span> (rgba 70 55 0 / 12 %),
+                <span class="mono">border-radius: --border-radius-4</span> (4 px),
+                <span class="mono">overflow: hidden</span> clips the fill.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">C</div>
+            <div class="part__info">
+              <strong class="part__name">Fill</strong>
+              <p class="part__desc">
+                Width controlled by CSS custom property
+                <span class="mono">--linear-progress</span> (set as an inline style).
+                Background set by the variant modifier:
+                <span class="mono">--color-brand-primary</span> (Positive) or
+                <span class="mono">--color-alert-error</span> (Alert).
+                Hidden in the Empty variant.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">D</div>
+            <div class="part__info">
+              <strong class="part__name">Footer <em>(optional)</em></strong>
+              <p class="part__desc">
+                H6 typography, <span class="mono">--color-text-dark-primary</span>.
+                Use to show the exact values behind the bar — e.g.
+                "5 GB brugt af 40 GB".
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TOKENS ===== -->
+    <section id="tokens" class="section" data-screen-label="04 Tokens">
+      <div class="eyebrow">04 · Tokens</div>
+      <h2 class="section__title type-h1">Figma variables.</h2>
+      <p class="section__lead type-body-large">
+        Fill colours come from the brand and alert token groups. The track
+        background adapts automatically to dark mode via its existing token.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Figma variable</th>
+              <th>Light</th>
+              <th>Dark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">--color-brand-primary</td>
+              <td class="mono">Color Palette/<wbr>Primary Color</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-brand-primary);"></span>
+                <span class="mono">--color-brand-primary</span>
+              </td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--color-alert-error</td>
+              <td class="mono">Alerts/Error</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-alert-error);"></span>
+                <span class="mono">--color-alert-error</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:#E86A5A;"></span>
+                <span class="mono">--color-alert-error</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--color-state-tertiary-pressed</td>
+              <td class="mono">System/State Overlays/<wbr>Tertiary Pressed</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-state-tertiary-pressed);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-state-tertiary-pressed</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:rgba(255,255,255,0.16);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-state-tertiary-pressed</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--color-text-dark-secondary</td>
+              <td class="mono">Text/Dark Colors/<wbr>Text Secondary</td>
+              <td>
+                <span class="token-swatch" style="background:rgba(0,0,0,0.56);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-text-dark-secondary</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:rgba(255,255,255,0.6);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-text-light-secondary</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--color-text-dark-primary</td>
+              <td class="mono">Text/Dark Colors/<wbr>Text Primary</td>
+              <td>
+                <span class="token-swatch" style="background:rgba(0,0,0,0.8);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-text-dark-primary</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:rgba(255,255,255,0.87);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-text-light-primary</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--spacing-small</td>
+              <td class="mono">Spacing/Small · Scale/8</td>
+              <td class="mono" colspan="2" style="color:var(--doc-muted);">8 px — bar height &amp; row gap, constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--border-radius-4</td>
+              <td class="mono">Border/<wbr>Border Radius/4</td>
+              <td class="mono" colspan="2" style="color:var(--doc-muted);">4 px — track &amp; fill radius, constant</td>
+            </tr>
+            <tr>
+              <td class="mono">H6 typography</td>
+              <td class="mono">eCare Typography/<wbr>H6 Medium</td>
+              <td class="mono" colspan="2" style="color:var(--doc-muted);">14 px · weight 500 · line-height 15/14 · tracking 0 — constant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== CODE ===== -->
+    <section id="code" class="section" data-screen-label="05 Code">
+      <div class="eyebrow">05 · Code</div>
+      <h2 class="section__title type-h1">How to build it.</h2>
+      <p class="section__lead type-body-large">
+        Set <span class="mono">--linear-progress</span> as an inline CSS custom
+        property to control the fill width. Header and footer elements are
+        optional — omit either when not needed.
+      </p>
+
+      <div style="display:grid; gap:24px;">
+
+        <div>
+          <h3 class="type-h3" style="margin:0 0 12px;">HTML</h3>
+          <pre class="code"><span class="c">&lt;!-- Positive — 12.5% fill --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"linear linear--positive"</span> <span class="k">style=</span><span class="s">"--linear-progress: 12.5%"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"linear__header"</span><span class="k">&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"linear__title"</span><span class="k">&gt;</span>Data brugt i udlandet<span class="k">&lt;/span&gt;</span>
+    <span class="c">&lt;!-- optional label chip --&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"label label--neutral"</span><span class="k">&gt;</span>Tilkøb<span class="k">&lt;/span&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"linear__track"</span><span class="k">&gt;</span>
+    <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"linear__fill"</span><span class="k">&gt;&lt;/div&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"linear__footer"</span><span class="k">&gt;</span>5 GB brugt af 40 GB<span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Alert — 87.5% fill --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"linear linear--alert"</span> <span class="k">style=</span><span class="s">"--linear-progress: 87.5%"</span><span class="k">&gt;</span>
+  …
+<span class="k">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Empty — no fill --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"linear linear--empty"</span><span class="k">&gt;</span>
+  …
+<span class="k">&lt;/div&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin:0 0 12px;">CSS</h3>
+          <pre class="code"><span class="k">.linear</span> {
+  display: flex;
+  flex-direction: column;
+  gap:   <span class="s">var(--spacing-small)</span>;   <span class="c">/* 8px */</span>
+  width: 100%;
+}
+<span class="k">.linear__header</span> {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 24px;
+  gap: <span class="s">var(--spacing-small)</span>;
+}
+<span class="k">.linear__title</span> {
+  font-family:    <span class="s">var(--font-family-sans)</span>;
+  font-size:      <span class="s">var(--type-h6-size)</span>;      <span class="c">/* 14px */</span>
+  font-weight:    <span class="s">var(--type-h6-weight)</span>;    <span class="c">/* 500 */</span>
+  line-height:    <span class="s">var(--type-h6-leading)</span>;   <span class="c">/* 15/14 */</span>
+  letter-spacing: <span class="s">var(--type-h6-tracking)</span>;  <span class="c">/* 0 */</span>
+  color: <span class="s">var(--color-text-dark-secondary)</span>;
+  flex: 1;
+}
+<span class="k">.linear__track</span> {
+  height:        <span class="s">var(--spacing-small)</span>;          <span class="c">/* 8px */</span>
+  border-radius: <span class="s">var(--border-radius-4)</span>;         <span class="c">/* 4px */</span>
+  background:    <span class="s">var(--color-state-tertiary-pressed)</span>;
+  overflow: hidden;
+  width: 100%;
+}
+<span class="k">.linear__fill</span> {
+  height: 100%;
+  width:  <span class="s">var(--linear-progress, 0%)</span>;
+  border-radius: <span class="s">var(--border-radius-4)</span>;
+  transition: width 0.4s ease;
+}
+<span class="k">.linear__footer</span> {
+  font-family:    <span class="s">var(--font-family-sans)</span>;
+  font-size:      <span class="s">var(--type-h6-size)</span>;
+  font-weight:    <span class="s">var(--type-h6-weight)</span>;
+  line-height:    <span class="s">var(--type-h6-leading)</span>;
+  letter-spacing: <span class="s">var(--type-h6-tracking)</span>;
+  color: <span class="s">var(--color-text-dark-primary)</span>;
+}
+
+<span class="k">.linear--positive .linear__fill</span> { background: <span class="s">var(--color-brand-primary)</span>; }
+<span class="k">.linear--alert    .linear__fill</span> { background: <span class="s">var(--color-alert-error)</span>; }
+<span class="k">.linear--empty    .linear__fill</span> { display: none; }
+
+<span class="c">/* Dark mode */</span>
+<span class="k">[data-color-theme="dark"] .linear__title</span>  { color: <span class="s">var(--color-text-light-secondary)</span>; }
+<span class="k">[data-color-theme="dark"] .linear__footer</span> { color: <span class="s">var(--color-text-light-primary)</span>; }</pre>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section--tight" style="text-align:center;" data-screen-label="06 Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Components</div>
+    </section>
+
+  </main>
+
+  <style>
+    /* ---- Linear examples grid ---- */
+    .linear-examples {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-medium);
+    }
+    @media (max-width: 900px) {
+      .linear-examples { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .linear-examples { grid-template-columns: 1fr; }
+    }
+
+    .linear-example {
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius);
+      overflow: hidden;
+    }
+    .linear-example__preview {
+      padding: var(--spacing-xx-large) var(--spacing-x-large);
+      background: var(--doc-surface);
+      border-bottom: 1px solid var(--doc-hairline);
+    }
+    .linear-example__info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-x-small);
+      padding: var(--spacing-medium);
+    }
+    .linear-example__name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--doc-ink);
+    }
+    .linear-example__desc {
+      font-size: 12px;
+      color: var(--doc-ink-soft);
+    }
+    .linear-example__class {
+      font-size: 11px;
+      color: var(--doc-muted);
+      margin-top: var(--spacing-x-small);
+    }
+
+    /* ---- Anatomy ---- */
+    .linear-anat {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 380px;
+    }
+    .linear-anat__header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .linear-anat__header[data-part]::before {
+      content: attr(data-part);
+      position: absolute;
+      top: -8px; left: -24px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px; font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .linear-anat__title {
+      font-family: var(--font-family-sans);
+      font-size: var(--type-h6-size);
+      font-weight: var(--type-h6-weight);
+      line-height: var(--type-h6-leading);
+      color: var(--color-text-dark-secondary);
+      flex: 1;
+    }
+    [data-color-theme="dark"] .linear-anat__title {
+      color: var(--color-text-light-secondary);
+    }
+    .linear-anat__track {
+      position: relative;
+      height: 8px;
+      border-radius: var(--border-radius-4);
+      background: var(--color-state-tertiary-pressed);
+    }
+    .linear-anat__track[data-part]::before {
+      content: attr(data-part);
+      position: absolute;
+      top: -12px; left: -24px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px; font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+    .linear-anat__fill {
+      position: relative;
+      height: 100%;
+      width: 30%;
+      border-radius: var(--border-radius-4);
+      background: var(--color-brand-primary);
+    }
+    .linear-anat__fill[data-part]::after {
+      content: attr(data-part);
+      position: absolute;
+      top: -12px; right: -8px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px; font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .linear-anat__footer {
+      position: relative;
+      font-family: var(--font-family-sans);
+      font-size: var(--type-h6-size);
+      font-weight: var(--type-h6-weight);
+      line-height: var(--type-h6-leading);
+      color: var(--color-text-dark-primary);
+    }
+    [data-color-theme="dark"] .linear-anat__footer {
+      color: var(--color-text-light-primary);
+    }
+    .linear-anat__footer[data-part]::before {
+      content: attr(data-part);
+      position: absolute;
+      top: -2px; left: -24px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px; font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ---- Token swatch ---- */
+    .token-swatch {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  </style>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Tabs</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html" class="is-active">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== 01 OVERVIEW ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Component</strong> &nbsp;·&nbsp; Tabs</span>
+        <span>v 0.1 — Draft</span>
+        <span>2 variants · standalone · group</span>
+      </div>
+
+      <h1 class="hero__title">Tabs<br /><em>component.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The Tab is a pill-shaped toggle button that switches between views
+            or filters content. In its standalone form it acts as a single
+            toggle; grouped inside a <span class="mono">.tab-group</span>
+            it becomes a segmented control where exactly one tab is active
+            at a time.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            The active state fills the pill with
+            <span class="mono">--color-brand-secondary</span> and flips the
+            text to light. The group container provides its own warm-grey
+            background so individual tabs inside are transparent when inactive.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">2</div>
+          <div class="stat__lab">Variants</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">14 px</div>
+          <div class="stat__lab">Font size</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">9 × 14 px</div>
+          <div class="stat__lab">Padding</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">2 px</div>
+          <div class="stat__lab">Gap in group</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 STATES ===== -->
+    <section id="states" class="section" data-screen-label="02 States">
+      <div class="eyebrow">02 · States</div>
+      <h2 class="section__title type-h1">Active &amp; inactive.</h2>
+      <p class="section__lead type-body-large">
+        Each tab has two selection states — active (filled dark pill) and
+        inactive (warm-grey pill or transparent inside a group). Click any
+        tab below to toggle it.
+      </p>
+
+      <div class="tab-states">
+
+        <!-- Standalone -->
+        <div class="tab-states__heading">Standalone tab</div>
+        <div class="tab-states__row">
+          <div class="tab-states__label">Active</div>
+          <div class="tab-states__demo">
+            <button class="tab tab--active" role="tab" aria-selected="true">Button</button>
+          </div>
+        </div>
+        <div class="tab-states__row">
+          <div class="tab-states__label">Inactive</div>
+          <div class="tab-states__demo">
+            <button class="tab" role="tab" aria-selected="false">Button</button>
+          </div>
+        </div>
+
+        <!-- Group -->
+        <div class="tab-states__heading">Tab group</div>
+        <div class="tab-states__row">
+          <div class="tab-states__label">First active</div>
+          <div class="tab-states__demo">
+            <div class="tab-group" role="tablist" aria-label="Example group">
+              <button class="tab tab--active" role="tab" aria-selected="true">Button</button>
+              <button class="tab" role="tab" aria-selected="false">Button</button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-states__row">
+          <div class="tab-states__label">Second active</div>
+          <div class="tab-states__demo">
+            <div class="tab-group" role="tablist" aria-label="Example group">
+              <button class="tab" role="tab" aria-selected="false">Button</button>
+              <button class="tab tab--active" role="tab" aria-selected="true">Button</button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-states__row tab-states__row--last">
+          <div class="tab-states__label">Three tabs</div>
+          <div class="tab-states__demo">
+            <div class="tab-group" role="tablist" aria-label="Example group">
+              <button class="tab" role="tab" aria-selected="false">One</button>
+              <button class="tab tab--active" role="tab" aria-selected="true">Two</button>
+              <button class="tab" role="tab" aria-selected="false">Three</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 03 ANATOMY ===== -->
+    <section id="anatomy" class="section" data-screen-label="03 Anatomy">
+      <div class="eyebrow">03 · Anatomy</div>
+      <h2 class="section__title type-h1">Three parts.</h2>
+
+      <div class="anatomy">
+        <div class="anatomy__preview">
+          <div class="tab-anat" aria-hidden="true">
+            <div class="tab-anat__wrap" data-part-a>
+              <div class="tab-group" role="tablist">
+                <button class="tab tab--active tab-anat__active" role="tab" data-part-b>Button</button>
+                <button class="tab tab-anat__inactive" role="tab" data-part-c>Button</button>
+              </div>
+              <span class="tab-anat__c-badge">C</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="anatomy__parts">
+          <div class="part">
+            <div class="part__badge">A</div>
+            <div class="part__info">
+              <strong class="part__name">Group container</strong>
+              <p class="part__desc">
+                A pill-shaped wrapper with
+                <span class="mono">background: --color-state-filled-warm</span>
+                and <span class="mono">border-radius: --border-radius-round</span>.
+                Items are spaced <span class="mono">2 px</span> apart via
+                <span class="mono">gap</span>. Not present in the standalone variant.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">B</div>
+            <div class="part__info">
+              <strong class="part__name">Active tab</strong>
+              <p class="part__desc">
+                Filled with <span class="mono">--color-brand-secondary</span>
+                (#323232 light / #FFFFFF dark) and pill-shaped.
+                Text uses <span class="mono">--color-text-light-primary</span>
+                in light mode and <span class="mono">--color-text-dark-primary</span>
+                in dark mode to always contrast with the fill.
+                Padding: <span class="mono">9 × 14 px</span>,
+                min-width: <span class="mono">60 px</span>.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">C</div>
+            <div class="part__info">
+              <strong class="part__name">Inactive tab</strong>
+              <p class="part__desc">
+                Transparent inside a group — the container's warm-grey
+                shows through. As a standalone tab it carries
+                <span class="mono">--color-state-filled-warm</span>
+                as its own background. Text is
+                <span class="mono">--color-text-dark-primary</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 TOKENS ===== -->
+    <section id="tokens" class="section" data-screen-label="04 Tokens">
+      <div class="eyebrow">04 · Tokens</div>
+      <h2 class="section__title type-h1">Figma variables.</h2>
+      <p class="section__lead type-body-large">
+        Active and inactive colours adapt automatically to dark mode through
+        semantic tokens — no explicit overrides required except for the
+        active tab text, which must flip when the background goes white.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Figma variable</th>
+              <th>Light</th>
+              <th>Dark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">--color-brand-secondary</td>
+              <td class="mono">Brand / Secondary</td>
+              <td><span class="token-swatch" style="background:var(--color-brand-secondary);border:1px solid var(--doc-hairline);"></span><span class="mono">Active tab bg</span></td>
+              <td><span class="token-swatch" style="background:var(--color-brand-secondary);border:1px solid var(--doc-hairline);"></span><span class="mono">Active tab bg</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--color-state-filled-warm</td>
+              <td class="mono">System / State Overlays / Filled Warm Grey</td>
+              <td><span class="token-swatch" style="background:var(--color-state-filled-warm);border:1px solid var(--doc-hairline);"></span><span class="mono">Inactive bg · group bg</span></td>
+              <td><span class="token-swatch" style="background:var(--color-state-filled-warm);border:1px solid var(--doc-hairline);"></span><span class="mono">Inactive bg · group bg</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--color-text-light-primary</td>
+              <td class="mono">Text / Light Colors / Text Primary</td>
+              <td><span class="token-swatch" style="background:var(--color-text-light-primary);border:1px solid var(--doc-hairline);"></span><span class="mono">Active tab text</span></td>
+              <td><span class="mono" style="color:var(--doc-muted);">— see below</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--color-text-dark-primary</td>
+              <td class="mono">Text / Dark Colors / Text Primary</td>
+              <td><span class="mono" style="color:var(--doc-muted);">Inactive tab text</span></td>
+              <td><span class="token-swatch" style="background:var(--color-text-dark-primary);border:1px solid var(--doc-hairline);"></span><span class="mono">Active tab text</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--border-radius-round</td>
+              <td class="mono">Border / Border Radius / Round</td>
+              <td class="mono">512 px</td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 05 CODE ===== -->
+    <section id="code" class="section" data-screen-label="05 Code">
+      <div class="eyebrow">05 · Code</div>
+      <h2 class="section__title type-h1">How to build it.</h2>
+      <p class="section__lead type-body-large">
+        A standalone <span class="mono">.tab</span> is a plain
+        <span class="mono">&lt;button&gt;</span>. In a group, wrap the
+        tabs in <span class="mono">.tab-group</span> with
+        <span class="mono">role="tablist"</span> and toggle
+        <span class="mono">.tab--active</span> and
+        <span class="mono">aria-selected</span> via JS on click.
+      </p>
+
+      <div style="display:grid; gap: 24px;">
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">HTML — Standalone tab</h3>
+          <pre class="code"><span class="c">&lt;!-- Active --&gt;</span>
+<span class="k">&lt;button</span> <span class="k">class=</span><span class="s">"tab tab--active"</span> <span class="k">role=</span><span class="s">"tab"</span> <span class="k">aria-selected=</span><span class="s">"true"</span><span class="k">&gt;</span>Label<span class="k">&lt;/button&gt;</span>
+
+<span class="c">&lt;!-- Inactive --&gt;</span>
+<span class="k">&lt;button</span> <span class="k">class=</span><span class="s">"tab"</span> <span class="k">role=</span><span class="s">"tab"</span> <span class="k">aria-selected=</span><span class="s">"false"</span><span class="k">&gt;</span>Label<span class="k">&lt;/button&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">HTML — Tab group</h3>
+          <pre class="code"><span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"tab-group"</span> <span class="k">role=</span><span class="s">"tablist"</span> <span class="k">aria-label=</span><span class="s">"View"</span><span class="k">&gt;</span>
+  <span class="k">&lt;button</span> <span class="k">class=</span><span class="s">"tab tab--active"</span> <span class="k">role=</span><span class="s">"tab"</span> <span class="k">aria-selected=</span><span class="s">"true"</span><span class="k">&gt;</span>Day<span class="k">&lt;/button&gt;</span>
+  <span class="k">&lt;button</span> <span class="k">class=</span><span class="s">"tab"</span>            <span class="k">role=</span><span class="s">"tab"</span> <span class="k">aria-selected=</span><span class="s">"false"</span><span class="k">&gt;</span>Week<span class="k">&lt;/button&gt;</span>
+  <span class="k">&lt;button</span> <span class="k">class=</span><span class="s">"tab"</span>            <span class="k">role=</span><span class="s">"tab"</span> <span class="k">aria-selected=</span><span class="s">"false"</span><span class="k">&gt;</span>Month<span class="k">&lt;/button&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">JavaScript</h3>
+          <pre class="code"><span class="c">// Tab group — one active at a time</span>
+<span class="k">document</span>.querySelectorAll(<span class="s">'.tab-group'</span>).forEach(<span class="k">group</span> =&gt; {
+  group.querySelectorAll(<span class="s">'.tab'</span>).forEach(<span class="k">tab</span> =&gt; {
+    tab.addEventListener(<span class="s">'click'</span>, () =&gt; {
+      group.querySelectorAll(<span class="s">'.tab'</span>).forEach(<span class="k">t</span> =&gt; {
+        t.classList.remove(<span class="s">'tab--active'</span>);
+        t.setAttribute(<span class="s">'aria-selected'</span>, <span class="s">'false'</span>);
+      });
+      tab.classList.add(<span class="s">'tab--active'</span>);
+      tab.setAttribute(<span class="s">'aria-selected'</span>, <span class="s">'true'</span>);
+    });
+  });
+});</pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">CSS</h3>
+          <pre class="code"><span class="k">.tab</span> {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 60px; max-height: 48px; padding: 9px 14px;
+  border-radius: <span class="s">var(--border-radius-round)</span>; border: none;
+  background: <span class="s">var(--color-state-filled-warm)</span>;
+  color: <span class="s">var(--color-text-dark-primary)</span>;
+  font-size: <span class="s">var(--type-button-medium-size)</span>;
+  font-weight: <span class="s">var(--type-button-medium-weight)</span>;
+  cursor: pointer;
+}
+<span class="k">.tab--active</span> {
+  background: <span class="s">var(--color-brand-secondary)</span>;
+  color: <span class="s">var(--color-text-light-primary)</span>;
+}
+<span class="c">/* Dark mode: active becomes white pill → text must be dark */</span>
+<span class="k">[data-color-theme="dark"] .tab--active</span> { color: <span class="s">var(--color-text-dark-primary)</span>; }
+
+<span class="k">.tab-group</span> {
+  display: inline-flex; gap: 2px;
+  background: <span class="s">var(--color-state-filled-warm)</span>;
+  border-radius: <span class="s">var(--border-radius-round)</span>;
+}
+<span class="k">.tab-group .tab</span>          { background: transparent; }
+<span class="k">.tab-group .tab--active</span>  { background: <span class="s">var(--color-brand-secondary)</span>; }</pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <section class="section section--tight" style="text-align:center;" data-screen-label="06 Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Components</div>
+    </section>
+
+  </main>
+
+  <style>
+    /* ---- States table ---- */
+    .tab-states {
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius-lg);
+      overflow: hidden;
+    }
+    .tab-states__heading {
+      padding: 12px 24px;
+      background: var(--doc-surface-2);
+      font-family: var(--font-family-mono);
+      font-size: 11px;
+      font-weight: var(--font-weight-medium);
+      letter-spacing: 0.1em;
+      color: var(--doc-muted);
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--doc-hairline);
+    }
+    .tab-states__row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      align-items: center;
+      border-bottom: 1px solid var(--doc-hairline);
+      min-height: 72px;
+    }
+    .tab-states__row--last { border-bottom: none; }
+    .tab-states__label {
+      padding: 20px 24px;
+      background: var(--doc-surface);
+      border-right: 1px solid var(--doc-hairline);
+      font-family: var(--font-family-mono);
+      font-size: 11px;
+      color: var(--doc-muted);
+      letter-spacing: 0.06em;
+    }
+    .tab-states__demo {
+      display: flex;
+      align-items: center;
+      padding: 20px 32px;
+    }
+
+    /* ---- Anatomy ---- */
+    .tab-anat {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    .tab-anat__wrap {
+      position: relative;
+      display: inline-flex;
+    }
+    /* A badge — group container */
+    .tab-anat__wrap[data-part-a]::before {
+      content: 'A';
+      position: absolute;
+      top: -12px; left: -12px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    /* B badge — active tab */
+    .tab-anat__active[data-part-b]::after {
+      content: 'B';
+      position: absolute;
+      top: -12px; right: -12px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .tab-anat__active { position: relative; }
+    /* C badge — inactive tab (real DOM span) */
+    .tab-anat__c-badge {
+      position: absolute;
+      bottom: -12px; right: -12px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    /* ---- Token swatch ---- */
+    .token-swatch {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border-radius: var(--border-radius-4);
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  </style>
+
+  <script src="js/theme.js"></script>
+  <script>
+    // Tab group — one active at a time
+    document.querySelectorAll('.tab-group').forEach(group => {
+      group.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          group.querySelectorAll('.tab').forEach(t => {
+            t.classList.remove('tab--active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('tab--active');
+          tab.setAttribute('aria-selected', 'true');
+        });
+      });
+    });
+    // Standalone tabs — toggle active
+    document.querySelectorAll('.tab:not(.tab-group .tab)').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const on = tab.classList.toggle('tab--active');
+        tab.setAttribute('aria-selected', on);
+      });
+    });
+  </script>
+</body>
+</html>

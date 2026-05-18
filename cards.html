@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Cards</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html" class="is-active">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Component</strong> &nbsp;·&nbsp; Cards</span>
+        <span>v 0.1 — Draft</span>
+        <span>1 variant · 3 tokens · responsive padding</span>
+      </div>
+
+      <h1 class="hero__title">Card<br /><em>component.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The eCare card is the primary surface for grouping related content.
+            It appears throughout the app as the container for appointments,
+            prescriptions, care plan summaries and informational panels —
+            wherever a visual unit needs to stand apart from the background.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            The component is a pure container: one variant, three Figma tokens.
+            Background, radius and padding are fixed by design — what goes
+            inside the slot is entirely up to the consuming component.
+            Padding snaps from 20 px on mobile to 24 px on desktop.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">3</div>
+          <div class="stat__lab">Figma tokens</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">16 px</div>
+          <div class="stat__lab">Border radius</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">20 px</div>
+          <div class="stat__lab">Padding · Mobile</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">24 px</div>
+          <div class="stat__lab">Padding · Desktop</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXAMPLES ===== -->
+    <section id="examples" class="section" data-screen-label="02 Examples">
+      <div class="eyebrow">02 · Examples</div>
+      <h2 class="section__title type-h1">Cards with content.</h2>
+      <p class="section__lead type-body-large">
+        The card defines the surface — background, radius and padding. Any content
+        can be slotted in. The flex-column layout with matching gap keeps
+        internal spacing consistent.
+      </p>
+
+      <div class="card-examples">
+
+        <div class="card">
+          <div>
+            <p class="type-h6" style="margin:0 0 4px; color:var(--color-text-dark-secondary);">Next appointment</p>
+            <p class="type-h4" style="margin:0;">Dr. Hansen · Cardiology</p>
+          </div>
+          <p class="type-body-small" style="margin:0; color:var(--color-text-dark-secondary);">Thursday 15 May &middot; 10:30 &middot; Online</p>
+          <a class="hlink hlink--no-underline" href="#"><span class="hlink__text">View details</span></a>
+        </div>
+
+        <div class="card">
+          <div>
+            <p class="type-h4" style="margin:0 0 4px;">Metformin 500 mg</p>
+            <p class="type-h7" style="margin:0; color:var(--color-text-dark-secondary);">14 days remaining</p>
+          </div>
+          <p class="type-body-small" style="margin:0; color:var(--color-text-dark-secondary);">Take 1 tablet twice daily with meals.</p>
+          <a class="hlink hlink--no-underline" href="#"><span class="hlink__text">Request refill</span></a>
+        </div>
+
+        <div class="card">
+          <div>
+            <p class="type-h6" style="margin:0 0 4px; color:var(--color-text-dark-secondary);">Care team update</p>
+            <p class="type-h4" style="margin:0;">New message from Dr. Hansen</p>
+          </div>
+          <p class="type-body-small" style="margin:0; color:var(--color-text-dark-secondary);">Your results from Tuesday's visit are ready to review.</p>
+          <a class="hlink hlink--no-underline" href="#"><span class="hlink__text">Read message</span></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== ANATOMY ===== -->
+    <section id="anatomy" class="section" data-screen-label="03 Anatomy">
+      <div class="eyebrow">03 · Anatomy</div>
+      <h2 class="section__title type-h1">What's inside.</h2>
+      <p class="section__lead type-body-large">
+        Two parts. The container handles all visual properties — the slot
+        receives any content without constraints.
+      </p>
+
+      <div class="anatomy">
+        <div class="anatomy__preview">
+          <div class="card-anat" aria-hidden="true">
+            <div class="card card-anat__card" data-part="A">
+              <div class="card-anat__slot" data-part="B">
+                <div class="card-anat__line" style="width:52%;"></div>
+                <div class="card-anat__line" style="width:82%; opacity:.6;"></div>
+                <div class="card-anat__line" style="width:68%; opacity:.6;"></div>
+                <div class="card-anat__line" style="width:38%; margin-top:4px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="anatomy__parts">
+          <div class="part">
+            <div class="part__badge">A</div>
+            <div class="part__info">
+              <strong class="part__name">Container</strong>
+              <p class="part__desc">
+                The card surface. Sets <span class="mono">background</span> to the product-cards warm off-white,
+                <span class="mono">border-radius</span> to 16 px, and <span class="mono">padding</span> to
+                the responsive padding token. Also defines a <span class="mono">flex-column</span>
+                layout with matching <span class="mono">gap</span> for direct children.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">B</div>
+            <div class="part__info">
+              <strong class="part__name">Content slot</strong>
+              <p class="part__desc">
+                A full-width, unconstrained area. Place headings, body text, links,
+                status labels or nested components here. Internal spacing is defined
+                by the slotted content — or use the card's own flex gap by placing
+                content as direct children.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TOKENS ===== -->
+    <section id="tokens" class="section" data-screen-label="04 Tokens">
+      <div class="eyebrow">04 · Tokens</div>
+      <h2 class="section__title type-h1">Three Figma variables.</h2>
+      <p class="section__lead type-body-large">
+        All three tokens come directly from the Figma variable export —
+        no overrides or aliases. Background and radius are constant across
+        themes and breakpoints; padding snaps at 1024 px.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Figma variable</th>
+              <th>Mobile / Light</th>
+              <th>Desktop / Dark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">--color-bg-product-cards</td>
+              <td class="mono">Background Colors/<wbr>Background Product Cards</td>
+              <td>
+                <span class="token-swatch" style="background:var(--color-bg-product-cards);border:1px solid var(--doc-hairline);"></span>
+                <span class="mono">--color-bg-product-cards</span>
+              </td>
+              <td>
+                <span class="token-swatch" style="background:#696A5E;"></span>
+                <span class="mono">--color-bg-product-cards</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="mono">--border-radius-16</td>
+              <td class="mono">Border/<wbr>Border Radius/16</td>
+              <td class="mono">16 px</td>
+              <td class="mono" style="color:var(--doc-muted);">— (constant)</td>
+            </tr>
+            <tr>
+              <td class="mono">--cards-padding-product</td>
+              <td class="mono">Cards/Padding/<wbr>Product Cards</td>
+              <td class="mono">20 px</td>
+              <td class="mono">24 px</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== CODE ===== -->
+    <section id="code" class="section" data-screen-label="05 Code">
+      <div class="eyebrow">05 · Code</div>
+      <h2 class="section__title type-h1">How to build it.</h2>
+      <p class="section__lead type-body-large">
+        A single <span class="mono">&lt;div class="card"&gt;</span> wrapper. No required children —
+        place any content directly inside. The flex-column layout and gap are
+        already set by the component.
+      </p>
+
+      <div style="display:grid; gap:24px;">
+
+        <div>
+          <h3 class="type-h3" style="margin:0 0 12px;">HTML</h3>
+          <pre class="code"><span class="c">&lt;!-- Card with slotted content --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"card"</span><span class="k">&gt;</span>
+
+  <span class="c">&lt;!-- Group tightly related items in a sub-div --&gt;</span>
+  <span class="k">&lt;div&gt;</span>
+    <span class="k">&lt;p</span> <span class="k">class=</span><span class="s">"type-h6"</span><span class="k">&gt;</span>Section label<span class="k">&lt;/p&gt;</span>
+    <span class="k">&lt;p</span> <span class="k">class=</span><span class="s">"type-h4"</span><span class="k">&gt;</span>Card heading<span class="k">&lt;/p&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Direct children receive the card's flex gap --&gt;</span>
+  <span class="k">&lt;p</span> <span class="k">class=</span><span class="s">"type-body-small"</span><span class="k">&gt;</span>Supporting text.<span class="k">&lt;/p&gt;</span>
+  <span class="k">&lt;a</span> <span class="k">class=</span><span class="s">"hlink hlink--no-underline"</span> <span class="k">href=</span><span class="s">"…"</span><span class="k">&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"hlink__text"</span><span class="k">&gt;</span>Action label<span class="k">&lt;/span&gt;</span>
+  <span class="k">&lt;/a&gt;</span>
+
+<span class="k">&lt;/div&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin:0 0 12px;">CSS</h3>
+          <pre class="code"><span class="k">.card</span> {
+  background:     <span class="s">var(--color-bg-product-cards)</span>;   <span class="c">/* rgba(240,235,220,0.6) */</span>
+  border-radius:  <span class="s">var(--border-radius-16)</span>;          <span class="c">/* 16 px */</span>
+  padding:        <span class="s">var(--cards-padding-product)</span>;      <span class="c">/* 20 px → 24 px */</span>
+  display: flex;
+  flex-direction: column;
+  gap:            <span class="s">var(--cards-padding-product)</span>;
+}
+
+<span class="c">/* css/tokens.css — padding snaps at 1024 px */</span>
+<span class="k">:root</span>                           { --cards-padding-product: <span class="s">1.25rem</span>; } <span class="c">/* 20 px */</span>
+<span class="k">@media (min-width: 1024px)</span> {
+  <span class="k">:root</span>                         { --cards-padding-product: <span class="s">1.5rem</span>;  } <span class="c">/* 24 px */</span>
+}</pre>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section--tight" style="text-align:center;" data-screen-label="06 Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Components</div>
+    </section>
+
+  </main>
+
+  <style>
+    /* ---- Card examples grid ---- */
+    .card-examples {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1100px) {
+      .card-examples { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .card-examples { grid-template-columns: 1fr; }
+    }
+
+    /* Secondary text inside cards adapts to dark mode */
+    [data-color-theme="dark"] .card-examples {
+      --color-text-dark-secondary: var(--color-text-light-secondary);
+    }
+
+    /* ---- Card anatomy ---- */
+    .card-anat__card {
+      position: relative;
+      width: 220px;
+    }
+    .card-anat__card[data-part]::after {
+      content: attr(data-part);
+      position: absolute;
+      top: -10px; right: -10px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px; font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .card-anat__slot {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+    .card-anat__slot[data-part]::after {
+      content: attr(data-part);
+      position: absolute;
+      top: 0; right: 0;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px; font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .card-anat__line {
+      height: 9px;
+      border-radius: 3px;
+      background: rgba(0,0,0,0.13);
+    }
+
+    /* ---- Token swatch ---- */
+    .token-swatch {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  </style>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

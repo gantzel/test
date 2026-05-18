@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Radius</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html" class="is-active">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== 01 OVERVIEW ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Foundation</strong> &nbsp;·&nbsp; Radius</span>
+        <span>v 0.1 — Draft</span>
+        <span>5 sizes · constant tokens · border-radius</span>
+      </div>
+
+      <h1 class="hero__title">Radius<br /><em>foundation.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The eCare radius scale defines how rounded element corners appear
+            across the system. Every step is a constant CSS custom property —
+            the same value in both light and dark mode — and maps directly to
+            a named Figma Border Radius variable.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            Five steps cover the full range: from sharp square corners (None,
+            0 px) through small and medium increments suited to inputs and
+            buttons, to the pill radius used for labels, status dots and
+            progress indicators (Round, 512 px).
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">5</div>
+          <div class="stat__lab">Sizes</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">0 px</div>
+          <div class="stat__lab">Minimum</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">16 px</div>
+          <div class="stat__lab">Largest named</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">512 px</div>
+          <div class="stat__lab">Round (pill)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 SIZES ===== -->
+    <section id="sizes" class="section" data-screen-label="02 Sizes">
+      <div class="eyebrow">02 · Sizes</div>
+      <h2 class="section__title type-h1">Five steps.</h2>
+      <p class="section__lead type-body-large">
+        From sharp corners to fully round. The red arc in each preview marks
+        the top-left corner curve — straight for None, a quarter-circle for Round.
+      </p>
+
+      <div class="radius-grid">
+
+        <!-- None -->
+        <div class="radius-card">
+          <div class="radius-card__preview">
+            <div class="radius-card__shape radius-card__shape--none" aria-hidden="true"></div>
+          </div>
+          <div class="radius-card__info">
+            <div class="radius-card__name">None</div>
+            <div class="radius-card__value">0 px</div>
+            <div class="radius-card__token mono">--border-radius-none</div>
+            <div class="radius-card__figma mono">Border / Border Radius / None</div>
+          </div>
+        </div>
+
+        <!-- Small -->
+        <div class="radius-card">
+          <div class="radius-card__preview">
+            <div class="radius-card__shape radius-card__shape--small" aria-hidden="true"></div>
+          </div>
+          <div class="radius-card__info">
+            <div class="radius-card__name">Small</div>
+            <div class="radius-card__value">4 px</div>
+            <div class="radius-card__token mono">--border-radius-4</div>
+            <div class="radius-card__figma mono">Border / Border Radius / 4</div>
+          </div>
+        </div>
+
+        <!-- Medium -->
+        <div class="radius-card">
+          <div class="radius-card__preview">
+            <div class="radius-card__shape radius-card__shape--medium" aria-hidden="true"></div>
+          </div>
+          <div class="radius-card__info">
+            <div class="radius-card__name">Medium</div>
+            <div class="radius-card__value">8 px</div>
+            <div class="radius-card__token mono">--border-radius-8</div>
+            <div class="radius-card__figma mono">Border / Border Radius / 8</div>
+          </div>
+        </div>
+
+        <!-- Large -->
+        <div class="radius-card">
+          <div class="radius-card__preview">
+            <div class="radius-card__shape radius-card__shape--large" aria-hidden="true"></div>
+          </div>
+          <div class="radius-card__info">
+            <div class="radius-card__name">Large</div>
+            <div class="radius-card__value">16 px</div>
+            <div class="radius-card__token mono">--border-radius-16</div>
+            <div class="radius-card__figma mono">Border / Border Radius / 16</div>
+          </div>
+        </div>
+
+        <!-- Round -->
+        <div class="radius-card">
+          <div class="radius-card__preview">
+            <div class="radius-card__shape radius-card__shape--round" aria-hidden="true"></div>
+          </div>
+          <div class="radius-card__info">
+            <div class="radius-card__name">Round</div>
+            <div class="radius-card__value">512 px</div>
+            <div class="radius-card__token mono">--border-radius-round</div>
+            <div class="radius-card__figma mono">Border / Border Radius / Round</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 03 TOKENS ===== -->
+    <section id="tokens" class="section" data-screen-label="03 Tokens">
+      <div class="eyebrow">03 · Tokens</div>
+      <h2 class="section__title type-h1">Token reference.</h2>
+      <p class="section__lead type-body-large">
+        All five radius values are constant — they do not change between light and dark mode.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Figma variable</th>
+              <th>Value</th>
+              <th>Used in</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">--border-radius-none</td>
+              <td class="mono">Border / Border Radius / None</td>
+              <td class="mono">0 px</td>
+              <td>Sharp-cornered elements with no rounding</td>
+            </tr>
+            <tr>
+              <td class="mono">--border-radius-4</td>
+              <td class="mono">Border / Border Radius / 4</td>
+              <td class="mono">4 px</td>
+              <td>Linear progress track · small inputs</td>
+            </tr>
+            <tr>
+              <td class="mono">--border-radius-8</td>
+              <td class="mono">Border / Border Radius / 8</td>
+              <td class="mono">8 px</td>
+              <td>Buttons · medium-sized UI elements</td>
+            </tr>
+            <tr>
+              <td class="mono">--border-radius-16</td>
+              <td class="mono">Border / Border Radius / 16</td>
+              <td class="mono">16 px</td>
+              <td>Cards · Alert · large containers</td>
+            </tr>
+            <tr>
+              <td class="mono">--border-radius-round</td>
+              <td class="mono">Border / Border Radius / Round</td>
+              <td class="mono">512 px</td>
+              <td>Label · Status dot · pill shapes · avatars</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <section class="section section--tight" style="text-align:center;" data-screen-label="04 Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Foundations</div>
+    </section>
+
+  </main>
+
+  <style>
+    /* ---- Radius grid ---- */
+    .radius-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--spacing-medium);
+    }
+    @media (max-width: 1100px) {
+      .radius-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 680px) {
+      .radius-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ---- Radius card ---- */
+    .radius-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius);
+      overflow: hidden;
+    }
+    .radius-card__preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 24px;
+      min-height: 164px;
+      background: var(--doc-surface);
+      border-bottom: 1px solid var(--doc-hairline);
+    }
+
+    /* ---- The shape ---- */
+    .radius-card__shape {
+      --r: 0px;
+      position: relative;
+      width: 120px;
+      height: 80px;
+      background: var(--doc-surface-2);
+      border: 1.5px solid var(--doc-hairline);
+      border-radius: var(--r);
+    }
+
+    /* Corner arc indicator — top-left only, matches the shape's radius */
+    .radius-card__shape::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 52px;
+      height: 52px;
+      border-top: 3.5px solid var(--color-brand-primary);
+      border-left: 3.5px solid var(--color-brand-primary);
+      border-top-left-radius: var(--r);
+      pointer-events: none;
+    }
+
+    /* Per-variant radii — drives both shape and arc via --r */
+    .radius-card__shape--none   { --r: var(--border-radius-none,   0px);  }
+    .radius-card__shape--small  { --r: var(--border-radius-4,      4px);  }
+    .radius-card__shape--medium { --r: var(--border-radius-8,      8px);  }
+    .radius-card__shape--large  { --r: var(--border-radius-16,     16px); }
+    .radius-card__shape--round  { --r: var(--border-radius-round,  512px); }
+
+    /*
+      For Round: the 120×80 shape clamps 512 px to 40 px (= 80 ÷ 2).
+      The 52×52 ::before would clamp 512 px to 26 px — a different curve.
+      Override so the arc uses the same 40 px the shape actually draws.
+    */
+    .radius-card__shape--round::before {
+      border-top-left-radius: 40px;
+    }
+
+    /* ---- Card info area ---- */
+    .radius-card__info {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 16px;
+    }
+    .radius-card__name {
+      font-family: var(--font-family-sans);
+      font-size: 13px;
+      font-weight: var(--font-weight-medium);
+      color: var(--doc-ink);
+      line-height: 1.2;
+    }
+    .radius-card__value {
+      font-family: var(--font-family-sans);
+      font-size: 22px;
+      font-weight: var(--font-weight-medium);
+      color: var(--doc-ink);
+      line-height: 1;
+      margin: 4px 0 6px;
+    }
+    .radius-card__token {
+      font-size: 11px;
+      color: var(--doc-ink-soft);
+    }
+    .radius-card__figma {
+      font-size: 10px;
+      color: var(--doc-muted);
+    }
+  </style>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

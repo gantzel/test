@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Input Field</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html" class="is-active">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== 01 OVERVIEW ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Component</strong> &nbsp;·&nbsp; Input Field</span>
+        <span>v 0.1 — Draft</span>
+        <span>2 variants · 4 states · floating label</span>
+      </div>
+
+      <h1 class="hero__title">Input Field<br /><em>component.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The Input Field is a single-line text control used to collect
+            user input. It features a floating label that starts inside
+            the field and rises to sit on the border when the field is
+            focused or filled.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            Two variants cover the main use cases: Text for free-form
+            input and Number for phone numbers with a fixed country-code
+            prefix. An optional search icon can be placed on the right.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">2</div>
+          <div class="stat__lab">Variants</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">4</div>
+          <div class="stat__lab">States</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">48 px</div>
+          <div class="stat__lab">Min height</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">8 px</div>
+          <div class="stat__lab">Border radius</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 STATES ===== -->
+    <section id="states" class="section" data-screen-label="02 States">
+      <div class="eyebrow">02 · States</div>
+      <h2 class="section__title type-h1">Four states.</h2>
+      <p class="section__lead type-body-large">
+        Click any Default or Selected field below to interact with it.
+        Error and Disabled are shown as static examples.
+      </p>
+
+      <!-- Text variant -->
+      <h3 class="type-h3" style="margin: 0 0 16px">Text variant</h3>
+      <div class="if-states-grid">
+
+        <div class="if-states-grid__col">
+          <div class="if-states-grid__head">Default</div>
+          <div class="if-states-grid__cell">
+            <div class="input-field">
+              <div class="input-field__wrapper">
+                <input class="input-field__input" type="text" id="t-default-empty" placeholder=" " />
+                <label class="input-field__label" for="t-default-empty">Label Text</label>
+              </div>
+            </div>
+          </div>
+          <div class="if-states-grid__cell">
+            <div class="input-field">
+              <div class="input-field__wrapper">
+                <input class="input-field__input" type="text" id="t-default-val" placeholder=" " value="Text value" />
+                <label class="input-field__label" for="t-default-val">Label Text</label>
+                <button class="input-field__icon-btn" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="if-states-grid__col">
+          <div class="if-states-grid__head">Selected</div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--selected">
+              <div class="input-field__wrapper">
+                <input class="input-field__input" type="text" id="t-sel-empty" placeholder=" " />
+                <label class="input-field__label" for="t-sel-empty">Label Text</label>
+                <button class="input-field__icon-btn" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--selected">
+              <div class="input-field__wrapper">
+                <input class="input-field__input" type="text" id="t-sel-val" placeholder=" " value="Text value" />
+                <label class="input-field__label" for="t-sel-val">Label Text</label>
+                <button class="input-field__icon-btn" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="if-states-grid__col">
+          <div class="if-states-grid__head">Error</div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--error">
+              <div class="input-field__wrapper">
+                <input class="input-field__input" type="text" id="t-err-empty" placeholder=" " />
+                <label class="input-field__label" for="t-err-empty">Label Text</label>
+              </div>
+              <p class="input-field__helper">Helper text</p>
+            </div>
+          </div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--error input-field--selected">
+              <div class="input-field__wrapper">
+                <input class="input-field__input" type="text" id="t-err-val" placeholder=" " value="Text value" />
+                <label class="input-field__label" for="t-err-val">Label Text</label>
+                <button class="input-field__icon-btn" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <p class="input-field__helper">Helper text</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="if-states-grid__col">
+          <div class="if-states-grid__head">Disabled</div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--disabled">
+              <div class="input-field__wrapper">
+                <input class="input-field__input" type="text" id="t-dis-empty" placeholder=" " disabled />
+                <label class="input-field__label" for="t-dis-empty">Label Text</label>
+              </div>
+            </div>
+          </div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--disabled">
+              <div class="input-field__wrapper">
+                <input class="input-field__input" type="text" id="t-dis-val" placeholder=" " value="Text value" disabled />
+                <label class="input-field__label" for="t-dis-val">Label Text</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Number variant -->
+      <h3 class="type-h3" style="margin: 32px 0 16px">Number variant</h3>
+      <div class="if-states-grid">
+
+        <div class="if-states-grid__col">
+          <div class="if-states-grid__head">Default</div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--number">
+              <div class="input-field__wrapper">
+                <span class="input-field__prefix">+45</span>
+                <input class="input-field__input" type="tel" id="n-default-empty" placeholder=" " />
+                <label class="input-field__label" for="n-default-empty">Label Text</label>
+              </div>
+            </div>
+          </div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--number">
+              <div class="input-field__wrapper">
+                <span class="input-field__prefix">+45</span>
+                <input class="input-field__input" type="tel" id="n-default-val" placeholder=" " value="25 90 65 12" />
+                <label class="input-field__label" for="n-default-val">Label Text</label>
+                <button class="input-field__icon-btn" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="if-states-grid__col">
+          <div class="if-states-grid__head">Selected</div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--number input-field--selected">
+              <div class="input-field__wrapper">
+                <span class="input-field__prefix">+45</span>
+                <input class="input-field__input" type="tel" id="n-sel-empty" placeholder=" " />
+                <label class="input-field__label" for="n-sel-empty">Label Text</label>
+                <button class="input-field__icon-btn" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--number input-field--selected">
+              <div class="input-field__wrapper">
+                <span class="input-field__prefix">+45</span>
+                <input class="input-field__input" type="tel" id="n-sel-val" placeholder=" " value="25 90 65 12" />
+                <label class="input-field__label" for="n-sel-val">Label Text</label>
+                <button class="input-field__icon-btn" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="if-states-grid__col">
+          <div class="if-states-grid__head">Error</div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--number input-field--error">
+              <div class="input-field__wrapper">
+                <span class="input-field__prefix">+45</span>
+                <input class="input-field__input" type="tel" id="n-err-empty" placeholder=" " />
+                <label class="input-field__label" for="n-err-empty">Label Text</label>
+              </div>
+              <p class="input-field__helper">Helper text</p>
+            </div>
+          </div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--number input-field--error input-field--selected">
+              <div class="input-field__wrapper">
+                <span class="input-field__prefix">+45</span>
+                <input class="input-field__input" type="tel" id="n-err-val" placeholder=" " value="25 90 65 12" />
+                <label class="input-field__label" for="n-err-val">Label Text</label>
+                <button class="input-field__icon-btn" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <p class="input-field__helper">Helper text</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="if-states-grid__col">
+          <div class="if-states-grid__head">Disabled</div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--number input-field--disabled">
+              <div class="input-field__wrapper">
+                <span class="input-field__prefix">+45</span>
+                <input class="input-field__input" type="tel" id="n-dis-empty" placeholder=" " disabled />
+                <label class="input-field__label" for="n-dis-empty">Label Text</label>
+              </div>
+            </div>
+          </div>
+          <div class="if-states-grid__cell">
+            <div class="input-field input-field--number input-field--disabled">
+              <div class="input-field__wrapper">
+                <span class="input-field__prefix">+45</span>
+                <input class="input-field__input" type="tel" id="n-dis-val" placeholder=" " value="25 90 65 12" disabled />
+                <label class="input-field__label" for="n-dis-val">Label Text</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 03 ANATOMY ===== -->
+    <section id="anatomy" class="section" data-screen-label="03 Anatomy">
+      <div class="eyebrow">03 · Anatomy</div>
+      <h2 class="section__title type-h1">Four parts.</h2>
+
+      <div class="anatomy">
+        <div class="anatomy__preview">
+          <div class="if-anat" aria-hidden="true">
+            <!-- Enlarged selected+value input with anatomy badges -->
+            <div class="if-anat__field">
+              <div class="if-anat__wrapper" data-part-a>
+                <input class="input-field__input" type="text" placeholder=" " value="Text value" tabindex="-1" readonly />
+                <label class="input-field__label if-anat__label" data-part-c>Label Text</label>
+                <button class="input-field__icon-btn if-anat__icon" data-part-d type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <span class="if-anat__badge if-anat__badge--b">B</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="anatomy__parts">
+          <div class="part">
+            <div class="part__badge">A</div>
+            <div class="part__info">
+              <strong class="part__name">Wrapper</strong>
+              <p class="part__desc">
+                The bordered container. <span class="mono">min-height: 48px</span>,
+                <span class="mono">border-radius: --border-radius-8</span> (8 px).
+                Default border is 1 px <span class="mono">--color-border-default</span>;
+                focused or selected state uses 2 px <span class="mono">--color-border-active</span>.
+                In dark mode the active border becomes brand green.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">B</div>
+            <div class="part__info">
+              <strong class="part__name">Input value</strong>
+              <p class="part__desc">
+                The actual <span class="mono">&lt;input&gt;</span> element.
+                H5 Medium — 16 px / weight 500.
+                Colour: <span class="mono">--color-text-dark-primary</span>.
+                Uses <span class="mono">placeholder=" "</span> (single space)
+                so CSS <span class="mono">:not(:placeholder-shown)</span>
+                can detect when the field is filled.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">C</div>
+            <div class="part__info">
+              <strong class="part__name">Floating label</strong>
+              <p class="part__desc">
+                Positioned absolute, starts centered vertically at H5 size.
+                On focus or when the field has a value, it transitions to
+                <span class="mono">top: 0</span> at 12 px / 0.3 px tracking,
+                sitting on the border line with
+                <span class="mono">background: --color-bg-frame</span>
+                to visually cut the border.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">D</div>
+            <div class="part__info">
+              <strong class="part__name">Icon button</strong>
+              <p class="part__desc">
+                Optional search icon, 20 × 20 px, inside a
+                <span class="mono">32 × 32 px</span> round tap target
+                with <span class="mono">6 px</span> padding.
+                Omit the element entirely when no icon is needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 TOKENS ===== -->
+    <section id="tokens" class="section" data-screen-label="04 Tokens">
+      <div class="eyebrow">04 · Tokens</div>
+      <h2 class="section__title type-h1">Figma variables.</h2>
+      <p class="section__lead type-body-large">
+        The active border switches to brand green in dark mode.
+        All other tokens adapt automatically through their CSS variable references.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Figma variable</th>
+              <th>Light</th>
+              <th>Dark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">--color-border-default</td>
+              <td class="mono">System / Border Default</td>
+              <td><span class="token-swatch" style="background:var(--color-border-default);border:1px solid var(--doc-hairline);"></span><span class="mono">Default border</span></td>
+              <td><span class="token-swatch" style="background:rgba(255,255,255,0.8);border:1px solid var(--doc-hairline);"></span><span class="mono">System / System Colors / Border Default</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--color-border-active</td>
+              <td class="mono">System / Border Active</td>
+              <td><span class="token-swatch" style="background:var(--color-border-active);border:1px solid var(--doc-hairline);"></span><span class="mono">Focus border (2 px)</span></td>
+              <td><span class="token-swatch" style="background:#00DC00;"></span><span class="mono">System / System Colors / Border Active</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--color-sys-error</td>
+              <td class="mono">System / 100% Error</td>
+              <td><span class="token-swatch" style="background:var(--color-sys-error);"></span><span class="mono">Error border</span></td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--color-error-text</td>
+              <td class="mono">System / Error Text</td>
+              <td><span class="token-swatch" style="background:var(--color-error-text);"></span><span class="mono">Helper text (error)</span></td>
+              <td><span class="token-swatch" style="background:#FF786E;"></span><span class="mono">System / System Colors / Error Text</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--color-bg-frame</td>
+              <td class="mono">Background / Frame Background</td>
+              <td><span class="token-swatch" style="background:var(--color-bg-frame);border:1px solid var(--doc-hairline);"></span><span class="mono">Label chip bg</span></td>
+              <td><span class="token-swatch" style="background:#323232;border:1px solid var(--doc-hairline);"></span><span class="mono">Color Palette / Secondary Color</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--border-radius-8</td>
+              <td class="mono">Border / Border Radius / 8</td>
+              <td class="mono">8 px</td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--type-h5-size</td>
+              <td class="mono">Font / Size / H5</td>
+              <td class="mono">16 px</td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--type-label-size</td>
+              <td class="mono">Font / Components / Label</td>
+              <td class="mono">12 px · floated label</td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 05 CODE ===== -->
+    <section id="code" class="section" data-screen-label="05 Code">
+      <div class="eyebrow">05 · Code</div>
+      <h2 class="section__title type-h1">How to build it.</h2>
+      <p class="section__lead type-body-large">
+        Use <span class="mono">placeholder=" "</span> (a single space) on the
+        <span class="mono">&lt;input&gt;</span> so the CSS
+        <span class="mono">:not(:placeholder-shown)</span> selector can detect
+        when the field has a value and float the label automatically.
+      </p>
+
+      <div style="display:grid; gap: 24px;">
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">Text variant — HTML</h3>
+          <pre class="code"><span class="c">&lt;!-- Default / empty --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"input-field"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"input-field__wrapper"</span><span class="k">&gt;</span>
+    <span class="k">&lt;input</span> <span class="k">class=</span><span class="s">"input-field__input"</span> <span class="k">type=</span><span class="s">"text"</span>
+           <span class="k">id=</span><span class="s">"f1"</span> <span class="k">placeholder=</span><span class="s">" "</span> <span class="k">/&gt;</span>
+    <span class="k">&lt;label</span> <span class="k">class=</span><span class="s">"input-field__label"</span> <span class="k">for=</span><span class="s">"f1"</span><span class="k">&gt;</span>Label Text<span class="k">&lt;/label&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- With icon right --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"input-field"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"input-field__wrapper"</span><span class="k">&gt;</span>
+    <span class="k">&lt;input</span> <span class="k">class=</span><span class="s">"input-field__input"</span> <span class="k">type=</span><span class="s">"text"</span>
+           <span class="k">id=</span><span class="s">"f2"</span> <span class="k">placeholder=</span><span class="s">" "</span> <span class="k">/&gt;</span>
+    <span class="k">&lt;label</span> <span class="k">class=</span><span class="s">"input-field__label"</span> <span class="k">for=</span><span class="s">"f2"</span><span class="k">&gt;</span>Label Text<span class="k">&lt;/label&gt;</span>
+    <span class="k">&lt;button</span> <span class="k">class=</span><span class="s">"input-field__icon-btn"</span> <span class="k">type=</span><span class="s">"button"</span>
+            <span class="k">aria-label=</span><span class="s">"Search"</span><span class="k">&gt;</span>
+      <span class="c">&lt;!-- 20×20 search SVG --&gt;</span>
+    <span class="k">&lt;/button&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- With helper text --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"input-field input-field--error"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"input-field__wrapper"</span><span class="k">&gt;</span>
+    <span class="k">&lt;input</span> <span class="k">class=</span><span class="s">"input-field__input"</span> <span class="k">type=</span><span class="s">"text"</span>
+           <span class="k">id=</span><span class="s">"f3"</span> <span class="k">placeholder=</span><span class="s">" "</span>
+           <span class="k">aria-describedby=</span><span class="s">"f3-helper"</span> <span class="k">aria-invalid=</span><span class="s">"true"</span> <span class="k">/&gt;</span>
+    <span class="k">&lt;label</span> <span class="k">class=</span><span class="s">"input-field__label"</span> <span class="k">for=</span><span class="s">"f3"</span><span class="k">&gt;</span>Label Text<span class="k">&lt;/label&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;p</span> <span class="k">class=</span><span class="s">"input-field__helper"</span> <span class="k">id=</span><span class="s">"f3-helper"</span><span class="k">&gt;</span>Helper text<span class="k">&lt;/p&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">Number variant — HTML</h3>
+          <pre class="code"><span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"input-field input-field--number"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"input-field__wrapper"</span><span class="k">&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"input-field__prefix"</span><span class="k">&gt;</span>+45<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;input</span> <span class="k">class=</span><span class="s">"input-field__input"</span> <span class="k">type=</span><span class="s">"tel"</span>
+           <span class="k">id=</span><span class="s">"n1"</span> <span class="k">placeholder=</span><span class="s">" "</span> <span class="k">/&gt;</span>
+    <span class="k">&lt;label</span> <span class="k">class=</span><span class="s">"input-field__label"</span> <span class="k">for=</span><span class="s">"n1"</span><span class="k">&gt;</span>Label Text<span class="k">&lt;/label&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">State modifiers</h3>
+          <pre class="code"><span class="c">/* Applied to .input-field */</span>
+<span class="k">.input-field--error</span>     <span class="c">/* Red border + red helper text */</span>
+<span class="k">.input-field--disabled</span>  <span class="c">/* All text to --color-disabled, pointer-events: none */</span>
+<span class="k">.input-field--number</span>    <span class="c">/* Enables prefix slot and tel input */</span>
+<span class="k">.input-field--selected</span>  <span class="c">/* Static active state (2px border, floated label) */</span></pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <section class="section section--tight" style="text-align:center;" data-screen-label="06 Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Components</div>
+    </section>
+
+  </main>
+
+  <style>
+    /* Label chip background must match the actual page surface, not the
+       component token (--color-bg-frame = pure white), so the chip is
+       invisible and only the border cut-through effect remains. */
+    .input-field__label { background: var(--doc-bg); }
+
+    /* ---- States grid ---- */
+    .if-states-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto auto; /* header + empty row + value row */
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius-lg);
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    /* Input fields fill their column — no fixed 320px */
+    .if-states-grid .input-field { width: 100%; }
+
+    /* Each column spans all 3 row tracks and uses subgrid so CSS grid
+       equalizes heights across all columns automatically */
+    .if-states-grid__col {
+      grid-row: span 3;
+      display: grid;
+      grid-template-rows: subgrid;
+      border-right: 1px solid var(--doc-hairline);
+    }
+    .if-states-grid__col:last-child { border-right: none; }
+
+    /* Collapse to 2 columns on medium viewports */
+    @media (max-width: 1100px) {
+      .if-states-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+      }
+      .if-states-grid__col:nth-child(even) { border-right: none; }
+      .if-states-grid__col:nth-child(3),
+      .if-states-grid__col:nth-child(4) { border-top: 1px solid var(--doc-hairline); }
+    }
+    /* Single column on small viewports */
+    @media (max-width: 680px) {
+      .if-states-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, auto);
+      }
+      .if-states-grid__col { border-right: none; border-top: 1px solid var(--doc-hairline); }
+      .if-states-grid__col:first-child { border-top: none; }
+    }
+
+    .if-states-grid__head {
+      padding: 12px 16px;
+      background: var(--doc-surface);
+      border-bottom: 1px solid var(--doc-hairline);
+      font-family: var(--font-family-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--doc-ink);
+    }
+    .if-states-grid__cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      border-bottom: 1px solid var(--doc-hairline);
+    }
+    .if-states-grid__cell:last-child { border-bottom: none; }
+    /* Error fields are taller (wrapper + helper), so when the cell centres
+       the block the wrapper sits ~11px above the other columns' wrappers.
+       Offset with margin-top so the wrappers align visually. */
+    .if-states-grid .input-field--error { margin-top: 17px; }
+
+    /* ---- Anatomy ---- */
+    .if-anat {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 32px;
+    }
+    .if-anat__field {
+      position: relative;
+      width: 320px;
+    }
+    .if-anat__wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 8px 8px 8px 16px;
+      border: none;
+      box-shadow: inset 0 0 0 2px var(--color-border-active);
+      border-radius: var(--border-radius-8);
+      gap: 8px;
+    }
+    .if-anat__wrapper[data-part-a]::before {
+      content: 'A';
+      position: absolute;
+      top: -14px; left: -14px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .if-anat__badge {
+      position: absolute;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .if-anat__badge--b { bottom: -10px; left: 50px; }
+    .if-anat__label[data-part-c]::before {
+      content: 'C';
+      position: absolute;
+      top: -8px; left: -8px;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 9px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    .if-anat__icon[data-part-d] {
+      position: relative;
+    }
+    .if-anat__icon[data-part-d]::after {
+      content: 'D';
+      position: absolute;
+      top: -8px; right: -8px;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 9px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    /* Keep label floated in anatomy (has value) */
+    .if-anat__label {
+      top: 0 !important;
+      font-size: var(--type-label-size) !important;
+      letter-spacing: var(--letter-spacing-label) !important;
+    }
+
+    /* ---- Token swatch ---- */
+    .token-swatch {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border-radius: var(--border-radius-4);
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  </style>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

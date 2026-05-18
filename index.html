@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>eCare DS · Typography</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/typography.css" />
   <link rel="stylesheet" href="css/site.css" />
@@ -16,33 +17,42 @@
   <aside class="sidebar" data-screen-label="Sidebar">
     <div class="sidebar__brand">
       <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
-      <span class="sidebar__name"><span>Design System</span></span>
+      <span class="sidebar__name"><span>eCare Design System</span></span>
     </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
 
     <div class="sidebar__section">Foundations</div>
     <ul class="sidebar__nav">
-      <li><a href="#overview" class="is-active">Overview</a></li>
-      <li><a href="#typeface">Typeface</a></li>
-      <li><a href="#scale">Type scale</a></li>
-      <li><a href="#tokens">Tokens</a></li>
-      <li><a href="#components">Component type</a></li>
-      <li><a href="#responsive">Responsive</a></li>
-      <li><a href="#reference">Reference table</a></li>
-      <li><a href="#usage">Usage &amp; code</a></li>
+      <li><a href="#overview" class="is-active">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
     </ul>
 
-    <div class="sidebar__section">Coming next</div>
+    <div class="sidebar__section">Components</div>
     <ul class="sidebar__nav">
-      <li><a href="#" style="opacity:.45;pointer-events:none">Color</a></li>
-      <li><a href="#" style="opacity:.45;pointer-events:none">Spacing</a></li>
-      <li><a href="#" style="opacity:.45;pointer-events:none">Radii &amp; Shadow</a></li>
-      <li><a href="#" style="opacity:.45;pointer-events:none">Components</a></li>
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
     </ul>
-
-    <div class="sidebar__foot">
-      v0.1 · Typography<br />
-      Updated May 2026<br />
-      Source · Figma tokens
     </div>
   </aside>
 
@@ -611,9 +621,6 @@
 
     <section class="section section--tight" style="text-align:center;" data-screen-label="09 Footer">
       <div class="eyebrow" style="margin-bottom: 12px;">eCare Design System · Foundation 01</div>
-      <p class="type-body-small muted" style="margin: 0">
-        Next: Color · Spacing · Radii &amp; Shadow · Components.
-      </p>
     </section>
   </main>
 
@@ -621,22 +628,6 @@
        Scripts — sidebar active + responsive demo
        ============================================================ -->
   <script>
-    // Sidebar active section
-    (function () {
-      const sections = document.querySelectorAll('main section[id]');
-      const links = document.querySelectorAll('.sidebar__nav a[href^="#"]');
-      const map = {};
-      links.forEach(a => { map[a.getAttribute('href').slice(1)] = a; });
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            links.forEach(l => l.classList.remove('is-active'));
-            if (map[e.target.id]) map[e.target.id].classList.add('is-active');
-          }
-        });
-      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-      sections.forEach(s => io.observe(s));
-    })();
 
     // Responsive demo — binary toggle: App/Mobile vs Desktop
     (function () {
@@ -685,6 +676,6 @@
     })();
   </script>
 
-  <style id="__om-edit-overrides"></style>
+  <script src="js/theme.js"></script>
 </body>
 </html>

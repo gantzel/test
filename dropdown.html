@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCare DS · Dropdown</title>
+  <script>if(localStorage.getItem('ecare-theme')==='dark')document.documentElement.setAttribute('data-color-theme','dark');</script>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       Sidebar
+       ============================================================ -->
+  <aside class="sidebar" data-screen-label="Sidebar">
+    <div class="sidebar__brand">
+      <img class="sidebar__logo" src="assets/yousee-logo.svg" alt="YouSee" />
+      <span class="sidebar__name"><span>eCare Design System</span></span>
+    </div>
+    <div class="sidebar__theme">
+      <button class="sidebar-theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+      <button class="sidebar-theme-btn" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="sidebar__scroll">
+
+    <div class="sidebar__section">Foundations</div>
+    <ul class="sidebar__nav">
+      <li><a href="index.html">Typography</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="radius.html">Radius</a></li>
+    </ul>
+
+    <div class="sidebar__section">Components</div>
+    <ul class="sidebar__nav">
+      <li><a href="alert.html">Alert</a></li>
+      <li><a href="button.html">Button</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="checkbox.html">Checkbox</a></li>
+      <li><a href="divider.html">Divider</a></li>
+      <li><a href="dropdown.html" class="is-active">Dropdown</a></li>
+      <li><a href="iconbutton.html">Icon Button</a></li>
+      <li><a href="inputfield.html">Input Field</a></li>
+      <li><a href="label.html">Label</a></li>
+      <li><a href="linear.html">Linear</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="radiobutton.html">Radio Button</a></li>
+      <li><a href="spinner.html">Spinner</a></li>
+      <li><a href="status.html">Status</a></li>
+      <li><a href="switch.html">Switch</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="tooltip.html">Tooltip</a></li>
+    </ul>
+
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       Main
+       ============================================================ -->
+  <main class="main">
+
+    <!-- ===== 01 OVERVIEW ===== -->
+    <section id="overview" class="hero" data-screen-label="01 Overview">
+      <div class="hero__meta">
+        <span><strong>Component</strong> &nbsp;·&nbsp; Dropdown</span>
+        <span>v 0.1 — Draft</span>
+        <span>4 states · 48 px · floating label · optional icon</span>
+      </div>
+
+      <h1 class="hero__title">Dropdown<br /><em>component.</em></h1>
+
+      <div class="hero__sub">
+        <div class="hero__col">
+          <p>
+            The Dropdown is a single-line select control that lets users
+            pick one option from a list. Like the Input Field it uses a
+            floating label that sits inside the field and rises to sit on
+            the border when the field is open or has a value.
+          </p>
+        </div>
+        <div class="hero__col">
+          <p>
+            An optional search icon can be placed on the left to signal
+            that the field supports filtering. The right-side chevron is
+            always present and rotates 180° when the menu is open.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__num">4</div>
+          <div class="stat__lab">States</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">48 px</div>
+          <div class="stat__lab">Min height</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">8 px</div>
+          <div class="stat__lab">Border radius</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">16 px</div>
+          <div class="stat__lab">Option text</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 STATES ===== -->
+    <section id="states" class="section" data-screen-label="02 States">
+      <div class="eyebrow">02 · States</div>
+      <h2 class="section__title type-h1">Four states.</h2>
+      <p class="section__lead type-body-large">
+        Default and Active fields are interactive. Error and Disabled are
+        shown as static examples. The top row shows an empty field; the
+        bottom row shows the same state with a selected value.
+      </p>
+
+      <div class="dd-states-grid">
+
+        <!-- Default -->
+        <div class="dd-states-grid__col">
+          <div class="dd-states-grid__head">Default</div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown">
+              <div class="dropdown__wrapper">
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value"></span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--has-value">
+              <div class="dropdown__wrapper">
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value">Selected value</span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active -->
+        <div class="dd-states-grid__col">
+          <div class="dd-states-grid__head">Active</div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--active">
+              <div class="dropdown__wrapper">
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value"></span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--active dropdown--has-value">
+              <div class="dropdown__wrapper">
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value">Selected value</span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Error -->
+        <div class="dd-states-grid__col">
+          <div class="dd-states-grid__head">Error</div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--error">
+              <div class="dropdown__wrapper">
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value"></span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <p class="dropdown__helper">Helper text</p>
+            </div>
+          </div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--error dropdown--has-value">
+              <div class="dropdown__wrapper">
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value">Selected value</span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <p class="dropdown__helper">Helper text</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disabled -->
+        <div class="dd-states-grid__col">
+          <div class="dd-states-grid__head">Disabled</div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--disabled">
+              <div class="dropdown__wrapper">
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value"></span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--disabled dropdown--has-value">
+              <div class="dropdown__wrapper">
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value">Selected value</span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /dd-states-grid -->
+
+      <!-- With icon -->
+      <h3 class="type-h3" style="margin: 32px 0 16px">With optional icon</h3>
+      <div class="dd-states-grid">
+
+        <!-- Default -->
+        <div class="dd-states-grid__col">
+          <div class="dd-states-grid__head">Default</div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--has-icon">
+              <div class="dropdown__wrapper">
+                <button class="dropdown__icon" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value"></span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--has-icon dropdown--has-value">
+              <div class="dropdown__wrapper">
+                <button class="dropdown__icon" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value">Selected value</span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active -->
+        <div class="dd-states-grid__col">
+          <div class="dd-states-grid__head">Active</div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--has-icon dropdown--active">
+              <div class="dropdown__wrapper">
+                <button class="dropdown__icon" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value"></span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--has-icon dropdown--active dropdown--has-value">
+              <div class="dropdown__wrapper">
+                <button class="dropdown__icon" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value">Selected value</span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Error -->
+        <div class="dd-states-grid__col">
+          <div class="dd-states-grid__head">Error</div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--has-icon dropdown--error">
+              <div class="dropdown__wrapper">
+                <button class="dropdown__icon" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value"></span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <p class="dropdown__helper">Helper text</p>
+            </div>
+          </div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--has-icon dropdown--error dropdown--has-value">
+              <div class="dropdown__wrapper">
+                <button class="dropdown__icon" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value">Selected value</span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <p class="dropdown__helper">Helper text</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disabled -->
+        <div class="dd-states-grid__col">
+          <div class="dd-states-grid__head">Disabled</div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--has-icon dropdown--disabled">
+              <div class="dropdown__wrapper">
+                <button class="dropdown__icon" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value"></span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-states-grid__cell">
+            <div class="dropdown dropdown--has-icon dropdown--disabled dropdown--has-value">
+              <div class="dropdown__wrapper">
+                <button class="dropdown__icon" type="button" tabindex="-1" aria-label="Search">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <span class="dropdown__label">Label</span>
+                <span class="dropdown__value">Selected value</span>
+                <div class="dropdown__chevron">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /dd-states-grid with icon -->
+    </section>
+
+    <!-- ===== 03 EXPANDED ===== -->
+    <section id="expanded" class="section" data-screen-label="03 Expanded">
+      <div class="eyebrow">03 · Expanded</div>
+      <h2 class="section__title type-h1">Open state.</h2>
+      <p class="section__lead type-body-large">
+        When open, the chevron flips 180°, the active 2 px border appears on
+        three sides (top, left, right), and the menu panel connects seamlessly
+        below. The menu uses a 1 px default border on the remaining three sides.
+      </p>
+
+      <div class="dd-open-row">
+
+        <div class="dd-open-row__item">
+          <div class="dd-open-row__label">Open · no value</div>
+          <div class="dropdown dropdown--open">
+            <div class="dropdown__wrapper">
+              <span class="dropdown__label">Label</span>
+              <span class="dropdown__value"></span>
+              <div class="dropdown__chevron">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="dropdown__menu">
+              <button class="dropdown__option">Option 1</button>
+              <button class="dropdown__option">Option 2</button>
+              <button class="dropdown__option">Option 3</button>
+              <button class="dropdown__option">Option 4</button>
+              <button class="dropdown__option">Option 5</button>
+              <button class="dropdown__option">Option 6</button>
+              <button class="dropdown__option">Option 7</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dd-open-row__item">
+          <div class="dd-open-row__label">Open · has value</div>
+          <div class="dropdown dropdown--open dropdown--has-value">
+            <div class="dropdown__wrapper">
+              <span class="dropdown__label">Label</span>
+              <span class="dropdown__value">Selected value</span>
+              <div class="dropdown__chevron">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="dropdown__menu">
+              <button class="dropdown__option">Option 1</button>
+              <button class="dropdown__option">Option 2</button>
+              <button class="dropdown__option">Option 3</button>
+              <button class="dropdown__option">Option 4</button>
+              <button class="dropdown__option">Option 5</button>
+              <button class="dropdown__option">Option 6</button>
+              <button class="dropdown__option">Option 7</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 04 ANATOMY ===== -->
+    <section id="anatomy" class="section" data-screen-label="04 Anatomy">
+      <div class="eyebrow">04 · Anatomy</div>
+      <h2 class="section__title type-h1">Four parts.</h2>
+
+      <div class="anatomy">
+        <div class="anatomy__preview">
+          <div class="dd-anat" aria-hidden="true">
+            <div class="dd-anat__field">
+              <div class="dd-anat__wrapper" data-part-a>
+                <span class="dropdown__label dd-anat__label" data-part-b>Label</span>
+                <span class="dd-anat__value" data-part-c>Selected value</span>
+                <div class="dd-anat__chevron" data-part-d>
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <p class="dd-anat__helper" data-part-e>Helper text</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="anatomy__parts">
+          <div class="part">
+            <div class="part__badge">A</div>
+            <div class="part__info">
+              <strong class="part__name">Wrapper</strong>
+              <p class="part__desc">
+                The bordered container. <span class="mono">min-height: 48px</span>,
+                <span class="mono">border-radius: --border-radius-8</span> (8 px).
+                Default border is 1 px <span class="mono">--color-border-default</span>;
+                active state uses 2 px <span class="mono">--color-border-active</span>
+                (brand green in dark mode). When open, only the top, left, and right
+                sides show the 2 px border.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">B</div>
+            <div class="part__info">
+              <strong class="part__name">Floating label</strong>
+              <p class="part__desc">
+                Positioned absolute, starts centered vertically at H6 size (14 px).
+                On focus or when the field has a value, transitions to
+                <span class="mono">top: 0</span> at 12 px / 0.3 px tracking,
+                sitting on the border with
+                <span class="mono">background: --color-bg-frame</span>.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">C</div>
+            <div class="part__info">
+              <strong class="part__name">Value text</strong>
+              <p class="part__desc">
+                The selected option displayed as H6 Medium — 14 px / weight 500.
+                Uses <span class="mono">--color-text-dark-secondary</span> as
+                placeholder colour and <span class="mono">--color-text-dark-primary</span>
+                once a value is set. Add an optional
+                <span class="mono">.dropdown__icon</span> before this slot for
+                a left-side search icon.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">D</div>
+            <div class="part__info">
+              <strong class="part__name">Chevron</strong>
+              <p class="part__desc">
+                Always present. A 20 × 20 px arrow icon that rotates
+                180° when the menu is open via
+                <span class="mono">transform: rotate(180deg)</span> on
+                <span class="mono">.dropdown--open</span>.
+              </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="part__badge">E</div>
+            <div class="part__info">
+              <strong class="part__name">Helper text <em style="font-style:normal;font-weight:400;opacity:0.5">· optional</em></strong>
+              <p class="part__desc">
+                An optional <span class="mono">.dropdown__helper</span> line below the
+                wrapper provides extra context. Required in the Error state, where it
+                renders in <span class="mono">--color-sys-error</span> to describe
+                the validation message.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 05 TOKENS ===== -->
+    <section id="tokens" class="section" data-screen-label="05 Tokens">
+      <div class="eyebrow">05 · Tokens</div>
+      <h2 class="section__title type-h1">Figma variables.</h2>
+      <p class="section__lead type-body-large">
+        The active border switches to brand green in dark mode — the same
+        token as Input Field. All other tokens adapt automatically.
+      </p>
+
+      <div class="reftable__wrap">
+        <table class="reftable">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Figma variable</th>
+              <th>Light</th>
+              <th>Dark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">--color-border-default</td>
+              <td class="mono">System / Border Default</td>
+              <td><span class="token-swatch" style="background:var(--color-border-default);border:1px solid var(--doc-hairline);"></span><span class="mono">Default border</span></td>
+              <td><span class="token-swatch" style="background:rgba(255,255,255,0.8);border:1px solid var(--doc-hairline);"></span><span class="mono">System / System Colors / Border Default</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--color-border-active</td>
+              <td class="mono">System / Border Active</td>
+              <td><span class="token-swatch" style="background:var(--color-border-active);border:1px solid var(--doc-hairline);"></span><span class="mono">Active border (2 px)</span></td>
+              <td><span class="token-swatch" style="background:#00DC00;"></span><span class="mono">System / System Colors / Border Active</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--color-sys-error</td>
+              <td class="mono">System / 100% Error</td>
+              <td><span class="token-swatch" style="background:var(--color-sys-error);"></span><span class="mono">Error border</span></td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--color-error-text</td>
+              <td class="mono">System / Error Text</td>
+              <td><span class="token-swatch" style="background:var(--color-error-text);"></span><span class="mono">Helper text · label (error)</span></td>
+              <td><span class="token-swatch" style="background:#FF786E;"></span><span class="mono">System / System Colors / Error Text</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--color-bg-frame</td>
+              <td class="mono">Background / Frame Background</td>
+              <td><span class="token-swatch" style="background:var(--color-bg-frame);border:1px solid var(--doc-hairline);"></span><span class="mono">Label chip bg</span></td>
+              <td><span class="token-swatch" style="background:#323232;border:1px solid var(--doc-hairline);"></span><span class="mono">Color Palette / Secondary Color</span></td>
+            </tr>
+            <tr>
+              <td class="mono">--type-h6-size</td>
+              <td class="mono">Font / Size / H6</td>
+              <td class="mono">14 px · value text</td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--type-label-size</td>
+              <td class="mono">Font / Components / Label</td>
+              <td class="mono">12 px · floated label</td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+            <tr>
+              <td class="mono">--type-h5-size</td>
+              <td class="mono">Font / Size / H5</td>
+              <td class="mono">16 px · option items</td>
+              <td class="mono" style="color:var(--doc-muted);">— constant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 06 CODE ===== -->
+    <section id="code" class="section" data-screen-label="06 Code">
+      <div class="eyebrow">06 · Code</div>
+      <h2 class="section__title type-h1">How to build it.</h2>
+      <p class="section__lead type-body-large">
+        The dropdown is a styled <span class="mono">div</span> — not a native
+        <span class="mono">&lt;select&gt;</span>. Apply state modifier classes
+        via JavaScript as the user interacts. Keyboard and ARIA handling is
+        left to the implementing component.
+      </p>
+
+      <div style="display:grid; gap: 24px;">
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">HTML — standard</h3>
+          <pre class="code"><span class="c">&lt;!-- Default / empty --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown__wrapper"</span><span class="k">&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"dropdown__label"</span><span class="k">&gt;</span>Label<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"dropdown__value"</span><span class="k">&gt;&lt;/span&gt;</span>
+    <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown__chevron"</span><span class="k">&gt;</span><span class="c">&lt;!-- chevron SVG --&gt;</span><span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;p</span> <span class="k">class=</span><span class="s">"dropdown__helper"</span><span class="k">&gt;</span>Helper text<span class="k">&lt;/p&gt;</span>
+<span class="k">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Has value --&gt;</span>
+<span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown dropdown--has-value"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown__wrapper"</span><span class="k">&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"dropdown__label"</span><span class="k">&gt;</span>Label<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"dropdown__value"</span><span class="k">&gt;</span>Selected option<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown__chevron"</span><span class="k">&gt;</span><span class="c">&lt;!-- chevron SVG --&gt;</span><span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;p</span> <span class="k">class=</span><span class="s">"dropdown__helper"</span><span class="k">&gt;</span>Helper text<span class="k">&lt;/p&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">HTML — with optional icon</h3>
+          <pre class="code"><span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown dropdown--has-icon"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown__wrapper"</span><span class="k">&gt;</span>
+    <span class="k">&lt;button</span> <span class="k">class=</span><span class="s">"dropdown__icon"</span> <span class="k">type=</span><span class="s">"button"</span>
+            <span class="k">aria-label=</span><span class="s">"Search"</span><span class="k">&gt;</span>
+      <span class="c">&lt;!-- 20×20 search SVG --&gt;</span>
+    <span class="k">&lt;/button&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"dropdown__label"</span><span class="k">&gt;</span>Label<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"dropdown__value"</span><span class="k">&gt;&lt;/span&gt;</span>
+    <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown__chevron"</span><span class="k">&gt;</span><span class="c">&lt;!-- chevron SVG --&gt;</span><span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;p</span> <span class="k">class=</span><span class="s">"dropdown__helper"</span><span class="k">&gt;</span>Helper text<span class="k">&lt;/p&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">HTML — open/expanded</h3>
+          <pre class="code"><span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown dropdown--open dropdown--has-value"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown__wrapper"</span><span class="k">&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"dropdown__label"</span><span class="k">&gt;</span>Label<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;span</span> <span class="k">class=</span><span class="s">"dropdown__value"</span><span class="k">&gt;</span>Selected option<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown__chevron"</span><span class="k">&gt;</span><span class="c">&lt;!-- chevron SVG --&gt;</span><span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;div</span> <span class="k">class=</span><span class="s">"dropdown__menu"</span><span class="k">&gt;</span>
+    <span class="k">&lt;button</span> <span class="k">class=</span><span class="s">"dropdown__option"</span> <span class="k">type=</span><span class="s">"button"</span><span class="k">&gt;</span>Option 1<span class="k">&lt;/button&gt;</span>
+    <span class="k">&lt;button</span> <span class="k">class=</span><span class="s">"dropdown__option"</span> <span class="k">type=</span><span class="s">"button"</span><span class="k">&gt;</span>Option 2<span class="k">&lt;/button&gt;</span>
+    <span class="c">&lt;!-- … --&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;p</span> <span class="k">class=</span><span class="s">"dropdown__helper"</span><span class="k">&gt;</span>Helper text<span class="k">&lt;/p&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">State modifiers</h3>
+          <pre class="code"><span class="c">/* Applied to .dropdown */</span>
+<span class="k">.dropdown--active</span>     <span class="c">/* Focused — 2px border, label floated  */</span>
+<span class="k">.dropdown--open</span>       <span class="c">/* Menu visible — chevron rotated 180°  */</span>
+<span class="k">.dropdown--has-value</span>  <span class="c">/* Value selected — label floated       */</span>
+<span class="k">.dropdown--error</span>      <span class="c">/* Red border + red helper + red label  */</span>
+<span class="k">.dropdown--disabled</span>   <span class="c">/* All text disabled, pointer-events: none */</span>
+<span class="k">.dropdown--has-icon</span>   <span class="c">/* Left icon present — offsets unfloated label */</span></pre>
+        </div>
+
+        <div>
+          <h3 class="type-h3" style="margin: 0 0 12px">CSS</h3>
+          <pre class="code"><span class="k">.dropdown</span> {
+  display: inline-flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 4px;
+}
+
+<span class="k">.dropdown__wrapper</span> {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 8px 12px;
+  gap: 8px;
+  box-shadow: inset 0 0 0 1px <span class="s">var(--color-border-default)</span>;
+  border-radius: <span class="s">var(--border-radius-8)</span>;
+  cursor: pointer;
+}
+
+<span class="k">.dropdown--active .dropdown__wrapper</span> {
+  box-shadow: inset 0 0 0 2px <span class="s">var(--color-border-active)</span>;
+}
+
+<span class="k">.dropdown--open .dropdown__wrapper</span> {
+  box-shadow:
+    inset 0 2px 0 0 <span class="s">var(--color-border-active)</span>,
+    inset 2px 0 0 0 <span class="s">var(--color-border-active)</span>,
+    inset -2px 0 0 0 <span class="s">var(--color-border-active)</span>;
+  border-radius: <span class="s">var(--border-radius-8)</span> <span class="s">var(--border-radius-8)</span> 0 0;
+}
+
+<span class="k">.dropdown__menu</span> {
+  display: none;
+  background: <span class="s">var(--color-bg-frame)</span>;
+  border-left:   1px solid <span class="s">var(--color-border-default)</span>;
+  border-right:  1px solid <span class="s">var(--color-border-default)</span>;
+  border-bottom: 1px solid <span class="s">var(--color-border-default)</span>;
+  border-radius: 0 0 <span class="s">var(--border-radius-8)</span> <span class="s">var(--border-radius-8)</span>;
+  padding: 8px 0;
+}
+<span class="k">.dropdown--open .dropdown__menu</span> { display: block; }
+
+<span class="k">.dropdown__option</span> {
+  display: block;
+  width: 100%;
+  padding: 6px 16px 8px;
+  font-size: <span class="s">var(--type-h5-size)</span>;   <span class="c">/* 16px */</span>
+  font-weight: <span class="s">var(--type-h5-weight)</span>; <span class="c">/* 500  */</span>
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+<span class="k">.dropdown__option:hover</span> {
+  background: <span class="s">var(--color-state-tertiary-hover)</span>;
+}</pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <section class="section section--tight" style="text-align:center;" data-screen-label="07 Footer">
+      <div class="eyebrow" style="margin-bottom:12px;">eCare Design System · Components</div>
+    </section>
+
+  </main>
+
+  <style>
+    /* Label chip and open wrapper match docs surface (--color-bg-frame is pure white, docs bg is off-white) */
+    .dropdown__label { background: var(--doc-bg); }
+    .dropdown--open .dropdown__wrapper { background: var(--doc-bg); }
+
+    /* ---- States grid ---- */
+    .dd-states-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto auto;
+      border: 1px solid var(--doc-hairline);
+      border-radius: var(--doc-radius-lg);
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .dd-states-grid .dropdown { width: 100%; }
+    /* Offset error state so its wrapper aligns visually with the other states */
+    .dd-states-grid .dropdown--error { margin-top: 17px; }
+    .dd-states-grid__col {
+      grid-row: span 3;
+      display: grid;
+      grid-template-rows: subgrid;
+      border-right: 1px solid var(--doc-hairline);
+    }
+    .dd-states-grid__col:last-child { border-right: none; }
+
+    @media (max-width: 1100px) {
+      .dd-states-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+      }
+      .dd-states-grid__col:nth-child(even) { border-right: none; }
+      .dd-states-grid__col:nth-child(3),
+      .dd-states-grid__col:nth-child(4) { border-top: 1px solid var(--doc-hairline); }
+    }
+    @media (max-width: 680px) {
+      .dd-states-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, auto);
+      }
+      .dd-states-grid__col { border-right: none; border-top: 1px solid var(--doc-hairline); }
+      .dd-states-grid__col:first-child { border-top: none; }
+    }
+
+    .dd-states-grid__head {
+      padding: 12px 16px;
+      background: var(--doc-surface);
+      border-bottom: 1px solid var(--doc-hairline);
+      font-family: var(--font-family-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--doc-ink);
+    }
+    .dd-states-grid__cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      border-bottom: 1px solid var(--doc-hairline);
+    }
+    .dd-states-grid__cell:last-child { border-bottom: none; }
+    /* ---- Open state row ---- */
+    .dd-open-row {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .dd-open-row__item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .dd-open-row__label {
+      font-family: var(--font-family-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--doc-muted);
+    }
+
+    /* ---- Anatomy ---- */
+    .dd-anat {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 32px;
+    }
+    .dd-anat__field {
+      position: relative;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .dd-anat__wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 8px 12px;
+      gap: 8px;
+      box-shadow: inset 0 0 0 2px var(--color-border-active);
+      border-radius: var(--border-radius-8);
+    }
+    .dd-anat__wrapper[data-part-a]::before {
+      content: 'A';
+      position: absolute;
+      top: -14px; left: -14px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    /* Floated label */
+    .dd-anat__label {
+      top: 0 !important;
+      font-size: var(--type-label-size) !important;
+      letter-spacing: var(--letter-spacing-label) !important;
+    }
+    .dd-anat__label[data-part-b]::after {
+      content: 'B';
+      position: absolute;
+      top: -10px; right: -10px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    .dd-anat__value {
+      flex: 1;
+      font-family: var(--font-family-sans);
+      font-size: var(--type-h6-size);
+      font-weight: var(--type-h6-weight);
+      line-height: var(--type-h6-leading);
+      color: var(--color-text-dark-primary);
+      position: relative;
+    }
+    .dd-anat__value[data-part-c]::after {
+      content: 'C';
+      position: absolute;
+      bottom: -10px; left: 40px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    .dd-anat__chevron {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px; height: 20px;
+      color: var(--color-text-dark-primary);
+      position: relative;
+    }
+    .dd-anat__chevron[data-part-d]::after {
+      content: 'D';
+      position: absolute;
+      top: -10px; right: -10px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    .dd-anat__chevron svg { display: block; width: 20px; height: 20px; }
+    .dd-anat__helper {
+      margin: 0;
+      padding-left: 14px;
+      font-family: var(--font-family-sans);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--color-text-dark-secondary);
+      position: relative;
+    }
+    .dd-anat__helper[data-part-e]::after {
+      content: 'E';
+      position: absolute;
+      top: 50%; right: -26px;
+      transform: translateY(-50%);
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--doc-ink);
+      color: var(--doc-bg);
+      font-family: var(--font-family-mono);
+      font-size: 10px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    [data-color-theme="dark"] .dd-anat__helper { color: var(--color-text-light-secondary); }
+
+    /* Dark mode anatomy */
+    [data-color-theme="dark"] .dd-anat__value { color: var(--color-text-light-primary); }
+    [data-color-theme="dark"] .dd-anat__chevron { color: var(--color-text-light-primary); }
+
+    /* ---- Token swatch ---- */
+    .token-swatch {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border-radius: var(--border-radius-4);
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  </style>
+
+  <script src="js/theme.js"></script>
+  <script>
+    (function () {
+      function closeAll(except) {
+        document.querySelectorAll('.dropdown--open').forEach(function (dd) {
+          if (dd !== except) {
+            dd.classList.remove('dropdown--open');
+            dd.classList.remove('dropdown--active');
+          }
+        });
+      }
+
+      document.addEventListener('click', function (e) {
+        var option  = e.target.closest('.dropdown__option');
+        var wrapper = e.target.closest('.dropdown__wrapper');
+        var inside  = e.target.closest('.dropdown');
+
+        if (option) {
+          var dd = option.closest('.dropdown');
+          var valueEl = dd.querySelector('.dropdown__value');
+          if (valueEl) valueEl.textContent = option.textContent.trim();
+          dd.classList.add('dropdown--has-value');
+          dd.classList.remove('dropdown--open');
+          dd.classList.remove('dropdown--active');
+          return;
+        }
+
+        if (wrapper) {
+          var dd = wrapper.closest('.dropdown');
+          if (dd.classList.contains('dropdown--disabled')) return;
+          var isOpen = dd.classList.contains('dropdown--open');
+          closeAll(dd);
+          dd.classList.toggle('dropdown--open', !isOpen);
+          dd.classList.toggle('dropdown--active', !isOpen);
+          return;
+        }
+
+        if (!inside) closeAll(null);
+      });
+    })();
+  </script>
+</body>
+</html>
